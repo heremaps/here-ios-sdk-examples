@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="Map View Controller" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDn-RF-DKq" userLabel="Map View" customClass="NMAMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please try tap, pan or rotate gesture." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4U2-ZV-TLB">
+                                        <rect key="frame" x="69" y="64" width="236" height="80"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="kng-wE-Dw7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <color key="textColor" red="0.29021818700000002" green="0.16891769230000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="4U2-ZV-TLB" firstAttribute="leading" secondItem="IDn-RF-DKq" secondAttribute="leading" constant="69" id="OUE-Ge-sky"/>
+                                    <constraint firstItem="4U2-ZV-TLB" firstAttribute="centerX" secondItem="IDn-RF-DKq" secondAttribute="centerX" id="lla-Br-H5v"/>
+                                    <constraint firstItem="4U2-ZV-TLB" firstAttribute="top" secondItem="IDn-RF-DKq" secondAttribute="top" constant="64" id="wtk-WB-xcx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IDn-RF-DKq" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="c2g-P4-1ml"/>
+                            <constraint firstItem="IDn-RF-DKq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="csG-dJ-oB0"/>
+                            <constraint firstAttribute="trailing" secondItem="IDn-RF-DKq" secondAttribute="trailing" id="iSS-RE-rqL"/>
+                            <constraint firstItem="IDn-RF-DKq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jiC-cy-ye6"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="mapView" destination="IDn-RF-DKq" id="6A7-M8-HqC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="277.5"/>
+        </scene>
+    </scenes>
+</document>

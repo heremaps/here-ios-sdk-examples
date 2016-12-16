@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqL-ez-mOK">
+                                <color key="backgroundColor" red="0.89009666442871094" green="0.89009666442871094" blue="0.89009666442871094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="hD1-Pc-TBc"/>
+                                </constraints>
+                                <state key="normal" title="Create Route"/>
+                                <connections>
+                                    <action selector="buttonDidClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yzU-iX-zzY"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LIi-iC-54h" customClass="NMAMapView">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LIi-iC-54h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PL6-ch-pRJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MqL-ez-mOK" secondAttribute="trailing" id="YHW-Rp-Ncv"/>
+                            <constraint firstItem="MqL-ez-mOK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="193" id="c3M-sA-4ba"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LIi-iC-54h" secondAttribute="bottom" id="ji0-Za-UEe"/>
+                            <constraint firstItem="LIi-iC-54h" firstAttribute="top" secondItem="MqL-ez-mOK" secondAttribute="bottom" constant="8" id="rOM-BU-SbK"/>
+                            <constraint firstItem="MqL-ez-mOK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tyh-hY-AQ8"/>
+                            <constraint firstAttribute="trailing" secondItem="LIi-iC-54h" secondAttribute="trailing" id="wBW-w9-UzZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="createRouteButton" destination="MqL-ez-mOK" id="0MV-yJ-hV7"/>
+                        <outlet property="mapView" destination="LIi-iC-54h" id="S4g-KQ-G0K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="389.60000000000002" y="263.11844077961024"/>
+        </scene>
+    </scenes>
+</document>

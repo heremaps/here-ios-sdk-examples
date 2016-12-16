@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="Main View Controller" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JxM-dh-GmI">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GPB-kf-Amr">
+                                <segments>
+                                    <segment title="Geocode "/>
+                                    <segment title="RevGeocode"/>
+                                </segments>
+                                <connections>
+                                    <action selector="handleRequestControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="zRj-0c-V1D"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JxM-dh-GmI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6cT-wZ-ZBz"/>
+                            <constraint firstItem="JxM-dh-GmI" firstAttribute="top" secondItem="GPB-kf-Amr" secondAttribute="bottom" constant="56" id="MQH-vs-pfy"/>
+                            <constraint firstItem="JxM-dh-GmI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="NLi-F7-fVM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JxM-dh-GmI" secondAttribute="bottom" constant="184" id="Y5y-vw-sPI"/>
+                            <constraint firstItem="JxM-dh-GmI" firstAttribute="centerX" secondItem="GPB-kf-Amr" secondAttribute="centerX" id="Z8e-VA-tcf"/>
+                            <constraint firstItem="JxM-dh-GmI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-12" id="whg-CH-Ecc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="requestControl" destination="GPB-kf-Amr" id="8Wz-0O-Mmo"/>
+                        <outlet property="resultTextView" destination="JxM-dh-GmI" id="fik-Hb-dLe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="306.39999999999998" y="396.25187406296857"/>
+        </scene>
+    </scenes>
+</document>

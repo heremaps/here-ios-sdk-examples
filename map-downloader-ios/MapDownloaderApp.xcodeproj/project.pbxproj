@@ -1,0 +1,363 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B1AF6311DB7F53000ABC855 /* MapPackageTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1AF6301DB7F53000ABC855 /* MapPackageTableCell.xib */; };
+		4B1AF6361DB7F6B200ABC855 /* MapPackageTableCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AF6351DB7F6B200ABC855 /* MapPackageTableCellTableViewCell.m */; };
+		4BF271791DB6E01400E2AD48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF271781DB6E01400E2AD48 /* main.m */; };
+		4BF2717C1DB6E01400E2AD48 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF2717B1DB6E01400E2AD48 /* AppDelegate.m */; };
+		4BF2717F1DB6E01400E2AD48 /* MapPackageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF2717E1DB6E01400E2AD48 /* MapPackageTableViewController.m */; };
+		4BF271821DB6E01400E2AD48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF271801DB6E01400E2AD48 /* Main.storyboard */; };
+		4BF271841DB6E01400E2AD48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BF271831DB6E01400E2AD48 /* Assets.xcassets */; };
+		4BF271871DB6E01400E2AD48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF271851DB6E01400E2AD48 /* LaunchScreen.storyboard */; };
+		4BF271911DB6E1F500E2AD48 /* NMAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF2718F1DB6E11D00E2AD48 /* NMAKit.framework */; };
+		4BF271921DB6E1F500E2AD48 /* NMAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF2718F1DB6E11D00E2AD48 /* NMAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4BF271931DB6E1F500E2AD48 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4BF271921DB6E1F500E2AD48 /* NMAKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4B1AF6301DB7F53000ABC855 /* MapPackageTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapPackageTableCell.xib; sourceTree = "<group>"; };
+		4B1AF6341DB7F6B200ABC855 /* MapPackageTableCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPackageTableCellTableViewCell.h; sourceTree = "<group>"; };
+		4B1AF6351DB7F6B200ABC855 /* MapPackageTableCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPackageTableCellTableViewCell.m; sourceTree = "<group>"; };
+		4BF271741DB6E01300E2AD48 /* MapDownloaderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapDownloaderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BF271781DB6E01400E2AD48 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4BF2717A1DB6E01400E2AD48 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4BF2717B1DB6E01400E2AD48 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4BF2717D1DB6E01400E2AD48 /* MapPackageTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapPackageTableViewController.h; sourceTree = "<group>"; };
+		4BF2717E1DB6E01400E2AD48 /* MapPackageTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapPackageTableViewController.m; sourceTree = "<group>"; };
+		4BF271811DB6E01400E2AD48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4BF271831DB6E01400E2AD48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4BF271861DB6E01400E2AD48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4BF271881DB6E01400E2AD48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BF2718F1DB6E11D00E2AD48 /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMAKit.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4BF271711DB6E01300E2AD48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BF271911DB6E1F500E2AD48 /* NMAKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4BF2716B1DB6E01300E2AD48 = {
+			isa = PBXGroup;
+			children = (
+				4BF2718E1DB6E10700E2AD48 /* Frameworks */,
+				4BF271761DB6E01300E2AD48 /* MapDownloaderApp */,
+				4BF271751DB6E01300E2AD48 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4BF271751DB6E01300E2AD48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4BF271741DB6E01300E2AD48 /* MapDownloaderApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4BF271761DB6E01300E2AD48 /* MapDownloaderApp */ = {
+			isa = PBXGroup;
+			children = (
+				4BF2717A1DB6E01400E2AD48 /* AppDelegate.h */,
+				4BF2717B1DB6E01400E2AD48 /* AppDelegate.m */,
+				4BF2717D1DB6E01400E2AD48 /* MapPackageTableViewController.h */,
+				4BF2717E1DB6E01400E2AD48 /* MapPackageTableViewController.m */,
+				4B1AF6301DB7F53000ABC855 /* MapPackageTableCell.xib */,
+				4B1AF6341DB7F6B200ABC855 /* MapPackageTableCellTableViewCell.h */,
+				4B1AF6351DB7F6B200ABC855 /* MapPackageTableCellTableViewCell.m */,
+				4BF271801DB6E01400E2AD48 /* Main.storyboard */,
+				4BF271831DB6E01400E2AD48 /* Assets.xcassets */,
+				4BF271851DB6E01400E2AD48 /* LaunchScreen.storyboard */,
+				4BF271881DB6E01400E2AD48 /* Info.plist */,
+				4BF271771DB6E01300E2AD48 /* Supporting Files */,
+			);
+			path = MapDownloaderApp;
+			sourceTree = "<group>";
+		};
+		4BF271771DB6E01300E2AD48 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4BF271781DB6E01400E2AD48 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4BF2718E1DB6E10700E2AD48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4BF2718F1DB6E11D00E2AD48 /* NMAKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4BF271731DB6E01300E2AD48 /* MapDownloaderApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BF2718B1DB6E01400E2AD48 /* Build configuration list for PBXNativeTarget "MapDownloaderApp" */;
+			buildPhases = (
+				4BF271701DB6E01300E2AD48 /* Sources */,
+				4BF271711DB6E01300E2AD48 /* Frameworks */,
+				4BF271721DB6E01300E2AD48 /* Resources */,
+				4BF271931DB6E1F500E2AD48 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MapDownloaderApp;
+			productName = MapDownloaderApp;
+			productReference = 4BF271741DB6E01300E2AD48 /* MapDownloaderApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4BF2716C1DB6E01300E2AD48 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "HERE Burnaby";
+				TargetAttributes = {
+					4BF271731DB6E01300E2AD48 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4BF2716F1DB6E01300E2AD48 /* Build configuration list for PBXProject "MapDownloaderApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4BF2716B1DB6E01300E2AD48;
+			productRefGroup = 4BF271751DB6E01300E2AD48 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4BF271731DB6E01300E2AD48 /* MapDownloaderApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4BF271721DB6E01300E2AD48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BF271871DB6E01400E2AD48 /* LaunchScreen.storyboard in Resources */,
+				4BF271841DB6E01400E2AD48 /* Assets.xcassets in Resources */,
+				4B1AF6311DB7F53000ABC855 /* MapPackageTableCell.xib in Resources */,
+				4BF271821DB6E01400E2AD48 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4BF271701DB6E01300E2AD48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BF2717F1DB6E01400E2AD48 /* MapPackageTableViewController.m in Sources */,
+				4BF2717C1DB6E01400E2AD48 /* AppDelegate.m in Sources */,
+				4B1AF6361DB7F6B200ABC855 /* MapPackageTableCellTableViewCell.m in Sources */,
+				4BF271791DB6E01400E2AD48 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4BF271801DB6E01400E2AD48 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BF271811DB6E01400E2AD48 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4BF271851DB6E01400E2AD48 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BF271861DB6E01400E2AD48 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4BF271891DB6E01400E2AD48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4BF2718A1DB6E01400E2AD48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4BF2718C1DB6E01400E2AD48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = MapDownloaderApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.MapDownloader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4BF2718D1DB6E01400E2AD48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = MapDownloaderApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.MapDownloader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4BF2716F1DB6E01300E2AD48 /* Build configuration list for PBXProject "MapDownloaderApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BF271891DB6E01400E2AD48 /* Debug */,
+				4BF2718A1DB6E01400E2AD48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BF2718B1DB6E01400E2AD48 /* Build configuration list for PBXNativeTarget "MapDownloaderApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BF2718C1DB6E01400E2AD48 /* Debug */,
+				4BF2718D1DB6E01400E2AD48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4BF2716C1DB6E01300E2AD48 /* Project object */;
+}

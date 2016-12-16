@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ij-Lk-mKy" userLabel="Map" customClass="NMAMapView">
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="x99-YF-sqk">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="04b-gb-FOc"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Color Property"/>
+                                            <segment title="Float Property"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="x99-YF-sqk" secondAttribute="trailing" constant="60" id="Kcb-Ib-X3h"/>
+                                    <constraint firstItem="x99-YF-sqk" firstAttribute="top" secondItem="5ij-Lk-mKy" secondAttribute="top" constant="35" id="RY3-kd-SzD"/>
+                                    <constraint firstItem="x99-YF-sqk" firstAttribute="leading" secondItem="5ij-Lk-mKy" secondAttribute="leading" constant="60" id="n3w-L6-Udg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5ij-Lk-mKy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="SBb-es-Lpv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5ij-Lk-mKy" secondAttribute="bottom" constant="-20" id="Xnp-Qa-6Ax"/>
+                            <constraint firstItem="5ij-Lk-mKy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="m4u-vA-2vr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5ij-Lk-mKy" secondAttribute="trailing" constant="-20" id="my2-KO-4Um"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="5ij-Lk-mKy" id="2x5-9n-jtc"/>
+                        <outlet property="segmentCtrl" destination="x99-YF-sqk" id="gQM-ia-B6Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>

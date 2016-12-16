@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GbZ-PY-Ch0" customClass="NMAMapView">
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="D83-sg-wU2">
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <segments>
+                                            <segment title="URL Raster Tile"/>
+                                            <segment title="Image Raster Tile"/>
+                                        </segments>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="segmentedCtrlValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="NC7-Fd-dqL"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="D83-sg-wU2" firstAttribute="leading" secondItem="GbZ-PY-Ch0" secondAttribute="leading" constant="50" id="8d0-Wf-cOc"/>
+                                    <constraint firstAttribute="trailing" secondItem="D83-sg-wU2" secondAttribute="trailing" constant="50" id="r3J-aS-r4i"/>
+                                    <constraint firstItem="D83-sg-wU2" firstAttribute="top" secondItem="GbZ-PY-Ch0" secondAttribute="top" constant="36" id="yVA-hb-ABv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GbZ-PY-Ch0" secondAttribute="bottom" id="18g-y7-cF4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GbZ-PY-Ch0" secondAttribute="trailing" constant="-20" id="FNs-Nc-PfV"/>
+                            <constraint firstItem="GbZ-PY-Ch0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="fe0-tT-LjZ"/>
+                            <constraint firstItem="GbZ-PY-Ch0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="poZ-G8-OF7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="GbZ-PY-Ch0" id="zO9-9d-SU8"/>
+                        <outlet property="segmentedCtrl" destination="D83-sg-wU2" id="tT4-dB-9mz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
