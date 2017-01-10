@@ -14,8 +14,6 @@
 		5F4368631D2F07F100E607A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F4368621D2F07F100E607A3 /* Assets.xcassets */; };
 		5F4368661D2F07F100E607A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F4368641D2F07F100E607A3 /* LaunchScreen.storyboard */; };
 		5F554CA71D94A4ED00E6D7D3 /* cafe.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F554CA61D94A4ED00E6D7D3 /* cafe.png */; };
-		5F5DD5161D2F141600D78ADA /* NMAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F5DD5151D2F141600D78ADA /* NMAKit.framework */; };
-		5F5DD5171D2F141600D78ADA /* NMAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F5DD5151D2F141600D78ADA /* NMAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +23,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5F5DD5171D2F141600D78ADA /* NMAKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,7 +41,6 @@
 		5F4368651D2F07F100E607A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F4368671D2F07F100E607A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F554CA61D94A4ED00E6D7D3 /* cafe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cafe.png; sourceTree = "<group>"; };
-		5F5DD5151D2F141600D78ADA /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMAKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F5DD5161D2F141600D78ADA /* NMAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +57,6 @@
 		5F43684A1D2F07F100E607A3 = {
 			isa = PBXGroup;
 			children = (
-				5F4368711D2F0B3C00E607A3 /* Frameworks */,
 				5F4368551D2F07F100E607A3 /* MapObjectsApp */,
 				5F4368541D2F07F100E607A3 /* Products */,
 			);
@@ -99,14 +93,6 @@
 				5F4368571D2F07F100E607A3 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5F4368711D2F0B3C00E607A3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5F5DD5151D2F141600D78ADA /* NMAKit.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		5F5DD5181D2F1CA600D78ADA /* images */ = {

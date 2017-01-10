@@ -13,8 +13,6 @@
 		4B2C3EF01DAE91C500990836 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C3EEE1DAE91C500990836 /* Main.storyboard */; };
 		4B2C3EF21DAE91C500990836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C3EF11DAE91C500990836 /* Assets.xcassets */; };
 		4B2C3EF51DAE91C500990836 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C3EF31DAE91C500990836 /* LaunchScreen.storyboard */; };
-		4B2C3EFF1DAE96A300990836 /* NMAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2C3EFD1DAE954A00990836 /* NMAKit.framework */; };
-		4B2C3F001DAE96A300990836 /* NMAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2C3EFD1DAE954A00990836 /* NMAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +22,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4B2C3F001DAE96A300990836 /* NMAKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,7 +39,6 @@
 		4B2C3EF11DAE91C500990836 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B2C3EF41DAE91C500990836 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B2C3EF61DAE91C500990836 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4B2C3EFD1DAE954A00990836 /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMAKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +46,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B2C3EFF1DAE96A300990836 /* NMAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +55,6 @@
 		4B2C3ED91DAE91C400990836 = {
 			isa = PBXGroup;
 			children = (
-				4B2C3EFC1DAE953300990836 /* Frameworks */,
 				4B2C3EE41DAE91C500990836 /* GeocoderRevGeocoderApp */,
 				4B2C3EE31DAE91C500990836 /* Products */,
 			);
@@ -96,14 +90,6 @@
 				4B2C3EE61DAE91C500990836 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4B2C3EFC1DAE953300990836 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4B2C3EFD1DAE954A00990836 /* NMAKit.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

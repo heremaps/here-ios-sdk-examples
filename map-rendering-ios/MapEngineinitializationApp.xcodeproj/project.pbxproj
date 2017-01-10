@@ -13,8 +13,6 @@
 		5F22EE1C1CEE8A4A002F4B5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F22EE1A1CEE8A4A002F4B5E /* Main.storyboard */; };
 		5F22EE1E1CEE8A4A002F4B5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F22EE1D1CEE8A4A002F4B5E /* Assets.xcassets */; };
 		5F22EE211CEE8A4A002F4B5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F22EE1F1CEE8A4A002F4B5E /* LaunchScreen.storyboard */; };
-		5F8F96431D10BC7F00DBE6CD /* NMAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8F96401D10BC7900DBE6CD /* NMAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F8F96441D10BC8400DBE6CD /* NMAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8F96401D10BC7900DBE6CD /* NMAKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +22,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5F8F96431D10BC7F00DBE6CD /* NMAKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,7 +39,6 @@
 		5F22EE1D1CEE8A4A002F4B5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F22EE201CEE8A4A002F4B5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F22EE221CEE8A4A002F4B5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5F8F96401D10BC7900DBE6CD /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMAKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +46,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F8F96441D10BC8400DBE6CD /* NMAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +55,6 @@
 		5F22EE051CEE8A4A002F4B5E = {
 			isa = PBXGroup;
 			children = (
-				5F22EE2C1CEE8EC9002F4B5E /* Frameworks */,
 				5F22EE101CEE8A4A002F4B5E /* MapEngineinitializationApp */,
 				5F22EE0F1CEE8A4A002F4B5E /* Products */,
 			);
@@ -96,14 +90,6 @@
 				5F22EE121CEE8A4A002F4B5E /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5F22EE2C1CEE8EC9002F4B5E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5F8F96401D10BC7900DBE6CD /* NMAKit.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

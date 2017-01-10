@@ -12,8 +12,6 @@
 		4B561B391D88A4F100CF60C4 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B561B381D88A4F100CF60C4 /* MapViewController.m */; };
 		4B561B3C1D88A4F100CF60C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B561B3A1D88A4F100CF60C4 /* Main.storyboard */; };
 		4B561B3E1D88A4F100CF60C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B561B3D1D88A4F100CF60C4 /* Assets.xcassets */; };
-		4B656BE71D89F24C0047AAD6 /* NMAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B561B491D88A5FF00CF60C4 /* NMAKit.framework */; };
-		4B656BE81D89F24C0047AAD6 /* NMAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B561B491D88A5FF00CF60C4 /* NMAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +21,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4B656BE81D89F24C0047AAD6 /* NMAKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -40,7 +37,6 @@
 		4B561B3B1D88A4F100CF60C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B561B3D1D88A4F100CF60C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B561B421D88A4F100CF60C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4B561B491D88A5FF00CF60C4 /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMAKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +44,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B656BE71D89F24C0047AAD6 /* NMAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +53,6 @@
 		4B561B251D88A4F100CF60C4 = {
 			isa = PBXGroup;
 			children = (
-				4B561B481D88A5DE00CF60C4 /* Frameworks */,
 				4B561B301D88A4F100CF60C4 /* GuidanceApp */,
 				4B561B2F1D88A4F100CF60C4 /* Products */,
 			);
@@ -93,14 +87,6 @@
 				4B561B321D88A4F100CF60C4 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4B561B481D88A5DE00CF60C4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4B561B491D88A5FF00CF60C4 /* NMAKit.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
