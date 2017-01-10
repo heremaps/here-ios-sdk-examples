@@ -13,26 +13,10 @@
 		5FE88F521DB5567A00C6C3BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FE88F501DB5567A00C6C3BB /* Main.storyboard */; };
 		5FE88F541DB5567A00C6C3BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FE88F531DB5567A00C6C3BB /* Assets.xcassets */; };
 		5FE88F571DB5567A00C6C3BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FE88F551DB5567A00C6C3BB /* LaunchScreen.storyboard */; };
-		5FE88F601DB5690E00C6C3BB /* NMAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FE88F5F1DB5690E00C6C3BB /* NMAKit.framework */; };
-		5FE88F631DB5691700C6C3BB /* NMAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5FE88F611DB5691700C6C3BB /* NMAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5FE88F671DB573F500C6C3BB /* URLTileSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE88F661DB573F500C6C3BB /* URLTileSource.m */; };
 		5FE88F6A1DB5774700C6C3BB /* ImageTileSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE88F691DB5774700C6C3BB /* ImageTileSource.m */; };
 		5FFDDB741DB57D860000D8A7 /* panda.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FFDDB731DB57D860000D8A7 /* panda.png */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		5FE88F641DB5691700C6C3BB /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				5FE88F631DB5691700C6C3BB /* NMAKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5FE88F441DB5567A00C6C3BB /* MapRasterTiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapRasterTiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,8 +29,6 @@
 		5FE88F531DB5567A00C6C3BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FE88F561DB5567A00C6C3BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FE88F581DB5567A00C6C3BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5FE88F5F1DB5690E00C6C3BB /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMAKit.framework; sourceTree = "<group>"; };
-		5FE88F611DB5691700C6C3BB /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMAKit.framework; path = /Users/wenwenchu/MSDKQA/SampleApp/iOS/MapRasterTiles/NMAKit.framework; sourceTree = "<absolute>"; };
 		5FE88F651DB573F500C6C3BB /* URLTileSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLTileSource.h; sourceTree = "<group>"; };
 		5FE88F661DB573F500C6C3BB /* URLTileSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLTileSource.m; sourceTree = "<group>"; };
 		5FE88F681DB5774700C6C3BB /* ImageTileSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTileSource.h; sourceTree = "<group>"; };
@@ -59,7 +41,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FE88F601DB5690E00C6C3BB /* NMAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +50,6 @@
 		5FE88F3B1DB5567A00C6C3BB = {
 			isa = PBXGroup;
 			children = (
-				5FE88F5E1DB568F500C6C3BB /* Framework */,
 				5FE88F461DB5567A00C6C3BB /* MapRasterTiles */,
 				5FE88F451DB5567A00C6C3BB /* Products */,
 			);
@@ -112,14 +92,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5FE88F5E1DB568F500C6C3BB /* Framework */ = {
-			isa = PBXGroup;
-			children = (
-				5FE88F5F1DB5690E00C6C3BB /* NMAKit.framework */,
-			);
-			name = Framework;
-			sourceTree = "<group>";
-		};
 		5FFDDB721DB57D170000D8A7 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +110,6 @@
 				5FE88F401DB5567A00C6C3BB /* Sources */,
 				5FE88F411DB5567A00C6C3BB /* Frameworks */,
 				5FE88F421DB5567A00C6C3BB /* Resources */,
-				5FE88F641DB5691700C6C3BB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
