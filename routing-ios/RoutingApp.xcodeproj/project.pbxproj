@@ -12,8 +12,6 @@
 		4BC9B19B1D7A400B0009B634 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9B19A1D7A400B0009B634 /* MapViewController.m */; };
 		4BC9B19E1D7A400B0009B634 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BC9B19C1D7A400B0009B634 /* Main.storyboard */; };
 		4BC9B1A01D7A400B0009B634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BC9B19F1D7A400B0009B634 /* Assets.xcassets */; };
-		4BC9B2711D7F70440009B634 /* NMAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC9B2701D7F70440009B634 /* NMAKit.framework */; };
-		4BC9B2751D7F73640009B634 /* NMAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC9B2701D7F70440009B634 /* NMAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +38,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4BC9B2751D7F73640009B634 /* NMAKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,7 +56,6 @@
 		4BC9B1A41D7A400B0009B634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BC9B1A91D7A400B0009B634 /* RoutingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoutingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BC9B1B41D7A400B0009B634 /* RoutingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoutingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BC9B2701D7F70440009B634 /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMAKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BC9B2711D7F70440009B634 /* NMAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +86,6 @@
 		4BC9B1871D7A400B0009B634 = {
 			isa = PBXGroup;
 			children = (
-				4BC9B22B1D7F655B0009B634 /* Frameworks */,
 				4BC9B1921D7A400B0009B634 /* RoutingApp */,
 				4BC9B1911D7A400B0009B634 /* Products */,
 			);
@@ -128,14 +122,6 @@
 				4BC9B1941D7A400B0009B634 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4BC9B22B1D7F655B0009B634 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4BC9B2701D7F70440009B634 /* NMAKit.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

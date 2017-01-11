@@ -15,8 +15,6 @@
 		5FDB346B1D3D969600330FC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FDB34691D3D969600330FC1 /* Main.storyboard */; };
 		5FDB346D1D3D969600330FC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FDB346C1D3D969600330FC1 /* Assets.xcassets */; };
 		5FDB34701D3D969600330FC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FDB346E1D3D969600330FC1 /* LaunchScreen.storyboard */; };
-		5FDB347A1D3D9BE100330FC1 /* NMAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FDB34791D3D9BE100330FC1 /* NMAKit.framework */; };
-		5FDB347B1D3D9BE100330FC1 /* NMAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5FDB34791D3D9BE100330FC1 /* NMAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5FDB347F1D3DA29800330FC1 /* tab_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FDB347E1D3DA29800330FC1 /* tab_list.png */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +25,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5FDB347B1D3D9BE100330FC1 /* NMAKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,7 +44,6 @@
 		5FDB346C1D3D969600330FC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FDB346F1D3D969600330FC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FDB34711D3D969600330FC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5FDB34791D3D9BE100330FC1 /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMAKit.framework; sourceTree = "<group>"; };
 		5FDB347E1D3DA29800330FC1 /* tab_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_list.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +52,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FDB347A1D3D9BE100330FC1 /* NMAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +61,6 @@
 		5FDB34541D3D969600330FC1 = {
 			isa = PBXGroup;
 			children = (
-				5FDB34791D3D9BE100330FC1 /* NMAKit.framework */,
 				5FDB345F1D3D969600330FC1 /* MapGesturesApp */,
 				5FDB345E1D3D969600330FC1 /* Products */,
 			);

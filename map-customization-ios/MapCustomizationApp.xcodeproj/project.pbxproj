@@ -13,8 +13,6 @@
 		5F554CDC1D9B0F1900E6D7D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F554CDA1D9B0F1900E6D7D3 /* Main.storyboard */; };
 		5F554CDE1D9B0F1900E6D7D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F554CDD1D9B0F1900E6D7D3 /* Assets.xcassets */; };
 		5F554CE11D9B0F1900E6D7D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F554CDF1D9B0F1900E6D7D3 /* LaunchScreen.storyboard */; };
-		5F554CF01D9EDBF400E6D7D3 /* NMAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F554CEF1D9EDBF400E6D7D3 /* NMAKit.framework */; };
-		5F554CF11D9EDBF400E6D7D3 /* NMAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F554CEF1D9EDBF400E6D7D3 /* NMAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +22,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5F554CF11D9EDBF400E6D7D3 /* NMAKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,7 +39,6 @@
 		5F554CDD1D9B0F1900E6D7D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F554CE01D9B0F1900E6D7D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F554CE21D9B0F1900E6D7D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5F554CEF1D9EDBF400E6D7D3 /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMAKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +46,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F554CF01D9EDBF400E6D7D3 /* NMAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +55,6 @@
 		5F554CC51D9B0F1900E6D7D3 = {
 			isa = PBXGroup;
 			children = (
-				5F554CEE1D9EDB9800E6D7D3 /* Frameworks */,
 				5F554CD01D9B0F1900E6D7D3 /* MapCustomizationApp */,
 				5F554CCF1D9B0F1900E6D7D3 /* Products */,
 			);
@@ -96,14 +90,6 @@
 				5F554CD21D9B0F1900E6D7D3 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5F554CEE1D9EDB9800E6D7D3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5F554CEF1D9EDBF400E6D7D3 /* NMAKit.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

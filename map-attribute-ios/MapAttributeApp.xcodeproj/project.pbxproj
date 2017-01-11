@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5F8F96381D10B06300DBE6CD /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F96371D10B06300DBE6CD /* SettingsViewController.m */; };
-		5F8F963E1D10BC3D00DBE6CD /* NMAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8F963B1D10BC2600DBE6CD /* NMAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F8F963F1D10BC4400DBE6CD /* NMAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8F963B1D10BC2600DBE6CD /* NMAKit.framework */; };
 		5FD23E221CFF9B4200F21EA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD23E211CFF9B4200F21EA3 /* main.m */; };
 		5FD23E251CFF9B4200F21EA3 /* DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD23E241CFF9B4200F21EA3 /* DemoAppDelegate.m */; };
 		5FD23E281CFF9B4200F21EA3 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD23E271CFF9B4200F21EA3 /* MapViewController.m */; };
@@ -26,7 +24,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5F8F963E1D10BC3D00DBE6CD /* NMAKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,7 +33,6 @@
 /* Begin PBXFileReference section */
 		5F8F96361D10B06300DBE6CD /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		5F8F96371D10B06300DBE6CD /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		5F8F963B1D10BC2600DBE6CD /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMAKit.framework; sourceTree = "<group>"; };
 		5FD23E1D1CFF9B4100F21EA3 /* MapAttributeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapAttributeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FD23E211CFF9B4200F21EA3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5FD23E231CFF9B4200F21EA3 /* DemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoAppDelegate.h; sourceTree = "<group>"; };
@@ -55,7 +51,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F8F963F1D10BC4400DBE6CD /* NMAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +60,6 @@
 		5FD23E141CFF9B4100F21EA3 = {
 			isa = PBXGroup;
 			children = (
-				5FD23E371CFF9B7600F21EA3 /* Frameworks */,
 				5FD23E1F1CFF9B4200F21EA3 /* MapAttributeApp */,
 				5FD23E1E1CFF9B4100F21EA3 /* Products */,
 			);
@@ -104,14 +98,6 @@
 				5FD23E211CFF9B4200F21EA3 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5FD23E371CFF9B7600F21EA3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5F8F963B1D10BC2600DBE6CD /* NMAKit.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		5FD23E8E1D00EA3300F21EA3 /* images */ = {
