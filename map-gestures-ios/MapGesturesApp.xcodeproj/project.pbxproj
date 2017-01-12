@@ -283,6 +283,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = MapGesturesApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.MapGestures;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,6 +300,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = MapGesturesApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.MapGestures;
 				PRODUCT_NAME = "$(TARGET_NAME)";
