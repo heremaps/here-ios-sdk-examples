@@ -3,17 +3,17 @@
  * All rights reserved.
  */
 
-#import "MapViewController.h"
+#import "MainViewController.h"
 #import <NMAKit/NMAKit.h>
 
-@interface MapViewController ()
+@interface MainViewController ()
 @property (weak, nonatomic) IBOutlet NMAMapView* mapView;
 @property (weak, nonatomic) IBOutlet UIButton* createRouteButton;
 @property (nonatomic) NMACoreRouter* router;
 @property (nonatomic) NMAMapRoute* mapRoute;
 @end
 
-@implementation MapViewController
+@implementation MainViewController
 
 - (void)viewDidLoad
 {

@@ -3,15 +3,15 @@
  * All rights reserved.
  */
 
-#import "MapViewController.h"
+#import "MainViewController.h"
 #import "SettingsViewController.h"
 #import <NMAKit/NMAKit.h>
 
-@interface MapViewController () <SettingsViewControllerDelegate>
+@interface MainViewController () <SettingsViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet NMAMapView* mapView;
 @end
 
-@implementation MapViewController
+@implementation MainViewController
 
 - (void)viewDidLoad
 {

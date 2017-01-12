@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4BE47DD21D94982100AEF78F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE47DD11D94982100AEF78F /* main.m */; };
-		4BE47DD51D94982100AEF78F /* DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE47DD41D94982100AEF78F /* DemoAppDelegate.m */; };
-		4BE47DD81D94982100AEF78F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE47DD71D94982100AEF78F /* MapViewController.m */; };
+		4BE47DD51D94982100AEF78F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE47DD41D94982100AEF78F /* AppDelegate.m */; };
+		4BE47DD81D94982100AEF78F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE47DD71D94982100AEF78F /* MainViewController.m */; };
 		4BE47DDB1D94982100AEF78F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE47DD91D94982100AEF78F /* Main.storyboard */; };
 		4BE47DDD1D94982100AEF78F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BE47DDC1D94982100AEF78F /* Assets.xcassets */; };
 		4BE47DE01D94982100AEF78F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE47DDE1D94982100AEF78F /* LaunchScreen.storyboard */; };
@@ -19,26 +19,13 @@
 		4BE47DFC1D9C4C6000AEF78F /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE47DFB1D9C4C6000AEF78F /* Helper.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		4BE47DEC1D9498DC00AEF78F /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		4BE47DCD1D94982100AEF78F /* SearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B9501F21E27033E00BD6DC0 /* SearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE47DD11D94982100AEF78F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4BE47DD31D94982100AEF78F /* DemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoAppDelegate.h; sourceTree = "<group>"; };
-		4BE47DD41D94982100AEF78F /* DemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoAppDelegate.m; sourceTree = "<group>"; };
-		4BE47DD61D94982100AEF78F /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		4BE47DD71D94982100AEF78F /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		4BE47DD31D94982100AEF78F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4BE47DD41D94982100AEF78F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4BE47DD61D94982100AEF78F /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		4BE47DD71D94982100AEF78F /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		4BE47DDA1D94982100AEF78F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BE47DDC1D94982100AEF78F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BE47DDF1D94982100AEF78F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,25 +55,17 @@
 			children = (
 				4BE47DED1D99A09700AEF78F /* Resources */,
 				4BE47DCF1D94982100AEF78F /* SearchApp */,
-				4BE47DCE1D94982100AEF78F /* Products */,
+				4B9501F21E27033E00BD6DC0 /* SearchApp.app */,
 			);
-			sourceTree = "<group>";
-		};
-		4BE47DCE1D94982100AEF78F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4BE47DCD1D94982100AEF78F /* SearchApp.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		4BE47DCF1D94982100AEF78F /* SearchApp */ = {
 			isa = PBXGroup;
 			children = (
-				4BE47DD31D94982100AEF78F /* DemoAppDelegate.h */,
-				4BE47DD41D94982100AEF78F /* DemoAppDelegate.m */,
-				4BE47DD61D94982100AEF78F /* MapViewController.h */,
-				4BE47DD71D94982100AEF78F /* MapViewController.m */,
+				4BE47DD31D94982100AEF78F /* AppDelegate.h */,
+				4BE47DD41D94982100AEF78F /* AppDelegate.m */,
+				4BE47DD61D94982100AEF78F /* MainViewController.h */,
+				4BE47DD71D94982100AEF78F /* MainViewController.m */,
 				4BE47DF61D99CAD000AEF78F /* ResultTableViewController.h */,
 				4BE47DF41D99CAA600AEF78F /* ResultTableViewController.m */,
 				4BE47DF71D9AEADE00AEF78F /* PlaceDetailViewController.h */,
@@ -128,7 +107,6 @@
 				4BE47DC91D94982100AEF78F /* Sources */,
 				4BE47DCA1D94982100AEF78F /* Frameworks */,
 				4BE47DCB1D94982100AEF78F /* Resources */,
-				4BE47DEC1D9498DC00AEF78F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,7 +114,7 @@
 			);
 			name = SearchApp;
 			productName = SearchApp;
-			productReference = 4BE47DCD1D94982100AEF78F /* SearchApp.app */;
+			productReference = 4B9501F21E27033E00BD6DC0 /* SearchApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -163,7 +141,7 @@
 				Base,
 			);
 			mainGroup = 4BE47DC41D94982100AEF78F;
-			productRefGroup = 4BE47DCE1D94982100AEF78F /* Products */;
+			productRefGroup = 4BE47DC41D94982100AEF78F;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -193,8 +171,8 @@
 			files = (
 				4BE47DF51D99CAA600AEF78F /* ResultTableViewController.m in Sources */,
 				4BE47DFC1D9C4C6000AEF78F /* Helper.m in Sources */,
-				4BE47DD81D94982100AEF78F /* MapViewController.m in Sources */,
-				4BE47DD51D94982100AEF78F /* DemoAppDelegate.m in Sources */,
+				4BE47DD81D94982100AEF78F /* MainViewController.m in Sources */,
+				4BE47DD51D94982100AEF78F /* AppDelegate.m in Sources */,
 				4BE47DD21D94982100AEF78F /* main.m in Sources */,
 				4BE47DF91D9AEAF300AEF78F /* PlaceDetailViewController.m in Sources */,
 			);

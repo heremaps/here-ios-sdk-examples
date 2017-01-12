@@ -9,33 +9,20 @@
 /* Begin PBXBuildFile section */
 		5F4368581D2F07F100E607A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4368571D2F07F100E607A3 /* main.m */; };
 		5F43685B1D2F07F100E607A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F43685A1D2F07F100E607A3 /* AppDelegate.m */; };
-		5F43685E1D2F07F100E607A3 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F43685D1D2F07F100E607A3 /* MapViewController.m */; };
+		5F43685E1D2F07F100E607A3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F43685D1D2F07F100E607A3 /* MainViewController.m */; };
 		5F4368611D2F07F100E607A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F43685F1D2F07F100E607A3 /* Main.storyboard */; };
 		5F4368631D2F07F100E607A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F4368621D2F07F100E607A3 /* Assets.xcassets */; };
 		5F4368661D2F07F100E607A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F4368641D2F07F100E607A3 /* LaunchScreen.storyboard */; };
 		5F554CA71D94A4ED00E6D7D3 /* cafe.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F554CA61D94A4ED00E6D7D3 /* cafe.png */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		5F4368701D2F0B1600E607A3 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		5F4368531D2F07F100E607A3 /* MapObjectsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapObjectsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BC40D641E27057A00232ACD /* MapObjectsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapObjectsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F4368571D2F07F100E607A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5F4368591D2F07F100E607A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5F43685A1D2F07F100E607A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5F43685C1D2F07F100E607A3 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		5F43685D1D2F07F100E607A3 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		5F43685C1D2F07F100E607A3 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		5F43685D1D2F07F100E607A3 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		5F4368601D2F07F100E607A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F4368621D2F07F100E607A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F4368651D2F07F100E607A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,16 +45,8 @@
 			isa = PBXGroup;
 			children = (
 				5F4368551D2F07F100E607A3 /* MapObjectsApp */,
-				5F4368541D2F07F100E607A3 /* Products */,
+				4BC40D641E27057A00232ACD /* MapObjectsApp.app */,
 			);
-			sourceTree = "<group>";
-		};
-		5F4368541D2F07F100E607A3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5F4368531D2F07F100E607A3 /* MapObjectsApp.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		5F4368551D2F07F100E607A3 /* MapObjectsApp */ = {
@@ -76,8 +55,8 @@
 				5F5DD5181D2F1CA600D78ADA /* images */,
 				5F4368591D2F07F100E607A3 /* AppDelegate.h */,
 				5F43685A1D2F07F100E607A3 /* AppDelegate.m */,
-				5F43685C1D2F07F100E607A3 /* MapViewController.h */,
-				5F43685D1D2F07F100E607A3 /* MapViewController.m */,
+				5F43685C1D2F07F100E607A3 /* MainViewController.h */,
+				5F43685D1D2F07F100E607A3 /* MainViewController.m */,
 				5F43685F1D2F07F100E607A3 /* Main.storyboard */,
 				5F4368621D2F07F100E607A3 /* Assets.xcassets */,
 				5F4368641D2F07F100E607A3 /* LaunchScreen.storyboard */,
@@ -113,7 +92,6 @@
 				5F43684F1D2F07F100E607A3 /* Sources */,
 				5F4368501D2F07F100E607A3 /* Frameworks */,
 				5F4368511D2F07F100E607A3 /* Resources */,
-				5F4368701D2F0B1600E607A3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -121,7 +99,7 @@
 			);
 			name = MapObjectsApp;
 			productName = MapObjectsApp;
-			productReference = 5F4368531D2F07F100E607A3 /* MapObjectsApp.app */;
+			productReference = 4BC40D641E27057A00232ACD /* MapObjectsApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -147,7 +125,7 @@
 				Base,
 			);
 			mainGroup = 5F43684A1D2F07F100E607A3;
-			productRefGroup = 5F4368541D2F07F100E607A3 /* Products */;
+			productRefGroup = 5F43684A1D2F07F100E607A3;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -175,7 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F43685E1D2F07F100E607A3 /* MapViewController.m in Sources */,
+				5F43685E1D2F07F100E607A3 /* MainViewController.m in Sources */,
 				5F43685B1D2F07F100E607A3 /* AppDelegate.m in Sources */,
 				5F4368581D2F07F100E607A3 /* main.m in Sources */,
 			);

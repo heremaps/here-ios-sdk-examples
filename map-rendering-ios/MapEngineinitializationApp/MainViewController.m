@@ -4,15 +4,15 @@
  */
 
 
-#import "MapViewController.h"
+#import "MainViewController.h"
 
-@interface MapViewController ()
+@interface MainViewController ()
 
 @property (weak, nonatomic) IBOutlet NMAMapView *mapView;
 
 @end
 
-@implementation MapViewController
+@implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

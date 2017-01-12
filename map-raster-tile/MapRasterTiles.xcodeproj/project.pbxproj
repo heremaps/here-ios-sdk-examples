@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5FE88F491DB5567A00C6C3BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE88F481DB5567A00C6C3BB /* main.m */; };
 		5FE88F4C1DB5567A00C6C3BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE88F4B1DB5567A00C6C3BB /* AppDelegate.m */; };
-		5FE88F4F1DB5567A00C6C3BB /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE88F4E1DB5567A00C6C3BB /* MapViewController.m */; };
+		5FE88F4F1DB5567A00C6C3BB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE88F4E1DB5567A00C6C3BB /* MainViewController.m */; };
 		5FE88F521DB5567A00C6C3BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FE88F501DB5567A00C6C3BB /* Main.storyboard */; };
 		5FE88F541DB5567A00C6C3BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FE88F531DB5567A00C6C3BB /* Assets.xcassets */; };
 		5FE88F571DB5567A00C6C3BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FE88F551DB5567A00C6C3BB /* LaunchScreen.storyboard */; };
@@ -19,12 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5FE88F441DB5567A00C6C3BB /* MapRasterTiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapRasterTiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BFB69FB1E2706150004DD36 /* MapRasterTiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapRasterTiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FE88F481DB5567A00C6C3BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5FE88F4A1DB5567A00C6C3BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5FE88F4B1DB5567A00C6C3BB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5FE88F4D1DB5567A00C6C3BB /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		5FE88F4E1DB5567A00C6C3BB /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		5FE88F4D1DB5567A00C6C3BB /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		5FE88F4E1DB5567A00C6C3BB /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		5FE88F511DB5567A00C6C3BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5FE88F531DB5567A00C6C3BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FE88F561DB5567A00C6C3BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,16 +51,8 @@
 			isa = PBXGroup;
 			children = (
 				5FE88F461DB5567A00C6C3BB /* MapRasterTiles */,
-				5FE88F451DB5567A00C6C3BB /* Products */,
+				4BFB69FB1E2706150004DD36 /* MapRasterTiles.app */,
 			);
-			sourceTree = "<group>";
-		};
-		5FE88F451DB5567A00C6C3BB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5FE88F441DB5567A00C6C3BB /* MapRasterTiles.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		5FE88F461DB5567A00C6C3BB /* MapRasterTiles */ = {
@@ -73,8 +65,8 @@
 				5FE88F691DB5774700C6C3BB /* ImageTileSource.m */,
 				5FE88F651DB573F500C6C3BB /* URLTileSource.h */,
 				5FE88F661DB573F500C6C3BB /* URLTileSource.m */,
-				5FE88F4D1DB5567A00C6C3BB /* MapViewController.h */,
-				5FE88F4E1DB5567A00C6C3BB /* MapViewController.m */,
+				5FE88F4D1DB5567A00C6C3BB /* MainViewController.h */,
+				5FE88F4E1DB5567A00C6C3BB /* MainViewController.m */,
 				5FE88F501DB5567A00C6C3BB /* Main.storyboard */,
 				5FE88F531DB5567A00C6C3BB /* Assets.xcassets */,
 				5FE88F551DB5567A00C6C3BB /* LaunchScreen.storyboard */,
@@ -117,7 +109,7 @@
 			);
 			name = MapRasterTiles;
 			productName = MapRasterTiles;
-			productReference = 5FE88F441DB5567A00C6C3BB /* MapRasterTiles.app */;
+			productReference = 4BFB69FB1E2706150004DD36 /* MapRasterTiles.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -144,7 +136,7 @@
 				Base,
 			);
 			mainGroup = 5FE88F3B1DB5567A00C6C3BB;
-			productRefGroup = 5FE88F451DB5567A00C6C3BB /* Products */;
+			productRefGroup = 5FE88F3B1DB5567A00C6C3BB;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -172,7 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FE88F4F1DB5567A00C6C3BB /* MapViewController.m in Sources */,
+				5FE88F4F1DB5567A00C6C3BB /* MainViewController.m in Sources */,
 				5FE88F4C1DB5567A00C6C3BB /* AppDelegate.m in Sources */,
 				5FE88F491DB5567A00C6C3BB /* main.m in Sources */,
 				5FE88F671DB573F500C6C3BB /* URLTileSource.m in Sources */,
@@ -300,6 +292,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/MapRasterTiles",
 				);
 				INFOPLIST_FILE = MapRasterTiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -316,6 +309,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/MapRasterTiles",
 				);
 				INFOPLIST_FILE = MapRasterTiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

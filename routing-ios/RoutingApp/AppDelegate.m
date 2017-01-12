@@ -3,7 +3,7 @@
  * All rights reserved.
  */
 
-#import "DemoAppDelegate.h"
+#import "AppDelegate.h"
 #import <NMAKit/NMAKit.h>
 
 // To obtain the application credentials, please register at developer.here.com
@@ -11,7 +11,7 @@ NSString* const kSampleAppID = @"{YOUR_APP_ID}";
 NSString* const kSampleAppCode = @"{YOUR_APP_CODE}";
 NSString* const kSampleMapLicenseKey = @"{YOUR_LICENSE_KEY}";
 
-@implementation DemoAppDelegate
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication*)application
     didFinishLaunchingWithOptions:(NSDictionary*)launchOptions

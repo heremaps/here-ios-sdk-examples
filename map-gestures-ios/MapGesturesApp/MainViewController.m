@@ -3,14 +3,14 @@
  * All rights reserved.
  */
 
-#import "MapViewController.h"
+#import "MainViewController.h"
 
-@interface MapViewController ()
+@interface MainViewController ()
 
 @property (weak, nonatomic) IBOutlet NMAMapView* mapView;
 @end
 
-@implementation MapViewController {
+@implementation MainViewController {
     NMAMapMarker* _gestureMarker;
 }
 

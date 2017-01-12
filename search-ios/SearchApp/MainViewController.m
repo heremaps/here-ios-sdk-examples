@@ -3,14 +3,14 @@
  * All rights reserved.
  */
 
-#import "MapViewController.h"
+#import "MainViewController.h"
 #import "Helper.h"
 #import "ResultTableViewController.h"
 #import <NMAKit/NMAKit.h>
 
 typedef void (^NMARequestCompletionBlock)(NMARequest* request, id data, NSError* error);
 
-@interface MapViewController ()
+@interface MainViewController ()
 @property (weak, nonatomic) IBOutlet NMAMapView* mapView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl* requestControl;
 @property (nonatomic) NSMutableArray* mapObjectsArray;
@@ -20,7 +20,7 @@ typedef void (^NMARequestCompletionBlock)(NMARequest* request, id data, NSError*
 @property (nonatomic, copy) NMARequestCompletionBlock completionBlock;
 @end
 
-@implementation MapViewController
+@implementation MainViewController
 
 - (void)viewDidLoad
 {

@@ -11,35 +11,22 @@
 		5F6A469C1D3EFC3B002E64D9 /* markerIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6A469B1D3EFC3B002E64D9 /* markerIcon.png */; };
 		5FDB34621D3D969600330FC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDB34611D3D969600330FC1 /* main.m */; };
 		5FDB34651D3D969600330FC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDB34641D3D969600330FC1 /* AppDelegate.m */; };
-		5FDB34681D3D969600330FC1 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDB34671D3D969600330FC1 /* MapViewController.m */; };
+		5FDB34681D3D969600330FC1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDB34671D3D969600330FC1 /* MainViewController.m */; };
 		5FDB346B1D3D969600330FC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FDB34691D3D969600330FC1 /* Main.storyboard */; };
 		5FDB346D1D3D969600330FC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FDB346C1D3D969600330FC1 /* Assets.xcassets */; };
 		5FDB34701D3D969600330FC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FDB346E1D3D969600330FC1 /* LaunchScreen.storyboard */; };
 		5FDB347F1D3DA29800330FC1 /* tab_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FDB347E1D3DA29800330FC1 /* tab_list.png */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		5FDB347C1D3D9BE100330FC1 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		4B896C491E270510005E6E49 /* MapGesturesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapGesturesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F185A051D41815300EAB5B2 /* indicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = indicator.png; sourceTree = "<group>"; };
 		5F6A469B1D3EFC3B002E64D9 /* markerIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = markerIcon.png; sourceTree = "<group>"; };
-		5FDB345D1D3D969600330FC1 /* MapGesturesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapGesturesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FDB34611D3D969600330FC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5FDB34631D3D969600330FC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5FDB34641D3D969600330FC1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5FDB34661D3D969600330FC1 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		5FDB34671D3D969600330FC1 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		5FDB34661D3D969600330FC1 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		5FDB34671D3D969600330FC1 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		5FDB346A1D3D969600330FC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5FDB346C1D3D969600330FC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FDB346F1D3D969600330FC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,16 +49,8 @@
 			isa = PBXGroup;
 			children = (
 				5FDB345F1D3D969600330FC1 /* MapGesturesApp */,
-				5FDB345E1D3D969600330FC1 /* Products */,
+				4B896C491E270510005E6E49 /* MapGesturesApp.app */,
 			);
-			sourceTree = "<group>";
-		};
-		5FDB345E1D3D969600330FC1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5FDB345D1D3D969600330FC1 /* MapGesturesApp.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		5FDB345F1D3D969600330FC1 /* MapGesturesApp */ = {
@@ -80,8 +59,8 @@
 				5FDB347D1D3DA25400330FC1 /* images */,
 				5FDB34631D3D969600330FC1 /* AppDelegate.h */,
 				5FDB34641D3D969600330FC1 /* AppDelegate.m */,
-				5FDB34661D3D969600330FC1 /* MapViewController.h */,
-				5FDB34671D3D969600330FC1 /* MapViewController.m */,
+				5FDB34661D3D969600330FC1 /* MainViewController.h */,
+				5FDB34671D3D969600330FC1 /* MainViewController.m */,
 				5FDB34691D3D969600330FC1 /* Main.storyboard */,
 				5FDB346C1D3D969600330FC1 /* Assets.xcassets */,
 				5FDB346E1D3D969600330FC1 /* LaunchScreen.storyboard */,
@@ -119,7 +98,6 @@
 				5FDB34591D3D969600330FC1 /* Sources */,
 				5FDB345A1D3D969600330FC1 /* Frameworks */,
 				5FDB345B1D3D969600330FC1 /* Resources */,
-				5FDB347C1D3D9BE100330FC1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,7 +105,7 @@
 			);
 			name = MapGesturesApp;
 			productName = MapGesturesApp;
-			productReference = 5FDB345D1D3D969600330FC1 /* MapGesturesApp.app */;
+			productReference = 4B896C491E270510005E6E49 /* MapGesturesApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -153,7 +131,7 @@
 				Base,
 			);
 			mainGroup = 5FDB34541D3D969600330FC1;
-			productRefGroup = 5FDB345E1D3D969600330FC1 /* Products */;
+			productRefGroup = 5FDB34541D3D969600330FC1;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -183,7 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FDB34681D3D969600330FC1 /* MapViewController.m in Sources */,
+				5FDB34681D3D969600330FC1 /* MainViewController.m in Sources */,
 				5FDB34651D3D969600330FC1 /* AppDelegate.m in Sources */,
 				5FDB34621D3D969600330FC1 /* main.m in Sources */,
 			);

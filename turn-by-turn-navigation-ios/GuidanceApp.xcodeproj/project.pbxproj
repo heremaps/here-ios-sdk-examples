@@ -8,35 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		4B561B331D88A4F100CF60C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B561B321D88A4F100CF60C4 /* main.m */; };
-		4B561B361D88A4F100CF60C4 /* DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B561B351D88A4F100CF60C4 /* DemoAppDelegate.m */; };
-		4B561B391D88A4F100CF60C4 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B561B381D88A4F100CF60C4 /* MapViewController.m */; };
+		4B561B361D88A4F100CF60C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B561B351D88A4F100CF60C4 /* AppDelegate.m */; };
+		4B561B391D88A4F100CF60C4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B561B381D88A4F100CF60C4 /* MainViewController.m */; };
 		4B561B3C1D88A4F100CF60C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B561B3A1D88A4F100CF60C4 /* Main.storyboard */; };
 		4B561B3E1D88A4F100CF60C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B561B3D1D88A4F100CF60C4 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		4B656BE91D89F24C0047AAD6 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		4B561B2E1D88A4F100CF60C4 /* GuidanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuidanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B561B321D88A4F100CF60C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4B561B341D88A4F100CF60C4 /* DemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoAppDelegate.h; sourceTree = "<group>"; };
-		4B561B351D88A4F100CF60C4 /* DemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoAppDelegate.m; sourceTree = "<group>"; };
-		4B561B371D88A4F100CF60C4 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		4B561B381D88A4F100CF60C4 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		4B561B341D88A4F100CF60C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4B561B351D88A4F100CF60C4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4B561B371D88A4F100CF60C4 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		4B561B381D88A4F100CF60C4 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		4B561B3B1D88A4F100CF60C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B561B3D1D88A4F100CF60C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B561B421D88A4F100CF60C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B8E32811E2707F70009D1A5 /* GuidanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuidanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,25 +41,17 @@
 			isa = PBXGroup;
 			children = (
 				4B561B301D88A4F100CF60C4 /* GuidanceApp */,
-				4B561B2F1D88A4F100CF60C4 /* Products */,
+				4B8E32811E2707F70009D1A5 /* GuidanceApp.app */,
 			);
-			sourceTree = "<group>";
-		};
-		4B561B2F1D88A4F100CF60C4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4B561B2E1D88A4F100CF60C4 /* GuidanceApp.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		4B561B301D88A4F100CF60C4 /* GuidanceApp */ = {
 			isa = PBXGroup;
 			children = (
-				4B561B341D88A4F100CF60C4 /* DemoAppDelegate.h */,
-				4B561B351D88A4F100CF60C4 /* DemoAppDelegate.m */,
-				4B561B371D88A4F100CF60C4 /* MapViewController.h */,
-				4B561B381D88A4F100CF60C4 /* MapViewController.m */,
+				4B561B341D88A4F100CF60C4 /* AppDelegate.h */,
+				4B561B351D88A4F100CF60C4 /* AppDelegate.m */,
+				4B561B371D88A4F100CF60C4 /* MainViewController.h */,
+				4B561B381D88A4F100CF60C4 /* MainViewController.m */,
 				4B561B3A1D88A4F100CF60C4 /* Main.storyboard */,
 				4B561B3D1D88A4F100CF60C4 /* Assets.xcassets */,
 				4B561B421D88A4F100CF60C4 /* Info.plist */,
@@ -99,7 +78,6 @@
 				4B561B2A1D88A4F100CF60C4 /* Sources */,
 				4B561B2B1D88A4F100CF60C4 /* Frameworks */,
 				4B561B2C1D88A4F100CF60C4 /* Resources */,
-				4B656BE91D89F24C0047AAD6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -107,7 +85,7 @@
 			);
 			name = GuidanceApp;
 			productName = GuidanceApp;
-			productReference = 4B561B2E1D88A4F100CF60C4 /* GuidanceApp.app */;
+			productReference = 4B8E32811E2707F70009D1A5 /* GuidanceApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -133,7 +111,7 @@
 				Base,
 			);
 			mainGroup = 4B561B251D88A4F100CF60C4;
-			productRefGroup = 4B561B2F1D88A4F100CF60C4 /* Products */;
+			productRefGroup = 4B561B251D88A4F100CF60C4;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -159,8 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B561B391D88A4F100CF60C4 /* MapViewController.m in Sources */,
-				4B561B361D88A4F100CF60C4 /* DemoAppDelegate.m in Sources */,
+				4B561B391D88A4F100CF60C4 /* MainViewController.m in Sources */,
+				4B561B361D88A4F100CF60C4 /* AppDelegate.m in Sources */,
 				4B561B331D88A4F100CF60C4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

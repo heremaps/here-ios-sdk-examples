@@ -3,11 +3,13 @@
  * All rights reserved.
  */
 
+
 #import <UIKit/UIKit.h>
 
-@interface DemoAppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
 
 @end
 

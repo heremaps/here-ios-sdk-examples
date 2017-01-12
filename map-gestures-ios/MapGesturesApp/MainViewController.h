@@ -5,9 +5,8 @@
 
 
 #import <UIKit/UIKit.h>
-#import <NMAKit/NMAKit.h>
+#import "NMAkit/NMAkit.h"
 
-@interface MapViewController : UIViewController
-
+@interface MainViewController : UIViewController<NMAMapGestureDelegate>
 @end
 
