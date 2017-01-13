@@ -2,16 +2,16 @@
  * Copyright (c) 2011-2017 HERE Europe B.V.
  * All rights reserved.
  */
-#import "MapViewController.h"
+#import "MainViewController.h"
 
 
-@interface MapViewController ()
+@interface MainViewController ()
 @property (weak, nonatomic) IBOutlet NMAMapView* mapView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl* segmentedCtrl;
 
 @end
 
-@implementation MapViewController {
+@implementation MainViewController {
 
     NMAMapPolygon* _geoPolygon;
     NMAMapPolyline* _geoPolyline;

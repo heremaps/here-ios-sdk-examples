@@ -3,10 +3,7 @@
  * All rights reserved.
  */
 
-
 #import <UIKit/UIKit.h>
-#import "NMAkit/NMAkit.h"
+@interface MainViewController : UIViewController
 
-@interface MapViewController : UIViewController<NMAMapGestureDelegate>
 @end
-

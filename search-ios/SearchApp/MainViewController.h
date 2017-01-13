@@ -5,6 +5,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DemoAppDelegate : UIResponder <UIApplicationDelegate>
-@property (nonatomic) UIWindow* window;
+@interface MainViewController : UIViewController
 @end

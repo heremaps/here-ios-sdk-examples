@@ -2,18 +2,18 @@
  * Copyright (c) 2011-2017 HERE Europe B.V.
  * All rights reserved.
  */
-#import "MapViewController.h"
+#import "MainViewController.h"
 #import "ImageTileSource.h"
 #import "URLTileSource.h"
 #import <NMAKit/NMAKit.h>
 
-@interface MapViewController ()
+@interface MainViewController ()
 @property (weak, nonatomic) IBOutlet NMAMapView* mapView;
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl* segmentedCtrl;
 @end
 
-@implementation MapViewController
+@implementation MainViewController
 {
     NMAMapTileLayer* _imageSourceTile;
     NMAMapTileLayer* _urlSourceTile;

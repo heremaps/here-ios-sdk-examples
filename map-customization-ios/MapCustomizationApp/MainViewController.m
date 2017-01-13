@@ -2,12 +2,12 @@
  * Copyright (c) 2011-2017 HERE Europe B.V.
  * All rights reserved.
  */
-#import "ViewController.h"
+#import "MainViewController.h"
 
 NSString* const FloatSchemeName = @"float";
 NSString* const ColorSchemeName = @"color";
 
-@implementation ViewController {
+@implementation MainViewController {
     NMAZoomRange* _zoomRange;
 
 }

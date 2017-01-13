@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4BC9B1951D7A400B0009B634 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9B1941D7A400B0009B634 /* main.m */; };
-		4BC9B1981D7A400B0009B634 /* DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9B1971D7A400B0009B634 /* DemoAppDelegate.m */; };
-		4BC9B19B1D7A400B0009B634 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9B19A1D7A400B0009B634 /* MapViewController.m */; };
+		4BC9B1981D7A400B0009B634 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9B1971D7A400B0009B634 /* AppDelegate.m */; };
+		4BC9B19B1D7A400B0009B634 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9B19A1D7A400B0009B634 /* MainViewController.m */; };
 		4BC9B19E1D7A400B0009B634 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BC9B19C1D7A400B0009B634 /* Main.storyboard */; };
 		4BC9B1A01D7A400B0009B634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BC9B19F1D7A400B0009B634 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -31,31 +31,18 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		4BC9B2761D7F73640009B634 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		4BC9B1901D7A400B0009B634 /* RoutingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoutingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B8E32751E27070D0009D1A5 /* RoutingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoutingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B8E32871E2709B00009D1A5 /* RoutingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoutingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B8E32881E2709B00009D1A5 /* RoutingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoutingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BC9B1941D7A400B0009B634 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4BC9B1961D7A400B0009B634 /* DemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoAppDelegate.h; sourceTree = "<group>"; };
-		4BC9B1971D7A400B0009B634 /* DemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoAppDelegate.m; sourceTree = "<group>"; };
-		4BC9B1991D7A400B0009B634 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		4BC9B19A1D7A400B0009B634 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		4BC9B1961D7A400B0009B634 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4BC9B1971D7A400B0009B634 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4BC9B1991D7A400B0009B634 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		4BC9B19A1D7A400B0009B634 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		4BC9B19D1D7A400B0009B634 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BC9B19F1D7A400B0009B634 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BC9B1A41D7A400B0009B634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4BC9B1A91D7A400B0009B634 /* RoutingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoutingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BC9B1B41D7A400B0009B634 /* RoutingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoutingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,27 +74,19 @@
 			isa = PBXGroup;
 			children = (
 				4BC9B1921D7A400B0009B634 /* RoutingApp */,
-				4BC9B1911D7A400B0009B634 /* Products */,
+				4B8E32751E27070D0009D1A5 /* RoutingApp.app */,
+				4B8E32871E2709B00009D1A5 /* RoutingAppTests.xctest */,
+				4B8E32881E2709B00009D1A5 /* RoutingAppUITests.xctest */,
 			);
-			sourceTree = "<group>";
-		};
-		4BC9B1911D7A400B0009B634 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4BC9B1901D7A400B0009B634 /* RoutingApp.app */,
-				4BC9B1A91D7A400B0009B634 /* RoutingAppTests.xctest */,
-				4BC9B1B41D7A400B0009B634 /* RoutingAppUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		4BC9B1921D7A400B0009B634 /* RoutingApp */ = {
 			isa = PBXGroup;
 			children = (
-				4BC9B1961D7A400B0009B634 /* DemoAppDelegate.h */,
-				4BC9B1971D7A400B0009B634 /* DemoAppDelegate.m */,
-				4BC9B1991D7A400B0009B634 /* MapViewController.h */,
-				4BC9B19A1D7A400B0009B634 /* MapViewController.m */,
+				4BC9B1961D7A400B0009B634 /* AppDelegate.h */,
+				4BC9B1971D7A400B0009B634 /* AppDelegate.m */,
+				4BC9B1991D7A400B0009B634 /* MainViewController.h */,
+				4BC9B19A1D7A400B0009B634 /* MainViewController.m */,
 				4BC9B19C1D7A400B0009B634 /* Main.storyboard */,
 				4BC9B19F1D7A400B0009B634 /* Assets.xcassets */,
 				4BC9B1A41D7A400B0009B634 /* Info.plist */,
@@ -134,7 +113,6 @@
 				4BC9B18C1D7A400B0009B634 /* Sources */,
 				4BC9B18D1D7A400B0009B634 /* Frameworks */,
 				4BC9B18E1D7A400B0009B634 /* Resources */,
-				4BC9B2761D7F73640009B634 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,7 +120,7 @@
 			);
 			name = RoutingApp;
 			productName = RoutingApp;
-			productReference = 4BC9B1901D7A400B0009B634 /* RoutingApp.app */;
+			productReference = 4B8E32751E27070D0009D1A5 /* RoutingApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4BC9B1A81D7A400B0009B634 /* RoutingAppTests */ = {
@@ -160,7 +138,7 @@
 			);
 			name = RoutingAppTests;
 			productName = RoutingAppTests;
-			productReference = 4BC9B1A91D7A400B0009B634 /* RoutingAppTests.xctest */;
+			productReference = 4B8E32871E2709B00009D1A5 /* RoutingAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		4BC9B1B31D7A400B0009B634 /* RoutingAppUITests */ = {
@@ -178,7 +156,7 @@
 			);
 			name = RoutingAppUITests;
 			productName = RoutingAppUITests;
-			productReference = 4BC9B1B41D7A400B0009B634 /* RoutingAppUITests.xctest */;
+			productReference = 4B8E32881E2709B00009D1A5 /* RoutingAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -212,7 +190,7 @@
 				Base,
 			);
 			mainGroup = 4BC9B1871D7A400B0009B634;
-			productRefGroup = 4BC9B1911D7A400B0009B634 /* Products */;
+			productRefGroup = 4BC9B1871D7A400B0009B634;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -254,8 +232,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BC9B19B1D7A400B0009B634 /* MapViewController.m in Sources */,
-				4BC9B1981D7A400B0009B634 /* DemoAppDelegate.m in Sources */,
+				4BC9B19B1D7A400B0009B634 /* MainViewController.m in Sources */,
+				4BC9B1981D7A400B0009B634 /* AppDelegate.m in Sources */,
 				4BC9B1951D7A400B0009B634 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +369,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = RoutingApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -409,6 +388,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = RoutingApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-lc++",

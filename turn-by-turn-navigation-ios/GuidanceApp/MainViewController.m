@@ -3,9 +3,9 @@
  * All rights reserved.
  */
 
-#import "MapViewController.h"
+#import "MainViewController.h"
 
-@interface MapViewController ()
+@interface MainViewController ()
 @property (weak, nonatomic) IBOutlet NMAMapView* mapView;
 @property (weak, nonatomic) IBOutlet UIButton* navigationControlButton;
 @property (nonatomic) NMACoreRouter* router;
@@ -14,7 +14,7 @@
 @property (nonatomic) NMAGeoBoundingBox* geoBoundingBox;
 @end
 
-@implementation MapViewController
+@implementation MainViewController
 
 - (void)viewDidLoad
 {

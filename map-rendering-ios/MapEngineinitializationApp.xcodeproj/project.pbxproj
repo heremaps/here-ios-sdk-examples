@@ -8,33 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		5F22EE131CEE8A4A002F4B5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F22EE121CEE8A4A002F4B5E /* main.m */; };
-		5F22EE161CEE8A4A002F4B5E /* DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F22EE151CEE8A4A002F4B5E /* DemoAppDelegate.m */; };
-		5F22EE191CEE8A4A002F4B5E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F22EE181CEE8A4A002F4B5E /* MapViewController.m */; };
+		5F22EE161CEE8A4A002F4B5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F22EE151CEE8A4A002F4B5E /* AppDelegate.m */; };
+		5F22EE191CEE8A4A002F4B5E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F22EE181CEE8A4A002F4B5E /* MainViewController.m */; };
 		5F22EE1C1CEE8A4A002F4B5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F22EE1A1CEE8A4A002F4B5E /* Main.storyboard */; };
 		5F22EE1E1CEE8A4A002F4B5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F22EE1D1CEE8A4A002F4B5E /* Assets.xcassets */; };
 		5F22EE211CEE8A4A002F4B5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F22EE1F1CEE8A4A002F4B5E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		5F22EE2B1CEE8B14002F4B5E /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		5F22EE0E1CEE8A4A002F4B5E /* MapEngineinitializationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapEngineinitializationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B9501EB1E27019C00BD6DC0 /* MapEngineinitializationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapEngineinitializationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F22EE121CEE8A4A002F4B5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5F22EE141CEE8A4A002F4B5E /* DemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoAppDelegate.h; sourceTree = "<group>"; };
-		5F22EE151CEE8A4A002F4B5E /* DemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoAppDelegate.m; sourceTree = "<group>"; };
-		5F22EE171CEE8A4A002F4B5E /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		5F22EE181CEE8A4A002F4B5E /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		5F22EE141CEE8A4A002F4B5E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5F22EE151CEE8A4A002F4B5E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5F22EE171CEE8A4A002F4B5E /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		5F22EE181CEE8A4A002F4B5E /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		5F22EE1B1CEE8A4A002F4B5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F22EE1D1CEE8A4A002F4B5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F22EE201CEE8A4A002F4B5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,25 +43,17 @@
 			isa = PBXGroup;
 			children = (
 				5F22EE101CEE8A4A002F4B5E /* MapEngineinitializationApp */,
-				5F22EE0F1CEE8A4A002F4B5E /* Products */,
+				4B9501EB1E27019C00BD6DC0 /* MapEngineinitializationApp.app */,
 			);
-			sourceTree = "<group>";
-		};
-		5F22EE0F1CEE8A4A002F4B5E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5F22EE0E1CEE8A4A002F4B5E /* MapEngineinitializationApp.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		5F22EE101CEE8A4A002F4B5E /* MapEngineinitializationApp */ = {
 			isa = PBXGroup;
 			children = (
-				5F22EE141CEE8A4A002F4B5E /* DemoAppDelegate.h */,
-				5F22EE151CEE8A4A002F4B5E /* DemoAppDelegate.m */,
-				5F22EE171CEE8A4A002F4B5E /* MapViewController.h */,
-				5F22EE181CEE8A4A002F4B5E /* MapViewController.m */,
+				5F22EE141CEE8A4A002F4B5E /* AppDelegate.h */,
+				5F22EE151CEE8A4A002F4B5E /* AppDelegate.m */,
+				5F22EE171CEE8A4A002F4B5E /* MainViewController.h */,
+				5F22EE181CEE8A4A002F4B5E /* MainViewController.m */,
 				5F22EE1A1CEE8A4A002F4B5E /* Main.storyboard */,
 				5F22EE1D1CEE8A4A002F4B5E /* Assets.xcassets */,
 				5F22EE1F1CEE8A4A002F4B5E /* LaunchScreen.storyboard */,
@@ -102,7 +81,6 @@
 				5F22EE0A1CEE8A4A002F4B5E /* Sources */,
 				5F22EE0B1CEE8A4A002F4B5E /* Frameworks */,
 				5F22EE0C1CEE8A4A002F4B5E /* Resources */,
-				5F22EE2B1CEE8B14002F4B5E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -110,7 +88,7 @@
 			);
 			name = MapEngineinitializationApp;
 			productName = MapEngineinitializationApp;
-			productReference = 5F22EE0E1CEE8A4A002F4B5E /* MapEngineinitializationApp.app */;
+			productReference = 4B9501EB1E27019C00BD6DC0 /* MapEngineinitializationApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -136,7 +114,7 @@
 				Base,
 			);
 			mainGroup = 5F22EE051CEE8A4A002F4B5E;
-			productRefGroup = 5F22EE0F1CEE8A4A002F4B5E /* Products */;
+			productRefGroup = 5F22EE051CEE8A4A002F4B5E;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -163,8 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F22EE191CEE8A4A002F4B5E /* MapViewController.m in Sources */,
-				5F22EE161CEE8A4A002F4B5E /* DemoAppDelegate.m in Sources */,
+				5F22EE191CEE8A4A002F4B5E /* MainViewController.m in Sources */,
+				5F22EE161CEE8A4A002F4B5E /* AppDelegate.m in Sources */,
 				5F22EE131CEE8A4A002F4B5E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,7 +206,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -267,7 +245,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -288,6 +266,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/MapEngineinitializationApp",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = MapEngineinitializationApp/Info.plist;
@@ -310,6 +289,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/MapEngineinitializationApp",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = MapEngineinitializationApp/Info.plist;

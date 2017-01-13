@@ -8,31 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		4B2C3EE71DAE91C500990836 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C3EE61DAE91C500990836 /* main.m */; };
-		4B2C3EEA1DAE91C500990836 /* DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C3EE91DAE91C500990836 /* DemoAppDelegate.m */; };
+		4B2C3EEA1DAE91C500990836 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C3EE91DAE91C500990836 /* AppDelegate.m */; };
 		4B2C3EED1DAE91C500990836 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C3EEC1DAE91C500990836 /* MainViewController.m */; };
 		4B2C3EF01DAE91C500990836 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C3EEE1DAE91C500990836 /* Main.storyboard */; };
 		4B2C3EF21DAE91C500990836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C3EF11DAE91C500990836 /* Assets.xcassets */; };
 		4B2C3EF51DAE91C500990836 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C3EF31DAE91C500990836 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		4B2C3F011DAE96A300990836 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		4B2C3EE21DAE91C500990836 /* GeocoderRevGeocoderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeocoderRevGeocoderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B0CDCC91E27036B0064EA7B /* GeocoderRevGeocoderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeocoderRevGeocoderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B2C3EE61DAE91C500990836 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4B2C3EE81DAE91C500990836 /* DemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoAppDelegate.h; sourceTree = "<group>"; };
-		4B2C3EE91DAE91C500990836 /* DemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoAppDelegate.m; sourceTree = "<group>"; };
+		4B2C3EE81DAE91C500990836 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4B2C3EE91DAE91C500990836 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4B2C3EEB1DAE91C500990836 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		4B2C3EEC1DAE91C500990836 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		4B2C3EEF1DAE91C500990836 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,23 +43,15 @@
 			isa = PBXGroup;
 			children = (
 				4B2C3EE41DAE91C500990836 /* GeocoderRevGeocoderApp */,
-				4B2C3EE31DAE91C500990836 /* Products */,
+				4B0CDCC91E27036B0064EA7B /* GeocoderRevGeocoderApp.app */,
 			);
-			sourceTree = "<group>";
-		};
-		4B2C3EE31DAE91C500990836 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4B2C3EE21DAE91C500990836 /* GeocoderRevGeocoderApp.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		4B2C3EE41DAE91C500990836 /* GeocoderRevGeocoderApp */ = {
 			isa = PBXGroup;
 			children = (
-				4B2C3EE81DAE91C500990836 /* DemoAppDelegate.h */,
-				4B2C3EE91DAE91C500990836 /* DemoAppDelegate.m */,
+				4B2C3EE81DAE91C500990836 /* AppDelegate.h */,
+				4B2C3EE91DAE91C500990836 /* AppDelegate.m */,
 				4B2C3EEB1DAE91C500990836 /* MainViewController.h */,
 				4B2C3EEC1DAE91C500990836 /* MainViewController.m */,
 				4B2C3EEE1DAE91C500990836 /* Main.storyboard */,
@@ -102,7 +81,6 @@
 				4B2C3EDE1DAE91C500990836 /* Sources */,
 				4B2C3EDF1DAE91C500990836 /* Frameworks */,
 				4B2C3EE01DAE91C500990836 /* Resources */,
-				4B2C3F011DAE96A300990836 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -110,7 +88,7 @@
 			);
 			name = GeocoderRevGeocoderApp;
 			productName = GeocoderRevGeocoderApp;
-			productReference = 4B2C3EE21DAE91C500990836 /* GeocoderRevGeocoderApp.app */;
+			productReference = 4B0CDCC91E27036B0064EA7B /* GeocoderRevGeocoderApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -136,7 +114,7 @@
 				Base,
 			);
 			mainGroup = 4B2C3ED91DAE91C400990836;
-			productRefGroup = 4B2C3EE31DAE91C500990836 /* Products */;
+			productRefGroup = 4B2C3ED91DAE91C400990836;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -164,7 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B2C3EED1DAE91C500990836 /* MainViewController.m in Sources */,
-				4B2C3EEA1DAE91C500990836 /* DemoAppDelegate.m in Sources */,
+				4B2C3EEA1DAE91C500990836 /* AppDelegate.m in Sources */,
 				4B2C3EE71DAE91C500990836 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

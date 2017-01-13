@@ -9,36 +9,23 @@
 /* Begin PBXBuildFile section */
 		5F8F96381D10B06300DBE6CD /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F96371D10B06300DBE6CD /* SettingsViewController.m */; };
 		5FD23E221CFF9B4200F21EA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD23E211CFF9B4200F21EA3 /* main.m */; };
-		5FD23E251CFF9B4200F21EA3 /* DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD23E241CFF9B4200F21EA3 /* DemoAppDelegate.m */; };
-		5FD23E281CFF9B4200F21EA3 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD23E271CFF9B4200F21EA3 /* MapViewController.m */; };
+		5FD23E251CFF9B4200F21EA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD23E241CFF9B4200F21EA3 /* AppDelegate.m */; };
+		5FD23E281CFF9B4200F21EA3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD23E271CFF9B4200F21EA3 /* MainViewController.m */; };
 		5FD23E2B1CFF9B4200F21EA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD23E291CFF9B4200F21EA3 /* Main.storyboard */; };
 		5FD23E2D1CFF9B4200F21EA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FD23E2C1CFF9B4200F21EA3 /* Assets.xcassets */; };
 		5FD23E301CFF9B4200F21EA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD23E2E1CFF9B4200F21EA3 /* LaunchScreen.storyboard */; };
 		5FD23E901D00EA4400F21EA3 /* tab_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FD23E8F1D00EA4400F21EA3 /* tab_list.png */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		5FD23E3C1CFF9BAD00F21EA3 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		4B0CDCCF1E27044C0064EA7B /* MapAttributeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapAttributeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8F96361D10B06300DBE6CD /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		5F8F96371D10B06300DBE6CD /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		5FD23E1D1CFF9B4100F21EA3 /* MapAttributeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapAttributeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FD23E211CFF9B4200F21EA3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5FD23E231CFF9B4200F21EA3 /* DemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoAppDelegate.h; sourceTree = "<group>"; };
-		5FD23E241CFF9B4200F21EA3 /* DemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoAppDelegate.m; sourceTree = "<group>"; };
-		5FD23E261CFF9B4200F21EA3 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		5FD23E271CFF9B4200F21EA3 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		5FD23E231CFF9B4200F21EA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5FD23E241CFF9B4200F21EA3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5FD23E261CFF9B4200F21EA3 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		5FD23E271CFF9B4200F21EA3 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		5FD23E2A1CFF9B4200F21EA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5FD23E2C1CFF9B4200F21EA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FD23E2F1CFF9B4200F21EA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,26 +48,18 @@
 			isa = PBXGroup;
 			children = (
 				5FD23E1F1CFF9B4200F21EA3 /* MapAttributeApp */,
-				5FD23E1E1CFF9B4100F21EA3 /* Products */,
+				4B0CDCCF1E27044C0064EA7B /* MapAttributeApp.app */,
 			);
-			sourceTree = "<group>";
-		};
-		5FD23E1E1CFF9B4100F21EA3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5FD23E1D1CFF9B4100F21EA3 /* MapAttributeApp.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		5FD23E1F1CFF9B4200F21EA3 /* MapAttributeApp */ = {
 			isa = PBXGroup;
 			children = (
 				5FD23E8E1D00EA3300F21EA3 /* images */,
-				5FD23E231CFF9B4200F21EA3 /* DemoAppDelegate.h */,
-				5FD23E241CFF9B4200F21EA3 /* DemoAppDelegate.m */,
-				5FD23E261CFF9B4200F21EA3 /* MapViewController.h */,
-				5FD23E271CFF9B4200F21EA3 /* MapViewController.m */,
+				5FD23E231CFF9B4200F21EA3 /* AppDelegate.h */,
+				5FD23E241CFF9B4200F21EA3 /* AppDelegate.m */,
+				5FD23E261CFF9B4200F21EA3 /* MainViewController.h */,
+				5FD23E271CFF9B4200F21EA3 /* MainViewController.m */,
 				5F8F96361D10B06300DBE6CD /* SettingsViewController.h */,
 				5F8F96371D10B06300DBE6CD /* SettingsViewController.m */,
 				5FD23E291CFF9B4200F21EA3 /* Main.storyboard */,
@@ -118,7 +97,6 @@
 				5FD23E191CFF9B4100F21EA3 /* Sources */,
 				5FD23E1A1CFF9B4100F21EA3 /* Frameworks */,
 				5FD23E1B1CFF9B4100F21EA3 /* Resources */,
-				5FD23E3C1CFF9BAD00F21EA3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,7 +104,7 @@
 			);
 			name = MapAttributeApp;
 			productName = MapAttributeApp;
-			productReference = 5FD23E1D1CFF9B4100F21EA3 /* MapAttributeApp.app */;
+			productReference = 4B0CDCCF1E27044C0064EA7B /* MapAttributeApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -152,7 +130,7 @@
 				Base,
 			);
 			mainGroup = 5FD23E141CFF9B4100F21EA3;
-			productRefGroup = 5FD23E1E1CFF9B4100F21EA3 /* Products */;
+			productRefGroup = 5FD23E141CFF9B4100F21EA3;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -180,8 +158,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FD23E281CFF9B4200F21EA3 /* MapViewController.m in Sources */,
-				5FD23E251CFF9B4200F21EA3 /* DemoAppDelegate.m in Sources */,
+				5FD23E281CFF9B4200F21EA3 /* MainViewController.m in Sources */,
+				5FD23E251CFF9B4200F21EA3 /* AppDelegate.m in Sources */,
 				5FD23E221CFF9B4200F21EA3 /* main.m in Sources */,
 				5F8F96381D10B06300DBE6CD /* SettingsViewController.m in Sources */,
 			);
@@ -303,8 +281,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/MapAttributeApp",
 				);
 				INFOPLIST_FILE = MapAttributeApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.MapAttribute;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -319,8 +299,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/MapAttributeApp",
 				);
 				INFOPLIST_FILE = MapAttributeApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.MapAttribute;
 				PRODUCT_NAME = "$(TARGET_NAME)";

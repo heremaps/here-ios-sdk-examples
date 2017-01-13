@@ -9,32 +9,19 @@
 /* Begin PBXBuildFile section */
 		5F554CD31D9B0F1900E6D7D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F554CD21D9B0F1900E6D7D3 /* main.m */; };
 		5F554CD61D9B0F1900E6D7D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F554CD51D9B0F1900E6D7D3 /* AppDelegate.m */; };
-		5F554CD91D9B0F1900E6D7D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F554CD81D9B0F1900E6D7D3 /* ViewController.m */; };
+		5F554CD91D9B0F1900E6D7D3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F554CD81D9B0F1900E6D7D3 /* MainViewController.m */; };
 		5F554CDC1D9B0F1900E6D7D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F554CDA1D9B0F1900E6D7D3 /* Main.storyboard */; };
 		5F554CDE1D9B0F1900E6D7D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F554CDD1D9B0F1900E6D7D3 /* Assets.xcassets */; };
 		5F554CE11D9B0F1900E6D7D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F554CDF1D9B0F1900E6D7D3 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		5F554CF21D9EDBF400E6D7D3 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		5F554CCE1D9B0F1900E6D7D3 /* MapCustomizationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapCustomizationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B896C451E2704A2005E6E49 /* MapCustomizationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapCustomizationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F554CD21D9B0F1900E6D7D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5F554CD41D9B0F1900E6D7D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5F554CD51D9B0F1900E6D7D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5F554CD71D9B0F1900E6D7D3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5F554CD81D9B0F1900E6D7D3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5F554CD71D9B0F1900E6D7D3 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		5F554CD81D9B0F1900E6D7D3 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		5F554CDB1D9B0F1900E6D7D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F554CDD1D9B0F1900E6D7D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F554CE01D9B0F1900E6D7D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,16 +43,8 @@
 			isa = PBXGroup;
 			children = (
 				5F554CD01D9B0F1900E6D7D3 /* MapCustomizationApp */,
-				5F554CCF1D9B0F1900E6D7D3 /* Products */,
+				4B896C451E2704A2005E6E49 /* MapCustomizationApp.app */,
 			);
-			sourceTree = "<group>";
-		};
-		5F554CCF1D9B0F1900E6D7D3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5F554CCE1D9B0F1900E6D7D3 /* MapCustomizationApp.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		5F554CD01D9B0F1900E6D7D3 /* MapCustomizationApp */ = {
@@ -73,8 +52,8 @@
 			children = (
 				5F554CD41D9B0F1900E6D7D3 /* AppDelegate.h */,
 				5F554CD51D9B0F1900E6D7D3 /* AppDelegate.m */,
-				5F554CD71D9B0F1900E6D7D3 /* ViewController.h */,
-				5F554CD81D9B0F1900E6D7D3 /* ViewController.m */,
+				5F554CD71D9B0F1900E6D7D3 /* MainViewController.h */,
+				5F554CD81D9B0F1900E6D7D3 /* MainViewController.m */,
 				5F554CDA1D9B0F1900E6D7D3 /* Main.storyboard */,
 				5F554CDD1D9B0F1900E6D7D3 /* Assets.xcassets */,
 				5F554CDF1D9B0F1900E6D7D3 /* LaunchScreen.storyboard */,
@@ -102,7 +81,6 @@
 				5F554CCA1D9B0F1900E6D7D3 /* Sources */,
 				5F554CCB1D9B0F1900E6D7D3 /* Frameworks */,
 				5F554CCC1D9B0F1900E6D7D3 /* Resources */,
-				5F554CF21D9EDBF400E6D7D3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -110,7 +88,7 @@
 			);
 			name = MapCustomizationApp;
 			productName = MapCustomizationApp;
-			productReference = 5F554CCE1D9B0F1900E6D7D3 /* MapCustomizationApp.app */;
+			productReference = 4B896C451E2704A2005E6E49 /* MapCustomizationApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -137,7 +115,7 @@
 				Base,
 			);
 			mainGroup = 5F554CC51D9B0F1900E6D7D3;
-			productRefGroup = 5F554CCF1D9B0F1900E6D7D3 /* Products */;
+			productRefGroup = 5F554CC51D9B0F1900E6D7D3;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -164,7 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F554CD91D9B0F1900E6D7D3 /* ViewController.m in Sources */,
+				5F554CD91D9B0F1900E6D7D3 /* MainViewController.m in Sources */,
 				5F554CD61D9B0F1900E6D7D3 /* AppDelegate.m in Sources */,
 				5F554CD31D9B0F1900E6D7D3 /* main.m in Sources */,
 			);
@@ -290,6 +268,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/MapCustomizationApp",
 				);
 				INFOPLIST_FILE = MapCustomizationApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -306,6 +285,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/MapCustomizationApp",
 				);
 				INFOPLIST_FILE = MapCustomizationApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

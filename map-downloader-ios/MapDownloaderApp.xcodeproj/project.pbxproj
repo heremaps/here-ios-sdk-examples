@@ -34,7 +34,7 @@
 		4B1AF6301DB7F53000ABC855 /* MapPackageTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapPackageTableCell.xib; sourceTree = "<group>"; };
 		4B1AF6341DB7F6B200ABC855 /* MapPackageTableCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPackageTableCellTableViewCell.h; sourceTree = "<group>"; };
 		4B1AF6351DB7F6B200ABC855 /* MapPackageTableCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPackageTableCellTableViewCell.m; sourceTree = "<group>"; };
-		4BF271741DB6E01300E2AD48 /* MapDownloaderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapDownloaderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BF271741DB6E01300E2AD48 /* MapDownloaderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MapDownloaderApp.app; path = "/Users/l7xiang/Desktop/here-ios-sdk-examples/map-downloader-ios/build/Debug-iphoneos/MapDownloaderApp.app"; sourceTree = "<absolute>"; };
 		4BF271781DB6E01400E2AD48 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4BF2717A1DB6E01400E2AD48 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4BF2717B1DB6E01400E2AD48 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,16 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				4BF271761DB6E01300E2AD48 /* MapDownloaderApp */,
-				4BF271751DB6E01300E2AD48 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		4BF271751DB6E01300E2AD48 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4BF271741DB6E01300E2AD48 /* MapDownloaderApp.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		4BF271761DB6E01300E2AD48 /* MapDownloaderApp */ = {
@@ -145,7 +136,7 @@
 				Base,
 			);
 			mainGroup = 4BF2716B1DB6E01300E2AD48;
-			productRefGroup = 4BF271751DB6E01300E2AD48 /* Products */;
+			productRefGroup = 4BF2716B1DB6E01300E2AD48;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
