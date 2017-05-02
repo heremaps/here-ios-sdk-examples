@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C7261901EB8B1F800386A31 /* NMAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C72618F1EB8B1F800386A31 /* NMAKit.framework */; };
+		1C7261911EB8B1F800386A31 /* NMAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C72618F1EB8B1F800386A31 /* NMAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1C7261941EB8B20100386A31 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261931EB8B20100386A31 /* SystemConfiguration.framework */; };
+		1C7261961EB8B20700386A31 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261951EB8B20700386A31 /* GLKit.framework */; };
+		1C7261981EB8B20D00386A31 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261971EB8B20D00386A31 /* libz.1.2.5.tbd */; };
+		1C72619A1EB8B21200386A31 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261991EB8B21200386A31 /* libsqlite3.tbd */; };
+		1C72619C1EB8B21900386A31 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C72619B1EB8B21900386A31 /* libc++.tbd */; };
 		4B1AF6311DB7F53000ABC855 /* MapPackageTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1AF6301DB7F53000ABC855 /* MapPackageTableCell.xib */; };
 		4B1AF6361DB7F6B200ABC855 /* MapPackageTableCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AF6351DB7F6B200ABC855 /* MapPackageTableCellTableViewCell.m */; };
 		4BF271791DB6E01400E2AD48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF271781DB6E01400E2AD48 /* main.m */; };
@@ -24,6 +31,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				1C7261911EB8B1F800386A31 /* NMAKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -31,10 +39,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1C72618E1EB8B1EB00386A31 /* MapDownloaderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapDownloaderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C72618F1EB8B1F800386A31 /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMAKit.framework; sourceTree = "<group>"; };
+		1C7261931EB8B20100386A31 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1C7261951EB8B20700386A31 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		1C7261971EB8B20D00386A31 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		1C7261991EB8B21200386A31 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		1C72619B1EB8B21900386A31 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		4B1AF6301DB7F53000ABC855 /* MapPackageTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapPackageTableCell.xib; sourceTree = "<group>"; };
 		4B1AF6341DB7F6B200ABC855 /* MapPackageTableCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPackageTableCellTableViewCell.h; sourceTree = "<group>"; };
 		4B1AF6351DB7F6B200ABC855 /* MapPackageTableCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPackageTableCellTableViewCell.m; sourceTree = "<group>"; };
-		4BF271741DB6E01300E2AD48 /* MapDownloaderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MapDownloaderApp.app; path = "/Users/l7xiang/Desktop/here-ios-sdk-examples/map-downloader-ios/build/Debug-iphoneos/MapDownloaderApp.app"; sourceTree = "<absolute>"; };
 		4BF271781DB6E01400E2AD48 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4BF2717A1DB6E01400E2AD48 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4BF2717B1DB6E01400E2AD48 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,16 +65,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C72619C1EB8B21900386A31 /* libc++.tbd in Frameworks */,
+				1C72619A1EB8B21200386A31 /* libsqlite3.tbd in Frameworks */,
+				1C7261981EB8B20D00386A31 /* libz.1.2.5.tbd in Frameworks */,
+				1C7261961EB8B20700386A31 /* GLKit.framework in Frameworks */,
+				1C7261941EB8B20100386A31 /* SystemConfiguration.framework in Frameworks */,
+				1C7261901EB8B1F800386A31 /* NMAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C7261921EB8B20100386A31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C72619B1EB8B21900386A31 /* libc++.tbd */,
+				1C7261991EB8B21200386A31 /* libsqlite3.tbd */,
+				1C7261971EB8B20D00386A31 /* libz.1.2.5.tbd */,
+				1C7261951EB8B20700386A31 /* GLKit.framework */,
+				1C7261931EB8B20100386A31 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4BF2716B1DB6E01300E2AD48 = {
 			isa = PBXGroup;
 			children = (
+				1C72618F1EB8B1F800386A31 /* NMAKit.framework */,
 				4BF271761DB6E01300E2AD48 /* MapDownloaderApp */,
+				1C72618E1EB8B1EB00386A31 /* MapDownloaderApp.app */,
+				1C7261921EB8B20100386A31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,7 +144,7 @@
 			);
 			name = MapDownloaderApp;
 			productName = MapDownloaderApp;
-			productReference = 4BF271741DB6E01300E2AD48 /* MapDownloaderApp.app */;
+			productReference = 1C72618E1EB8B1EB00386A31 /* MapDownloaderApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

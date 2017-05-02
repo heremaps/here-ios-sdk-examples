@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C7261EE1EB8B3EB00386A31 /* NMAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261ED1EB8B3EB00386A31 /* NMAKit.framework */; };
+		1C7261EF1EB8B3EB00386A31 /* NMAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261ED1EB8B3EB00386A31 /* NMAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1C7261F31EB8B3F300386A31 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261F21EB8B3F300386A31 /* SystemConfiguration.framework */; };
+		1C7261F51EB8B3F800386A31 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261F41EB8B3F800386A31 /* GLKit.framework */; };
+		1C7261F71EB8B3FC00386A31 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261F61EB8B3FC00386A31 /* libz.1.2.5.tbd */; };
+		1C7261F91EB8B40400386A31 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261F81EB8B40400386A31 /* libsqlite3.tbd */; };
+		1C7261FB1EB8B40D00386A31 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261FA1EB8B40D00386A31 /* libc++.tbd */; };
 		4BE47DD21D94982100AEF78F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE47DD11D94982100AEF78F /* main.m */; };
 		4BE47DD51D94982100AEF78F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE47DD41D94982100AEF78F /* AppDelegate.m */; };
 		4BE47DD81D94982100AEF78F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE47DD71D94982100AEF78F /* MainViewController.m */; };
@@ -19,7 +26,27 @@
 		4BE47DFC1D9C4C6000AEF78F /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE47DFB1D9C4C6000AEF78F /* Helper.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1C7261F01EB8B3EC00386A31 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1C7261EF1EB8B3EB00386A31 /* NMAKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1C7261ED1EB8B3EB00386A31 /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMAKit.framework; sourceTree = "<group>"; };
+		1C7261F21EB8B3F300386A31 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1C7261F41EB8B3F800386A31 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		1C7261F61EB8B3FC00386A31 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		1C7261F81EB8B40400386A31 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		1C7261FA1EB8B40D00386A31 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		4B9501F21E27033E00BD6DC0 /* SearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE47DD11D94982100AEF78F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4BE47DD31D94982100AEF78F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,18 +71,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C7261FB1EB8B40D00386A31 /* libc++.tbd in Frameworks */,
+				1C7261F91EB8B40400386A31 /* libsqlite3.tbd in Frameworks */,
+				1C7261F71EB8B3FC00386A31 /* libz.1.2.5.tbd in Frameworks */,
+				1C7261F51EB8B3F800386A31 /* GLKit.framework in Frameworks */,
+				1C7261F31EB8B3F300386A31 /* SystemConfiguration.framework in Frameworks */,
+				1C7261EE1EB8B3EB00386A31 /* NMAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C7261F11EB8B3F300386A31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C7261FA1EB8B40D00386A31 /* libc++.tbd */,
+				1C7261F81EB8B40400386A31 /* libsqlite3.tbd */,
+				1C7261F61EB8B3FC00386A31 /* libz.1.2.5.tbd */,
+				1C7261F41EB8B3F800386A31 /* GLKit.framework */,
+				1C7261F21EB8B3F300386A31 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4BE47DC41D94982100AEF78F = {
 			isa = PBXGroup;
 			children = (
+				1C7261ED1EB8B3EB00386A31 /* NMAKit.framework */,
 				4BE47DED1D99A09700AEF78F /* Resources */,
 				4BE47DCF1D94982100AEF78F /* SearchApp */,
 				4B9501F21E27033E00BD6DC0 /* SearchApp.app */,
+				1C7261F11EB8B3F300386A31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +154,7 @@
 				4BE47DC91D94982100AEF78F /* Sources */,
 				4BE47DCA1D94982100AEF78F /* Frameworks */,
 				4BE47DCB1D94982100AEF78F /* Resources */,
+				1C7261F01EB8B3EC00386A31 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
