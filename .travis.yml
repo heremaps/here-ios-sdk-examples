@@ -1,0 +1,14 @@
+language: objective-c
+osx_image: xcode8.3
+
+env:
+  global:
+  - LC_CTYPE=en_US.UTF-8
+  - LANG=en_US.UTF-8
+  - secure: "lf7ex67KHIzDhGy6RjbJfE5UbI09UhJAPqU4jLoAOoxhKEjmBqTX9klIrrCuEGn8gLPc2YFjfqZ2i6fkqRQOUZRZTFn5RJzbjWYTuPBuAcOyIaO6lJx9NdqI/+7UmHaPH3KKJHO8u/GbTUZKTc4Y3TfY1SbJq9PCcJQvKc2Jz92xPmTdQKGDnX1DBv8PQK0VubFDiLvu8DJEZ8rR92/132ACGHeR/bLOFSlJP5qIEPdJPC0g6HhgVG+ih3CM5INZIGQ8ep3H9OJk/KWdweD5OyAcH6mbr8Ecm2vCPOdvVStjR7DGMoBBigrBivsq8dSI1O8dxsvb3oqhbkrYM5JCjXqR9l9b33GeE6Dq6ieN1Eb9e2AcqaNoj9uIEu+ONkMz4hTazNgEvu9QaWTtBoBJ4bSHb+vahgKfkKXMAutB9jm+NfHEEheNK8KgUZ247Hi4AqyyEAmZhr7r/3JWVT6hkG4FaxA33EBg09kNJyDPtvYEEO3+lwfSXvcOEOcmGVwl8mNx86faIPgoE8J+2TRQWGXdViHSK5QE/DlSzckt3nS/xg36McrEBs3O/tcikARoHSi0/YikytMR9sk7uSE2lLNumD0sO7OvvlrO5XvyItOgR0osa9Cx3M0Ox/eaDN2UIYkqidxeYewc1Ws2/1JthsOc51r1GCWq4DRuF/kgA88="
+
+before_install:
+  - travis_wait .ci/preInstall.sh
+
+script:
+  - .ci/buildAll.sh
