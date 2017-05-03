@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/heremaps/here-ios-sdk-examples.svg?branch=master)](https://travis-ci.org/heremaps/here-ios-sdk-examples)
+
 # HERE SDK for iOS example projects
 
 Copyright (c) 2011-2017 HERE Europe B.V.
