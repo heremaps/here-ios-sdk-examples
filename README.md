@@ -63,11 +63,11 @@ All of the following projects use **version 3.4** of the iOS Premium SDK
 3. In AppDelegate.m:
     - Enter an app id, app code and license key.
 
-## BUILD REQUIREMENTS
+## Build Requirements
  
 * Xcode 8 & iOS 9 SDK or above
 * HERE Premium SDK Version 3.4 or above
 
-## TARGET PLATFORM
+## Target Platform
  
 * iOS 9.0 and above
