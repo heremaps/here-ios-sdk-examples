@@ -18,7 +18,7 @@ Unless otherwise noted in `LICENSE` files for specific files or directories, the
 
 ## iOS Premium SDK
 
-All of the following projects use **version 3.3** of the iOS Premium SDK
+All of the following projects use **version 3.4** of the iOS Premium SDK
 
 * [Geocoding and Reverse Gecoding](geocoder-and-reverse-geocoder-ios) - Trigger a Geocode and Reverse Geocode request in HERE SDK
 * [Map Attribute](map-attribute-ios) - Map attributes manipulations
@@ -31,3 +31,43 @@ All of the following projects use **version 3.3** of the iOS Premium SDK
 * [Routing](rotuing-ios) - Create a route from HERE Burnaby office to Langely BC and display it on the map
 * [Search](search-ios) - Send different types of search requests
 * [Turn-by-Turn Navigation](turn-by-turn-navigation-ios) - Trigger a turn-by-turn navigation from HERE Burnaby office to Langley BC
+
+## How to build apps 
+
+### Using CocoaPods
+
+1. Run "pod install" or "pod update" in the application's root directory to install
+   the HERE SDK.
+
+2. In the "General" settings of the App target:
+    - Select an eligible provisioning profile or enable "Automatically
+      manage signing".
+
+3. In AppDelegate.m:
+    - Enter an app id, app code and license key.
+
+### Without CocoaPods
+
+1. In the "General" settings of the App target:
+    - Select an eligible provisioning profile or enable "Automatically
+      manage signing".
+    - Add NMAKit.framework to the "Embedded Binaries" section otherwise you
+      will get a "dyld: Library not loaded: @rpath/NMAKit.framework/NMAKit"
+      error at runtime.
+ 
+2. In the "Builds Settings" of the App target:
+    - Ensure "Frameworks Search Paths" includes the location of
+      NMAKit.framework. In this example app it is already set to
+      "$(PROJECT_DIR)/../../framework".
+ 
+3. In AppDelegate.m:
+    - Enter an app id, app code and license key.
+
+## Build Requirements
+ 
+* Xcode 8 & iOS 9 SDK or above
+* HERE Premium SDK Version 3.4 or above
+
+## Target Platform
+ 
+* iOS 9.0 and above
