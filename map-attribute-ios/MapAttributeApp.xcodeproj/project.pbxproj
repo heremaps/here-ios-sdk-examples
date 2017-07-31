@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C7261711EB8B11400386A31 /* NMAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261701EB8B11400386A31 /* NMAKit.framework */; };
-		1C7261721EB8B11400386A31 /* NMAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261701EB8B11400386A31 /* NMAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1C7261761EB8B12000386A31 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261751EB8B12000386A31 /* SystemConfiguration.framework */; };
 		1C7261781EB8B12600386A31 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261771EB8B12600386A31 /* GLKit.framework */; };
 		1C72617A1EB8B13400386A31 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261791EB8B13400386A31 /* libz.1.2.5.tbd */; };
@@ -31,7 +29,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1C7261721EB8B11400386A31 /* NMAKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,7 +36,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1C7261701EB8B11400386A31 /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMAKit.framework; sourceTree = "<group>"; };
 		1C7261751EB8B12000386A31 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1C7261771EB8B12600386A31 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		1C7261791EB8B13400386A31 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
@@ -70,7 +66,6 @@
 				1C72617A1EB8B13400386A31 /* libz.1.2.5.tbd in Frameworks */,
 				1C7261781EB8B12600386A31 /* GLKit.framework in Frameworks */,
 				1C7261761EB8B12000386A31 /* SystemConfiguration.framework in Frameworks */,
-				1C7261711EB8B11400386A31 /* NMAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +87,6 @@
 		5FD23E141CFF9B4100F21EA3 = {
 			isa = PBXGroup;
 			children = (
-				1C7261701EB8B11400386A31 /* NMAKit.framework */,
 				5FD23E1F1CFF9B4200F21EA3 /* MapAttributeApp */,
 				4B0CDCCF1E27044C0064EA7B /* MapAttributeApp.app */,
 				1C7261741EB8B12000386A31 /* Frameworks */,
