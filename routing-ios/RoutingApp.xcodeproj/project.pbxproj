@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C7261DF1EB8B3A500386A31 /* NMAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261DE1EB8B3A500386A31 /* NMAKit.framework */; };
-		1C7261E01EB8B3A500386A31 /* NMAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261DE1EB8B3A500386A31 /* NMAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1C7261E41EB8B3AD00386A31 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261E31EB8B3AD00386A31 /* SystemConfiguration.framework */; };
 		1C7261E61EB8B3B100386A31 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261E51EB8B3B100386A31 /* GLKit.framework */; };
 		1C7261E81EB8B3B900386A31 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261E71EB8B3B900386A31 /* libz.1.2.5.tbd */; };
@@ -45,7 +43,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1C7261E01EB8B3A500386A31 /* NMAKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,15 +51,14 @@
 
 /* Begin PBXFileReference section */
 		1C7261DB1EB8B39A00386A31 /* RoutingApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = RoutingApp.xcodeproj; sourceTree = "<group>"; };
-		1C7261DE1EB8B3A500386A31 /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMAKit.framework; sourceTree = "<group>"; };
 		1C7261E31EB8B3AD00386A31 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1C7261E51EB8B3B100386A31 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		1C7261E71EB8B3B900386A31 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		1C7261E91EB8B3BE00386A31 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		1C7261EB1EB8B3C400386A31 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		4B8E32751E27070D0009D1A5 /* RoutingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoutingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B8E32871E2709B00009D1A5 /* RoutingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoutingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B8E32881E2709B00009D1A5 /* RoutingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoutingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B8E32871E2709B00009D1A5 /* RoutingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = RoutingAppTests.xctest; path = "/Users/l7xiang/Desktop/here-ios-sdk-examples/routing-ios/build/Debug-iphoneos/RoutingAppTests.xctest"; sourceTree = "<absolute>"; };
+		4B8E32881E2709B00009D1A5 /* RoutingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = RoutingAppUITests.xctest; path = "/Users/l7xiang/Desktop/here-ios-sdk-examples/routing-ios/build/Debug-iphoneos/RoutingAppUITests.xctest"; sourceTree = "<absolute>"; };
 		4BC9B1941D7A400B0009B634 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4BC9B1961D7A400B0009B634 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4BC9B1971D7A400B0009B634 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -83,7 +79,6 @@
 				1C7261E81EB8B3B900386A31 /* libz.1.2.5.tbd in Frameworks */,
 				1C7261E61EB8B3B100386A31 /* GLKit.framework in Frameworks */,
 				1C7261E41EB8B3AD00386A31 /* SystemConfiguration.framework in Frameworks */,
-				1C7261DF1EB8B3A500386A31 /* NMAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,12 +119,9 @@
 		4BC9B1871D7A400B0009B634 = {
 			isa = PBXGroup;
 			children = (
-				1C7261DE1EB8B3A500386A31 /* NMAKit.framework */,
 				1C7261DB1EB8B39A00386A31 /* RoutingApp.xcodeproj */,
 				4BC9B1921D7A400B0009B634 /* RoutingApp */,
 				4B8E32751E27070D0009D1A5 /* RoutingApp.app */,
-				4B8E32871E2709B00009D1A5 /* RoutingAppTests.xctest */,
-				4B8E32881E2709B00009D1A5 /* RoutingAppUITests.xctest */,
 				1C7261E21EB8B3AD00386A31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
