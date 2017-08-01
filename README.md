@@ -57,8 +57,7 @@ All of the following projects use **version 3.4** of the iOS Premium SDK
  
 2. In the "Builds Settings" of the App target:
     - Ensure "Frameworks Search Paths" includes the location of
-      NMAKit.framework. In this example app it is already set to
-      "$(PROJECT_DIR)/../../framework".
+      NMAKit.framework.
  
 3. In AppDelegate.m:
     - Enter an app id, app code and license key.
