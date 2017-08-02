@@ -7,7 +7,7 @@ env:
   - LANG=en_US.UTF-8
 
 before_install:
-  - travis_wait .ci/preInstall.sh
+  - travis_wait 60 .ci/preInstall.sh
 
 script:
   - .ci/buildAll.sh

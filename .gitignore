@@ -3,6 +3,5 @@
 /**/*.xcodeproj/project.xcworkspace/xcuserdata/
 /**/build/
 
-# NMAKit
-/**/NMAKit.framework
-/**/NMABundle.bundle
+# CocoaPods
+/**/Pods/
