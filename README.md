@@ -18,7 +18,7 @@ Unless otherwise noted in `LICENSE` files for specific files or directories, the
 
 ## iOS Premium SDK
 
-All of the following projects use **version 3.4** of the iOS Premium SDK
+All of the following projects use **version 3.5** of the iOS Premium SDK
 
 * [Geocoding and Reverse Gecoding](geocoder-and-reverse-geocoder-ios) - Trigger a Geocode and Reverse Geocode request in HERE SDK
 * [Map Attribute](map-attribute-ios) - Map attributes manipulations
@@ -65,7 +65,7 @@ All of the following projects use **version 3.4** of the iOS Premium SDK
 ## Build Requirements
  
 * Xcode 8 & iOS 9 SDK or above
-* HERE Premium SDK Version 3.4 or above
+* HERE Premium SDK Version 3.5 or above
 
 ## Target Platform
  
