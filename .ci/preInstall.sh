@@ -1,16 +1,16 @@
 #!/bin/sh
 
-# Download the HERE SDK.
-wget "$HERE_SDK_URL" -q -O 'HERE_SDK.tar.gz'
-tar -xzf 'HERE_SDK.tar.gz'
-rm 'HERE_SDK.tar.gz'
+# Install gems defined on Gemfile.
+bundle install
 
-# Find paths that contain an xcodeproj directory.
-APP_PROJECTS=$(find "$PWD" -mindepth 2 -maxdepth 2 -type d -name "*.xcodeproj")
+# Update local pod repo.
+pod repo update
+
+# Find paths that contain a Podfile.
+APP_PROJECTS=$(find "$PWD" -mindepth 2 -maxdepth 2 -type f -name Podfile)
 
 for APP_PATH in $APP_PROJECTS; do
     PROJECT_DIR=$(dirname "$APP_PATH")
-    cp -r HERESDK-Premium/framework/NMAKit.framework "$PROJECT_DIR"
+    cd $PROJECT_DIR
+    pod install
 done
-
-rm -rf 'HERESDK-Premium'
