@@ -69,4 +69,4 @@ All of the following projects use **version 3.5** of the iOS Premium SDK
 
 ## Target Platform
  
-* iOS 9.0 and above
+* iOS 10.0 and above
