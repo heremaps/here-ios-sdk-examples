@@ -56,9 +56,14 @@
     else
     {
         [self.navigationManager stop];
+        if (![[NMAPositioningManager sharedPositioningManager].dataSource isKindOfClass:[NMADevicePositionSource class]]) {
+            [NMAPositioningManager sharedPositioningManager].dataSource = nil;
+        }
         // Restore the map orientation to show entire route on screen
         [self.mapView setBoundingBox:self.geoBoundingBox withAnimation:NMAMapAnimationLinear];
         [self.mapView setOrientation:0];
+        self.navigationManager.mapTrackingAutoZoomEnabled = false;
+        self.navigationManager.mapTrackingEnabled = false;
         [self.navigationControlButton setTitle:@"Start Navigation" forState:UIControlStateNormal];
         self.route = nil;
     }
@@ -135,19 +140,52 @@
     self.mapView.positionIndicator.visible = YES;
     // Configure NavigationManager to launch navigation on current map
     [self.navigationManager setMap:self.mapView];
+    
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:@"Choose Navigation mode"
+                                 message:@"Please choose a mode"
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    //Add Buttons
+    
+    UIAlertAction* deviceButton = [UIAlertAction
+                                actionWithTitle:@"Navigation"
+                                style:UIAlertActionStyleDefault
+                                handler:^(UIAlertAction * action) {
 
-    // Start the turn-by-turn navigation.Please note if the transport mode of the passed-in
-    // route is pedestrian, the NavigationManager automatically triggers the guidance which is
-    // suitable for walking. Simulation and tracking modes can also be launched at this moment
-    // by calling either simulate() or startTracking()
-    [self.navigationManager startTurnByTurnNavigationWithRoute:self.route];
+                                    /// Start the turn-by-turn navigation.Please note if the transport mode of the passed-in
+                                    // route is pedestrian, the NavigationManager automatically triggers the guidance which is
+                                    // suitable for walking.
+                                    [self.navigationManager startTurnByTurnNavigationWithRoute:self.route];
 
-    // Set the map tracking properties
-    [NMANavigationManager sharedNavigationManager].mapTrackingEnabled = YES;
-    [NMANavigationManager sharedNavigationManager].mapTrackingAutoZoomEnabled = YES;
-    [NMANavigationManager sharedNavigationManager].mapTrackingOrientation
-        = NMAMapTrackingOrientationDynamic;
-    [NMANavigationManager sharedNavigationManager].speedWarningEnabled = YES;
+                                    // Set the map tracking properties
+                                    [NMANavigationManager sharedNavigationManager].mapTrackingEnabled = YES;
+                                    [NMANavigationManager sharedNavigationManager].mapTrackingAutoZoomEnabled = YES;
+                                    [NMANavigationManager sharedNavigationManager].mapTrackingOrientation
+                                    = NMAMapTrackingOrientationDynamic;
+                                    [NMANavigationManager sharedNavigationManager].speedWarningEnabled = YES;
+                                }];
+
+    UIAlertAction* simulateButton = [UIAlertAction
+                               actionWithTitle:@"Simulation"
+                               style:UIAlertActionStyleDefault
+                                     handler:^(UIAlertAction * action) {
+                                         // Simulation navigation by init the PositionSource with route and set movement speed
+                                         NMARoutePositionSource *source = [[NMARoutePositionSource alloc] initWithRoute:self.route];
+                                         source.movementSpeed = 60;
+                                         [NMAPositioningManager sharedPositioningManager].dataSource = source;
+                                         // Set the map tracking properties
+                                         [NMANavigationManager sharedNavigationManager].mapTrackingEnabled = YES;
+                                         [NMANavigationManager sharedNavigationManager].mapTrackingAutoZoomEnabled = YES;
+                                         [NMANavigationManager sharedNavigationManager].mapTrackingOrientation
+                                         = NMAMapTrackingOrientationDynamic;
+                                         [NMANavigationManager sharedNavigationManager].speedWarningEnabled = YES;
+                               }];
+
+    [alert addAction:deviceButton];
+    [alert addAction:simulateButton];
+
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 // Signifies that there is new instruction information available
