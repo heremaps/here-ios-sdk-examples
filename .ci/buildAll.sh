@@ -2,8 +2,8 @@
 
 # Find paths that contain an xcodeproj directory.
 APP_PROJECTS=$(find "$PWD" -mindepth 2 -maxdepth 2 -type d -name "*.xcworkspace")
-SDK=iphonesimulator10.3
-DESTINATION="OS=10.3.1,name=iPhone SE"
+SDK=iphonesimulator11.0
+DESTINATION="OS=11.0,name=iPhone 8"
 
 for APP_PATH in $APP_PROJECTS; do
     PROJECT_DIR=$(dirname "$APP_PATH")
