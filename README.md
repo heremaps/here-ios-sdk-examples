@@ -10,7 +10,7 @@ This set of self-contained, use-case based projects is designed to be cloned by 
 
 > **Note:** In order to get the sample code to work, you **must** replace all instances of `{YOUR_APP_ID}`, `{YOUR_APP_CODE}` and `{YOUR_LICENSE_KEY}` within the code and use your own **HERE** credentials.
 
-> You can obtain a set of credentials from the [Contact Us](https://developer.here.com/contact-us) page on developer.here.com.
+> You can obtain a set of credentials from the [Contact Us](https://developer.here.com/contact-us) page on developer.here.com.**The bundle ID registered must match it in your app**
 
 ## License
 
