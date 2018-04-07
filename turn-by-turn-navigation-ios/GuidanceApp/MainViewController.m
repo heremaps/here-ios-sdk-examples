@@ -180,6 +180,7 @@
                                          [NMANavigationManager sharedNavigationManager].mapTrackingOrientation
                                          = NMAMapTrackingOrientationDynamic;
                                          [NMANavigationManager sharedNavigationManager].speedWarningEnabled = YES;
+                                         [self.navigationManager startTurnByTurnNavigationWithRoute:self.route];
                                }];
 
     [alert addAction:deviceButton];
