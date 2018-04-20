@@ -1,4 +1,4 @@
 target 'SearchApp' do
-    platform :ios, ’10.0’
-    pod 'HEREMaps', '>= 3.7’
+    platform :ios, '10.0'
+    pod 'HEREMaps', '>= 3.7'
 end
