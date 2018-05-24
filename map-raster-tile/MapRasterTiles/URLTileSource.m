@@ -7,7 +7,7 @@
 #import "NMAKit/NMAkit.h"
 
 // URL address to provide image to be downloaded
-NSString* const URL = @"https://sites.google.com/site/tilestester/home/bunny_256x256.png";
+NSString* const URL = @"https://raw.githubusercontent.com/sergiikaplun/bunny/master/bunny.png";
 
 @implementation URLTileSource
 
