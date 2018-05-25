@@ -46,8 +46,6 @@
                 settingsController.trafficLayers ^= NMATrafficLayerIncidents;
             }
         }
-        // It turns on/off street level coverage switch in settings
-        settingsController.streetLevelCoverage = _mapView.streetLevelCoverageVisible;
     }
 }
 
@@ -95,7 +93,5 @@
     }
     // Set selected transit display mode.
     self.mapView.transitDisplayMode = controller.transitDisplayMode;
-    // Turn on/off street level coverage.
-    self.mapView.streetLevelCoverageVisible = controller.streetLevelCoverage;
 }
 @end

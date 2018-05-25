@@ -63,17 +63,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="44" id="Or4-19-VqC">
-                                <rect key="frame" x="0.0" y="120" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Or4-19-VqC" id="IPN-Zk-69m">
-                                    <frame key="frameInset" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <sections/>
                         <connections>
                             <outlet property="dataSource" destination="eJe-3s-MT2" id="k53-B0-Zhb"/>
@@ -81,13 +70,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="8zm-ff-SXe">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="Zgu-D4-d5B">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Zgu-D4-d5B">
                             <color key="tintColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="cancelBtnPressed:" destination="eJe-3s-MT2" id="jOC-lR-mEW"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="ZRB-ep-TFp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="ZRB-ep-TFp">
                             <color key="tintColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="doneBtPressed:" destination="eJe-3s-MT2" id="LFG-X0-Q3e"/>
