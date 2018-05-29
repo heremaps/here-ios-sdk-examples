@@ -18,7 +18,6 @@
 @property (nonatomic) NSString* mapScheme;
 @property (nonatomic) int trafficLayers;
 @property (nonatomic) NMAMapTransitDisplayMode transitDisplayMode;
-@property (nonatomic) BOOL streetLevelCoverage;
 @property (nonatomic, weak) id<SettingsViewControllerDelegate> delegate;
 
 - (IBAction)cancelBtnPressed:(id)sender;
