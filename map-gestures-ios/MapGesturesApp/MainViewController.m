@@ -33,15 +33,19 @@
 {
     // it showed a message label for tap gesture
     [self showMessage:@"Tap gesture"];
+
+    //calculate geoCoordinates of tap gesture
+    NMAGeoCoordinates *markerCoordinates = [self.mapView geoCoordinatesFromPoint:location];
+
     //it added a image icon to map view at location where tap gesture was applied.
     if(!_gestureMarker) {
         UIImage* image = [UIImage imageNamed:@"markerIcon"];
-        _gestureMarker = [NMAMapMarker mapMarkerWithGeoCoordinates:nil image:image];
+        _gestureMarker = [NMAMapMarker mapMarkerWithGeoCoordinates:markerCoordinates image:image];
         [_gestureMarker setAnchorOffsetUsingLayoutPosition:NMALayoutPositionBottomCenter];
         [self.mapView addMapObject:_gestureMarker];
+    } else {
+        _gestureMarker.coordinates = markerCoordinates;
     }
-
-    _gestureMarker.coordinates = [self.mapView geoCoordinatesFromPoint:location];
 }
 
 /**

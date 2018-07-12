@@ -17,7 +17,6 @@
 @property (nonatomic, weak) UISegmentedControl* transitModeCtrl;
 @property (nonatomic, weak) UISwitch* flowSwitch;
 @property (nonatomic, weak) UISwitch* incidentSwitch;
-@property (nonatomic, weak) UISwitch* coverageSwitch;
 
 @end
 
@@ -34,8 +33,7 @@
     };
     self.transitModes = @[ @"NOTHING", @"STOP_AND_ACCESSE", @"EVERYTHING" ];
     self.titles = @[
-        @"Map Schemes", @"Transit Mode Attributes", @"Traffic Layer Attributes",
-        @"Street Level Coverage"
+        @"Map Schemes", @"Transit Mode Attributes", @"Traffic Layer Attributes"
     ];
 }
 
@@ -57,8 +55,7 @@
 }
 
 /**
- * Add segmetned swtichs for map scheme and transit mode,  switches for traffic
- *layer and street level coverage
+ * Add segmetned switches for map scheme and transit mode, switch for traffic layer.
  **/
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
@@ -165,21 +162,6 @@
             break;
         }
     }
-    else
-    {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"SwitchCell"];
-
-        if (cell == nil)
-        {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                          reuseIdentifier:@"SwitchCell"];
-        }
-        cell.textLabel.text = @"Coverage";
-        UISwitch* coverageSwitch = [[UISwitch alloc] init];
-        coverageSwitch.on = _streetLevelCoverage;
-        self.coverageSwitch = coverageSwitch;
-        cell.accessoryView = coverageSwitch;
-    }
     return cell;
 }
 
@@ -232,14 +214,6 @@
 }
 
 /**
- * It gets selection for street level ocverage(on/off)
- **/
-- (void)getStreetLevelCoverageSettings
-{
-    _streetLevelCoverage = _coverageSwitch.on;
-}
-
-/**
  * When cancel button is pressed, it calls delegates to perform.
  **/
 - (IBAction)cancelBtnPressed:(id)sender
@@ -256,7 +230,6 @@
     [self getMapSchemeSettings];
     [self getTransitModeSettings];
     [self getTrafficLayersSettings];
-    [self getStreetLevelCoverageSettings];
     [self.delegate settingsViewControllerDidDone:self];
 }
 @end
