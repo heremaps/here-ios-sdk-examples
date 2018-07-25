@@ -99,7 +99,7 @@
 		5FE88F461DB5567A00C6C3BB /* MapRasterTiles */ = {
 			isa = PBXGroup;
 			children = (
-				5FFDDB721DB57D170000D8A7 /* images */,
+				B6E767E72108B53E0070EB80 /* images */,
 				5FE88F4A1DB5567A00C6C3BB /* AppDelegate.h */,
 				5FE88F4B1DB5567A00C6C3BB /* AppDelegate.m */,
 				5FE88F681DB5774700C6C3BB /* ImageTileSource.h */,
@@ -125,12 +125,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5FFDDB721DB57D170000D8A7 /* images */ = {
+		B6E767E72108B53E0070EB80 /* images */ = {
 			isa = PBXGroup;
 			children = (
 				5FFDDB731DB57D860000D8A7 /* panda.png */,
 			);
-			name = images;
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
