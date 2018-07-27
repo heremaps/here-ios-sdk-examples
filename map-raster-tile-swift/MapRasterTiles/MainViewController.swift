@@ -11,21 +11,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var segmentedCtrl: UISegmentedControl!
     @IBOutlet weak var mapView: NMAMapView!
 
-    var imageSourceTile: NMAMapTileLayer? = nil
-    var urlSourceTile: NMAMapTileLayer? = nil
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Create an instance of URL raster tile source
-        if urlSourceTile == nil {
-            urlSourceTile = URLTileSource()
-        }
-        // Create an instance of Image raster tile source
-        if imageSourceTile == nil {
-            imageSourceTile = ImageTileSource()
-        }
-    }
+    lazy var imageSourceTile: NMAMapTileLayer! = ImageTileSource()
+    lazy var urlSourceTile: NMAMapTileLayer! = URLTileSource()
 
     /**
      * Remove all tile layers which have been added to NMAMapView
