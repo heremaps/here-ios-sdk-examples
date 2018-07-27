@@ -16,7 +16,7 @@ import NMAKit
  */
 
 // URL address to provide image to be downloaded
-let URL = "https://raw.githubusercontent.com/sergiikaplun/bunny/master/bunny.png"
+let URL = "https://github.com/heremaps/here-ios-sdk-examples/blob/master/misc/bunny.png"
 
 class URLTileSource: NMAMapTileLayer, NMAMapTileLayerDataSource {
 
