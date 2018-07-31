@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nrt-3E-hL1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map Package Table View Controller-->
+        <scene sceneID="803-Tw-7SY">
+            <objects>
+                <tableViewController id="ole-MQ-R6c" userLabel="Map Package Table View Controller" customClass="MapPackageTableViewController" customModule="MapDownloaderApp" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" sectionHeaderHeight="28" sectionFooterHeight="28" id="70d-Lx-ipT" userLabel="Map Package Table View">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="ole-MQ-R6c" id="iqK-CF-7Es"/>
+                            <outlet property="delegate" destination="ole-MQ-R6c" id="zID-Ur-lIh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="MeG-5w-Nw2" userLabel="Navigation Item">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="ZJz-Kt-jow" userLabel="Cancel">
+                            <connections>
+                                <action selector="didCancelButtonClick:" destination="ole-MQ-R6c" id="qDM-SY-oFn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Update" id="Ctt-vu-2Xt">
+                            <connections>
+                                <action selector="didUpdateButtonClick:" destination="ole-MQ-R6c" id="WIJ-ij-MtV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelButton" destination="ZJz-Kt-jow" id="L2t-XT-4M6"/>
+                        <outlet property="mapPackageTableView" destination="70d-Lx-ipT" id="Vvh-DV-wwq"/>
+                        <outlet property="mapUpdateButton" destination="Ctt-vu-2Xt" id="U6K-ZL-Yz7"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bx3-hy-Zd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240" y="144"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="M2P-rH-SyR">
+            <objects>
+                <navigationController id="nrt-3E-hL1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Kp-rZ-RiA">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ole-MQ-R6c" kind="relationship" relationship="rootViewController" id="pvv-zr-33I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I9y-3Y-fEu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-715" y="144"/>
+        </scene>
+    </scenes>
+</document>
