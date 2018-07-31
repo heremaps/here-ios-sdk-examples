@@ -7,7 +7,7 @@
 #import "NMAKit/NMAkit.h"
 
 // URL address to provide image to be downloaded
-NSString* const URL = @"https://github.com/heremaps/here-ios-sdk-examples/blob/master/misc/bunny.png";
+NSString* const URL = @"https://raw.githubusercontent.com/heremaps/here-ios-sdk-examples/master/misc/bunny.png";
 
 @implementation URLTileSource
 
