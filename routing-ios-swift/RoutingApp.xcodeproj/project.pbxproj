@@ -89,7 +89,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = spredko;
+				ORGANIZATIONNAME = "HERE Burnaby";
 				TargetAttributes = {
 					12DC7B442125BD71000B2E6D = {
 						CreatedOnToolsVersion = 9.4.1;
