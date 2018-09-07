@@ -21,6 +21,7 @@ Unless otherwise noted in `LICENSE` files for specific files or directories, the
 All of the following projects use **version 3.8** of the iOS Premium SDK
 
 * [Geocoding and Reverse Gecoding](geocoder-and-reverse-geocoder-ios) - Trigger a Geocode and Reverse Geocode request in HERE SDK
+* [Here Positioning](here-positioning-ios) - Use HERE location data source.
 * [Map Attribute](map-attribute-ios) - Map attributes manipulations
 * [Map Customization](map-customization-ios) - Customize the map scheme
 * [Map Downloader](map-downloader-ios) - Download offline map data
@@ -28,7 +29,7 @@ All of the following projects use **version 3.8** of the iOS Premium SDK
 * [Map Objects](map-objects-ios) - Add map objects onto HERE map
 * [Map Raster Tile](map-raster-tile) - Add custom raster tiles onto map
 * [Map Rendering](map-rendering-ios) - Display the HERE map on a device
-* [Routing](rotuing-ios) - Create a route from HERE Burnaby office to Langely BC and display it on the map
+* [Routing](routing-ios) - Create a route from HERE Burnaby office to Langely BC and display it on the map
 * [Search](search-ios) - Send different types of search requests
 * [Turn-by-Turn Navigation](turn-by-turn-navigation-ios) - Trigger a turn-by-turn navigation from HERE Burnaby office to Langley BC
 
