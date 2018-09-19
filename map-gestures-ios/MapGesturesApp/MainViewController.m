@@ -46,6 +46,8 @@
     } else {
         _gestureMarker.coordinates = markerCoordinates;
     }
+
+    [mapView.defaultGestureHandler mapView:mapView didReceiveTapAtLocation:location];
 }
 
 /**
@@ -56,6 +58,7 @@
                                         atLocation:(CGPoint)location
 {
     [self showMessage:@"Pan gesture"];
+    [mapView.defaultGestureHandler mapView:mapView didReceivePan:translation atLocation:location];
 }
 
 /**
@@ -65,6 +68,7 @@
                                              atLocation:(CGPoint) location
 {
     [self showMessage:@"Rotation gesture"];
+    [mapView.defaultGestureHandler mapView:mapView didReceiveRotation:rotation atLocation:location];
 }
 
 /**

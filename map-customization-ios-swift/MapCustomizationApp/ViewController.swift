@@ -6,8 +6,8 @@
 import UIKit
 import NMAKit
 
-let colorScheme = "color"
-let floatScheme = "float"
+let colorSchemeName = "color"
+let floatSchemeName = "float"
 
 class ViewController: UIViewController {
 
@@ -32,16 +32,16 @@ class ViewController: UIViewController {
     
     func colorCustomization() {
         //if customized map scheme already exists, remove it first.
-        if map.getCustomizableScheme(floatScheme) != nil {
+        if map.getCustomizableScheme(floatSchemeName) != nil {
             //it is not allowed to remove map scheme which is active.
             //set to other map scheme then remove.
             map.mapScheme = NMAMapSchemeNormalDay
-            map.removeCustomizableScheme(floatScheme)
+            map.removeCustomizableScheme(floatSchemeName)
         }
         
         //create customizable scheme with specific scheme name based on NMAMapSchemeNormalDay
         if (colorScheme == nil) {
-            colorScheme = map.createCustomizableScheme(colorScheme, basedOn: NMAMapSchemeNormalDay)
+            colorScheme = map.createCustomizableScheme(colorSchemeName, basedOn: NMAMapSchemeNormalDay)
         }
         
         //create customizable color for property NMASchemeBuildingColor for specific zoom level
@@ -57,29 +57,29 @@ class ViewController: UIViewController {
         }
         
         //set map scheme to be customized scheme
-        map.mapScheme = colorScheme
+        map.mapScheme = colorSchemeName
         map.set(geoCenter: NMAGeoCoordinates(latitude: 52.500556, longitude: 13.398889), zoomLevel: 18, animation: NMAMapAnimation.none)
     }
     
     func floatCustomization() {
         //if customized map scheme already exists, remove it first.
-        if map.getCustomizableScheme(colorScheme) != nil {
+        if map.getCustomizableScheme(colorSchemeName) != nil {
             //it is not allowed to remove map scheme which is active.
             //set to other map scheme then remove.
             map.mapScheme = NMAMapSchemeNormalDay
-            map.removeCustomizableScheme(colorScheme)
+            map.removeCustomizableScheme(colorSchemeName)
         }
         
         //create customizable scheme with specific scheme name based on NMAMapSchemeNormalDay
         if (floatScheme == nil) {
-            floatScheme = map.createCustomizableScheme(floatScheme, basedOn: NMAMapSchemeNormalDay)
+            floatScheme = map.createCustomizableScheme(floatSchemeName, basedOn: NMAMapSchemeNormalDay)
         }
         
         //set its float property boundary width to be 10.0 for specific zoom range
         floatScheme?.setFloatProperty(NMASchemeFloatProperty.countryBoundaryWidth, value: 10, zoomRange: zoom)
         
         //set map scheme to be customized scheme
-        map.mapScheme = floatScheme
+        map.mapScheme = floatSchemeName
         map.zoomLevel = 4.0
     }
 }
