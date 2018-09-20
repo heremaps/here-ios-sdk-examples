@@ -72,7 +72,7 @@
 			children = (
 				E474143021357E0400792138 /* cafe.png */,
 			);
-			path = images;
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

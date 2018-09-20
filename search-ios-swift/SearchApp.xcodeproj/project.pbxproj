@@ -48,7 +48,7 @@
 			children = (
 				D507C61320F8D57F0074C27A /* marker.png */,
 			);
-			path = Resources;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		D5C6612820F4C2F000383E2D = {
