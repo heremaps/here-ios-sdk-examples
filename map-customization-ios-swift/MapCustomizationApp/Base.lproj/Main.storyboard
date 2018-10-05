@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapCustomizationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYH-TK-ZaQ" customClass="NMAMapView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="qJM-kp-J7y">
+                                        <rect key="frame" x="140" y="24" width="95" height="29"/>
+                                        <segments>
+                                            <segment title="Color"/>
+                                            <segment title="Float"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmentedCtrlClicked:" destination="BYZ-38-t0r" eventType="valueChanged" id="Nzr-Cb-LrW"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qJM-kp-J7y" firstAttribute="top" secondItem="uYH-TK-ZaQ" secondAttribute="top" constant="24" id="33Q-ZI-WLy"/>
+                                    <constraint firstItem="qJM-kp-J7y" firstAttribute="centerX" secondItem="uYH-TK-ZaQ" secondAttribute="centerX" id="tbq-ZB-jam"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uYH-TK-ZaQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1uc-3J-4hU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uYH-TK-ZaQ" secondAttribute="bottom" id="a34-RC-G1N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uYH-TK-ZaQ" secondAttribute="trailing" id="p5y-no-ceG"/>
+                            <constraint firstItem="uYH-TK-ZaQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xeN-Ya-VQ4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="uYH-TK-ZaQ" id="OuX-ky-JoT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

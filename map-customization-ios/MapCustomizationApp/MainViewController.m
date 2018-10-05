@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2017 HERE Europe B.V.
+ * Copyright (c) 2011-2018 HERE Europe B.V.
  * All rights reserved.
  */
 #import "MainViewController.h"
@@ -9,7 +9,6 @@ NSString* const ColorSchemeName = @"color";
 
 @implementation MainViewController {
     NMAZoomRange* _zoomRange;
-
 }
 
 - (void)viewDidLoad {
@@ -58,18 +57,21 @@ NSString* const ColorSchemeName = @"color";
         [self.mapView removeCustomizableSchemeWithName:FloatSchemeName];
 
     }
+    
     //create customizable scheme with specific scheme name based on NMAMapSchemeNormalDay
-    NMACustomizableScheme* colorScheme =
-        [self.mapView createCustomizableSchemeWithName:ColorSchemeName
+    if (self.colorScheme == nil) {
+        self.colorScheme = [self.mapView createCustomizableSchemeWithName:ColorSchemeName
                                          basedOnScheme:NMAMapSchemeNormalDay];
+    }
+    
     //create customizable color for property NMASchemeBuildingColor for specific zoom level
     NMACustomizableColor* buildingColor =
-        [colorScheme colorForProperty:NMASchemeBuildingColor forZoomLevel:18.0f];
+        [self.colorScheme colorForProperty:NMASchemeBuildingColor forZoomLevel:18.0f];
     [buildingColor setRed:100];
     [buildingColor setGreen:100];
     [buildingColor setBlue:133];
     //set color property
-    [colorScheme setColorProperty:buildingColor forZoomRange:_zoomRange];
+    [self.colorScheme setColorProperty:buildingColor forZoomRange:_zoomRange];
     //set map scheme to be customized scheme
     [self.mapView setMapScheme:ColorSchemeName];
     [self.mapView setGeoCenter:[[NMAGeoCoordinates alloc] initWithLatitude:52.500556 longitude:13.398889]
@@ -88,12 +90,15 @@ NSString* const ColorSchemeName = @"color";
         [self.mapView setMapScheme:NMAMapSchemeNormalDay];
         [self.mapView removeCustomizableSchemeWithName:ColorSchemeName];
     }
+    
     //create customizable scheme with specific scheme name based on NMAMapSchemeNormalDay
-    NMACustomizableScheme* floatScheme =
-        [self.mapView createCustomizableSchemeWithName:FloatSchemeName
+    if (self.floatScheme == nil) {
+        self.floatScheme = [self.mapView createCustomizableSchemeWithName:FloatSchemeName
                                          basedOnScheme:NMAMapSchemeNormalDay];
+    }
+    
     //set its float property boundary width to be 10.0 for specific zoom range
-    [floatScheme setFloatProperty:NMASchemeCountryBoundaryWidth withValue:10.0f forZoomRange:_zoomRange];
+    [self.floatScheme setFloatProperty:NMASchemeCountryBoundaryWidth withValue:10.0f forZoomRange:_zoomRange];
     //set map scheme to be customized scheme
     [self.mapView setMapScheme:FloatSchemeName];
     [self.mapView setZoomLevel:4.0];

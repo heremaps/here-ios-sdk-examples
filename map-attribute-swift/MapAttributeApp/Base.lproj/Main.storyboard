@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="MapAttributeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8iL-Lm-xSG" customClass="NMAMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XsU-hw-bde">
+                                        <rect key="frame" x="295" y="587" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="YmH-ed-Z8o"/>
+                                            <constraint firstAttribute="width" constant="50" id="zF9-Vu-7gN"/>
+                                        </constraints>
+                                        <state key="normal" image="tab_list.png"/>
+                                        <connections>
+                                            <segue destination="2YX-sO-ZU5" kind="presentation" identifier="Settings" id="Z8L-qa-xeM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XsU-hw-bde" secondAttribute="trailing" constant="30" id="A7A-ML-3WR"/>
+                                    <constraint firstAttribute="bottom" secondItem="XsU-hw-bde" secondAttribute="bottom" constant="30" id="nAb-qs-3KY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8iL-Lm-xSG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TYX-KK-oK7"/>
+                            <constraint firstItem="8iL-Lm-xSG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="V4Y-Nf-Gf2"/>
+                            <constraint firstAttribute="trailing" secondItem="8iL-Lm-xSG" secondAttribute="trailing" id="tRy-nu-mer"/>
+                            <constraint firstAttribute="bottom" secondItem="8iL-Lm-xSG" secondAttribute="bottom" id="vXP-PO-adC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="8iL-Lm-xSG" id="4FN-b4-w3e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="408.80000000000001" y="139.880059970015"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="FQG-1P-sDD">
+            <objects>
+                <tableViewController id="IDF-gu-E3e" customClass="SettingsViewController" customModule="MapAttributeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="le5-iC-PgR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="IDF-gu-E3e" id="Bea-eo-nHa"/>
+                            <outlet property="delegate" destination="IDF-gu-E3e" id="IdI-IM-dkg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="3gw-VH-4c1">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="bRc-Ef-vkd">
+                            <connections>
+                                <action selector="cancel:" destination="IDF-gu-E3e" id="WGd-7y-u3Y"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="SrR-Aa-r2z">
+                            <connections>
+                                <action selector="done:" destination="IDF-gu-E3e" id="WgV-4J-fbk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wr5-yN-yBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2015" y="140"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0ab-aS-Zht">
+            <objects>
+                <navigationController id="2YX-sO-ZU5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="50h-dy-gg5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="IDF-gu-E3e" kind="relationship" relationship="rootViewController" id="DXW-Oy-eNN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Uw-49-16i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1274" y="140"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_list.png" width="82" height="82"/>
+    </resources>
+</document>

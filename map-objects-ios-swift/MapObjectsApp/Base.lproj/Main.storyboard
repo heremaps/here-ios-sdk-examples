@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="Main View Controller" customClass="MainViewController" customModule="MapObjectsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vaC-w7-yN9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pR8-61-Hnu" userLabel="Map View" customClass="NMAMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ELt-jD-qwq">
+                                        <rect key="frame" x="62.5" y="30" width="250" height="29"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="F9G-bK-YES"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Polygon"/>
+                                            <segment title="Polyline"/>
+                                            <segment title="Circle"/>
+                                            <segment title="Marker"/>
+                                        </segments>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="segmentedCtrlPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="BJL-Ts-xjB"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ELt-jD-qwq" firstAttribute="top" secondItem="pR8-61-Hnu" secondAttribute="top" constant="30" id="b2M-EQ-YiA"/>
+                                    <constraint firstItem="ELt-jD-qwq" firstAttribute="centerX" secondItem="pR8-61-Hnu" secondAttribute="centerX" id="qa6-bf-ZYH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pR8-61-Hnu" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="4vc-Wv-GOe"/>
+                            <constraint firstAttribute="trailing" secondItem="pR8-61-Hnu" secondAttribute="trailing" id="6z6-bo-eV8"/>
+                            <constraint firstItem="pR8-61-Hnu" firstAttribute="leading" secondItem="vaC-w7-yN9" secondAttribute="leading" id="UH9-zn-8qo"/>
+                            <constraint firstItem="pR8-61-Hnu" firstAttribute="top" secondItem="vaC-w7-yN9" secondAttribute="top" id="nB4-7i-V4n"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="pR8-61-Hnu" id="bxj-V9-Nc4"/>
+                        <outlet property="segmentCtrl" destination="ELt-jD-qwq" id="m0h-hf-lZC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-192.80000000000001" y="182.15892053973016"/>
+        </scene>
+    </scenes>
+</document>
