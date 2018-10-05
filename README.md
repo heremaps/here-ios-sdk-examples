@@ -2,7 +2,7 @@
 
 # HERE SDK for iOS example projects
 
-Copyright (c) 2011-2017 HERE Europe B.V.
+Copyright (c) 2011-2018 HERE Europe B.V.
 
 This repository holds a series of Objective-C-based projects using the **HERE SDK for iOS**. More information about the API can be found on [developer.here.com](https://developer.here.com/develop/mobile-sdks) under the *Android & iOS SDKs* section.
 
@@ -18,7 +18,7 @@ Unless otherwise noted in `LICENSE` files for specific files or directories, the
 
 ## iOS Premium SDK
 
-All of the following projects use **version 3.8** of the iOS Premium SDK
+All of the following projects use **version 3.9** of the iOS Premium SDK
 
 * [Geocoding and Reverse Gecoding](geocoder-and-reverse-geocoder-ios) - Trigger a Geocode and Reverse Geocode request in HERE SDK
 * [Here Positioning](here-positioning-ios) - Use HERE location data source.
