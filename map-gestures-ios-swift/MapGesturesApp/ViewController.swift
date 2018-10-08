@@ -74,6 +74,10 @@ extension ViewController : NMAMapGestureDelegate {
         } else {
             gestureMarker?.coordinates = markerCoordinates
         }
+
+        if let defaultHandler = mapView.defaultGestureHandler {
+            defaultHandler.mapView!(mapView, didReceiveTapAt: location)
+        }
     }
 
     /**
@@ -81,6 +85,9 @@ extension ViewController : NMAMapGestureDelegate {
      */
     func mapView(_ mapView: NMAMapView, didReceivePan translation: CGPoint, at location: CGPoint) {
         showMessage("Pan gesture")
+        if let defaultHandler = mapView.defaultGestureHandler {
+            defaultHandler.mapView!(mapView, didReceivePan: translation, at: location)
+        }
     }
 
     /**
@@ -88,5 +95,8 @@ extension ViewController : NMAMapGestureDelegate {
      */
     func mapView(_ mapView: NMAMapView, didReceiveRotation rotation: Float, at location: CGPoint) {
         showMessage("Rotation gesture")
+        if let defaultHandler = mapView.defaultGestureHandler {
+            defaultHandler.mapView!(mapView, didReceiveRotation: rotation, at: location)
+        }
     }
 }
