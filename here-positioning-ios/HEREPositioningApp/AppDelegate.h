@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2017 HERE Europe B.V.
+ * Copyright (c) 2016-2018 HERE Europe B.V.
  * All rights reserved.
  */
 
