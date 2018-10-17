@@ -9,6 +9,7 @@ import NMAKit
 let colorSchemeName = "color"
 let floatSchemeName = "float"
 
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var map: NMAMapView!
