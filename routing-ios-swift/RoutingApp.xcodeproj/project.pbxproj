@@ -11,15 +11,20 @@
 		12DC7B4B2125BD72000B2E6D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DC7B4A2125BD72000B2E6D /* MapViewController.swift */; };
 		12DC7B4E2125BD72000B2E6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12DC7B4C2125BD72000B2E6D /* Main.storyboard */; };
 		12DC7B502125BD72000B2E6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12DC7B4F2125BD72000B2E6D /* Assets.xcassets */; };
+		792CE73176096FA72E9EC8CF /* libPods-RouteTta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03164D3B43480A1FD629E497 /* libPods-RouteTta.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		12DC7B452125BD71000B2E6D /* RoutingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoutingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03164D3B43480A1FD629E497 /* libPods-RouteTta.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RouteTta.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		12DC7B452125BD71000B2E6D /* RouteTta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouteTta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12DC7B482125BD71000B2E6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12DC7B4A2125BD72000B2E6D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		12DC7B4D2125BD72000B2E6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12DC7B4F2125BD72000B2E6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12DC7B542125BD72000B2E6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69BFF2CA5F6DBB93B25F995F /* Pods-RouteTta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RouteTta.release.xcconfig"; path = "Pods/Target Support Files/Pods-RouteTta/Pods-RouteTta.release.xcconfig"; sourceTree = "<group>"; };
+		6F655BE5DEAFCB369C738DBF /* libPods-RoutingApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RoutingApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80087CC6CA4180D04DE31522 /* Pods-RouteTta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RouteTta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RouteTta/Pods-RouteTta.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				792CE73176096FA72E9EC8CF /* libPods-RouteTta.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,13 +44,15 @@
 			children = (
 				12DC7B472125BD71000B2E6D /* RoutingApp */,
 				12DC7B462125BD71000B2E6D /* Products */,
+				E0BAE071B3CEF81F8E9348AE /* Pods */,
+				B05FCDC3479094E73205F620 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		12DC7B462125BD71000B2E6D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				12DC7B452125BD71000B2E6D /* RoutingApp.app */,
+				12DC7B452125BD71000B2E6D /* RouteTta.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,24 +69,44 @@
 			path = RoutingApp;
 			sourceTree = "<group>";
 		};
+		B05FCDC3479094E73205F620 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F655BE5DEAFCB369C738DBF /* libPods-RoutingApp.a */,
+				03164D3B43480A1FD629E497 /* libPods-RouteTta.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0BAE071B3CEF81F8E9348AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				80087CC6CA4180D04DE31522 /* Pods-RouteTta.debug.xcconfig */,
+				69BFF2CA5F6DBB93B25F995F /* Pods-RouteTta.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		12DC7B442125BD71000B2E6D /* RoutingApp */ = {
+		12DC7B442125BD71000B2E6D /* RouteTta */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 12DC7B572125BD72000B2E6D /* Build configuration list for PBXNativeTarget "RoutingApp" */;
+			buildConfigurationList = 12DC7B572125BD72000B2E6D /* Build configuration list for PBXNativeTarget "RouteTta" */;
 			buildPhases = (
+				1C88F9E72D32F7057CB6C2F4 /* [CP] Check Pods Manifest.lock */,
 				12DC7B412125BD71000B2E6D /* Sources */,
 				12DC7B422125BD71000B2E6D /* Frameworks */,
 				12DC7B432125BD71000B2E6D /* Resources */,
+				97046D120BEF2DBEDBAE5C99 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = RoutingApp;
+			name = RouteTta;
 			productName = RoutingApp;
-			productReference = 12DC7B452125BD71000B2E6D /* RoutingApp.app */;
+			productReference = 12DC7B452125BD71000B2E6D /* RouteTta.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -109,7 +137,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				12DC7B442125BD71000B2E6D /* RoutingApp */,
+				12DC7B442125BD71000B2E6D /* RouteTta */,
 			);
 		};
 /* End PBXProject section */
@@ -125,6 +153,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C88F9E72D32F7057CB6C2F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RouteTta-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97046D120BEF2DBEDBAE5C99 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RouteTta/Pods-RouteTta-frameworks.sh",
+				"${PODS_ROOT}/HEREMaps/framework/NMAKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NMAKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RouteTta/Pods-RouteTta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		12DC7B412125BD71000B2E6D /* Sources */ = {
@@ -266,15 +341,17 @@
 		};
 		12DC7B582125BD72000B2E6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80087CC6CA4180D04DE31522 /* Pods-RouteTta.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L7P3R4HARK;
 				INFOPLIST_FILE = RoutingApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.Routing;
+				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.RouteTta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -283,15 +360,17 @@
 		};
 		12DC7B592125BD72000B2E6D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69BFF2CA5F6DBB93B25F995F /* Pods-RouteTta.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L7P3R4HARK;
 				INFOPLIST_FILE = RoutingApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.Routing;
+				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.RouteTta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -310,7 +389,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		12DC7B572125BD72000B2E6D /* Build configuration list for PBXNativeTarget "RoutingApp" */ = {
+		12DC7B572125BD72000B2E6D /* Build configuration list for PBXNativeTarget "RouteTta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				12DC7B582125BD72000B2E6D /* Debug */,
