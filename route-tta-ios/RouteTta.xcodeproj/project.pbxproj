@@ -7,85 +7,102 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12DC7B492125BD72000B2E6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DC7B482125BD71000B2E6D /* AppDelegate.swift */; };
-		12DC7B4B2125BD72000B2E6D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DC7B4A2125BD72000B2E6D /* MapViewController.swift */; };
-		12DC7B4E2125BD72000B2E6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12DC7B4C2125BD72000B2E6D /* Main.storyboard */; };
-		12DC7B502125BD72000B2E6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12DC7B4F2125BD72000B2E6D /* Assets.xcassets */; };
+		9D580819218779DD007D5648 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D580818218779DD007D5648 /* AppDelegate.m */; };
+		9D58081C218779DD007D5648 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D58081B218779DD007D5648 /* ViewController.m */; };
+		9D58081F218779DD007D5648 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D58081D218779DD007D5648 /* Main.storyboard */; };
+		9D580821218779DE007D5648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D580820218779DE007D5648 /* Assets.xcassets */; };
+		9D580824218779DE007D5648 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D580822218779DE007D5648 /* LaunchScreen.storyboard */; };
+		9D580827218779DE007D5648 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D580826218779DE007D5648 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		12DC7B452125BD71000B2E6D /* RouteTta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouteTta.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		12DC7B482125BD71000B2E6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		12DC7B4A2125BD72000B2E6D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		12DC7B4D2125BD72000B2E6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		12DC7B4F2125BD72000B2E6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		12DC7B542125BD72000B2E6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D580814218779DD007D5648 /* RouteTta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouteTta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D580817218779DD007D5648 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9D580818218779DD007D5648 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9D58081A218779DD007D5648 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9D58081B218779DD007D5648 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9D58081E218779DD007D5648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9D580820218779DE007D5648 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9D580823218779DE007D5648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9D580825218779DE007D5648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D580826218779DE007D5648 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		12DC7B3C2125BD71000B2E6D = {
+		7BAAB45C72B5991F31F992F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				12DC7B472125BD71000B2E6D /* RoutingApp */,
-				12DC7B462125BD71000B2E6D /* Products */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D58080B218779DD007D5648 = {
+			isa = PBXGroup;
+			children = (
+				9D580816218779DD007D5648 /* RouteTta */,
+				9D580815218779DD007D5648 /* Products */,
+				7BAAB45C72B5991F31F992F7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		12DC7B462125BD71000B2E6D /* Products */ = {
+		9D580815218779DD007D5648 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				12DC7B452125BD71000B2E6D /* RouteTta.app */,
+				9D580814218779DD007D5648 /* RouteTta.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		12DC7B472125BD71000B2E6D /* RoutingApp */ = {
+		9D580816218779DD007D5648 /* RouteTta */ = {
 			isa = PBXGroup;
 			children = (
-				12DC7B482125BD71000B2E6D /* AppDelegate.swift */,
-				12DC7B4A2125BD72000B2E6D /* MapViewController.swift */,
-				12DC7B4C2125BD72000B2E6D /* Main.storyboard */,
-				12DC7B4F2125BD72000B2E6D /* Assets.xcassets */,
-				12DC7B542125BD72000B2E6D /* Info.plist */,
+				9D580817218779DD007D5648 /* AppDelegate.h */,
+				9D580818218779DD007D5648 /* AppDelegate.m */,
+				9D58081A218779DD007D5648 /* ViewController.h */,
+				9D58081B218779DD007D5648 /* ViewController.m */,
+				9D58081D218779DD007D5648 /* Main.storyboard */,
+				9D580820218779DE007D5648 /* Assets.xcassets */,
+				9D580822218779DE007D5648 /* LaunchScreen.storyboard */,
+				9D580825218779DE007D5648 /* Info.plist */,
+				9D580826218779DE007D5648 /* main.m */,
 			);
-			path = RoutingApp;
+			path = RouteTta;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		12DC7B442125BD71000B2E6D /* RouteTta */ = {
+		9D580813218779DD007D5648 /* RouteTta */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 12DC7B572125BD72000B2E6D /* Build configuration list for PBXNativeTarget "RouteTta" */;
+			buildConfigurationList = 9D58082A218779DE007D5648 /* Build configuration list for PBXNativeTarget "RouteTta" */;
 			buildPhases = (
-				12DC7B412125BD71000B2E6D /* Sources */,
-				12DC7B432125BD71000B2E6D /* Resources */,
+				9D580810218779DD007D5648 /* Sources */,
+				9D580812218779DD007D5648 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = RouteTta;
-			productName = RoutingApp;
-			productReference = 12DC7B452125BD71000B2E6D /* RouteTta.app */;
+			productName = RouteTta;
+			productReference = 9D580814218779DD007D5648 /* RouteTta.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		12DC7B3D2125BD71000B2E6D /* Project object */ = {
+		9D58080C218779DD007D5648 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "HERE Burnaby";
 				TargetAttributes = {
-					12DC7B442125BD71000B2E6D = {
-						CreatedOnToolsVersion = 9.4.1;
+					9D580813218779DD007D5648 = {
+						CreatedOnToolsVersion = 10.0;
 					};
 				};
 			};
-			buildConfigurationList = 12DC7B402125BD71000B2E6D /* Build configuration list for PBXProject "RoutingApp" */;
+			buildConfigurationList = 9D58080F218779DD007D5648 /* Build configuration list for PBXProject "RouteTta" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -93,53 +110,63 @@
 				en,
 				Base,
 			);
-			mainGroup = 12DC7B3C2125BD71000B2E6D;
-			productRefGroup = 12DC7B462125BD71000B2E6D /* Products */;
+			mainGroup = 9D58080B218779DD007D5648;
+			productRefGroup = 9D580815218779DD007D5648 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				12DC7B442125BD71000B2E6D /* RouteTta */,
+				9D580813218779DD007D5648 /* RouteTta */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		12DC7B432125BD71000B2E6D /* Resources */ = {
+		9D580812218779DD007D5648 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12DC7B502125BD72000B2E6D /* Assets.xcassets in Resources */,
-				12DC7B4E2125BD72000B2E6D /* Main.storyboard in Resources */,
+				9D580824218779DE007D5648 /* LaunchScreen.storyboard in Resources */,
+				9D580821218779DE007D5648 /* Assets.xcassets in Resources */,
+				9D58081F218779DD007D5648 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		12DC7B412125BD71000B2E6D /* Sources */ = {
+		9D580810218779DD007D5648 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12DC7B4B2125BD72000B2E6D /* MapViewController.swift in Sources */,
-				12DC7B492125BD72000B2E6D /* AppDelegate.swift in Sources */,
+				9D58081C218779DD007D5648 /* ViewController.m in Sources */,
+				9D580827218779DE007D5648 /* main.m in Sources */,
+				9D580819218779DD007D5648 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		12DC7B4C2125BD72000B2E6D /* Main.storyboard */ = {
+		9D58081D218779DD007D5648 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				12DC7B4D2125BD72000B2E6D /* Base */,
+				9D58081E218779DD007D5648 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9D580822218779DE007D5648 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D580823218779DE007D5648 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		12DC7B552125BD72000B2E6D /* Debug */ = {
+		9D580828218779DE007D5648 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -190,16 +217,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		12DC7B562125BD72000B2E6D /* Release */ = {
+		9D580829218779DE007D5648 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -244,20 +270,21 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		12DC7B582125BD72000B2E6D /* Debug */ = {
+		9D58082B218779DE007D5648 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C25CEE31E179809D2234E3F2;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RoutingApp/Info.plist;
+				INFOPLIST_FILE = RouteTta/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -265,16 +292,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.RouteTta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		12DC7B592125BD72000B2E6D /* Release */ = {
+		9D58082C218779DE007D5648 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80F6B2ACA994D05F89212CCE;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RoutingApp/Info.plist;
+				INFOPLIST_FILE = RouteTta/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -282,7 +310,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.RouteTta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -290,25 +317,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		12DC7B402125BD71000B2E6D /* Build configuration list for PBXProject "RoutingApp" */ = {
+		9D58080F218779DD007D5648 /* Build configuration list for PBXProject "RouteTta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				12DC7B552125BD72000B2E6D /* Debug */,
-				12DC7B562125BD72000B2E6D /* Release */,
+				9D580828218779DE007D5648 /* Debug */,
+				9D580829218779DE007D5648 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		12DC7B572125BD72000B2E6D /* Build configuration list for PBXNativeTarget "RouteTta" */ = {
+		9D58082A218779DE007D5648 /* Build configuration list for PBXNativeTarget "RouteTta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				12DC7B582125BD72000B2E6D /* Debug */,
-				12DC7B592125BD72000B2E6D /* Release */,
+				9D58082B218779DE007D5648 /* Debug */,
+				9D58082C218779DE007D5648 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 12DC7B3D2125BD71000B2E6D /* Project object */;
+	rootObject = 9D58080C218779DD007D5648 /* Project object */;
 }
