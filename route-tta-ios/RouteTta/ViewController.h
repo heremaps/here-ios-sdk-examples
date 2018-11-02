@@ -10,6 +10,7 @@
 
 @property (strong, nonatomic) NMARoute* calculatedRoute;
 @property (strong, nonatomic) NMACoreRouter* coreRouter;
+@property (strong, nonatomic) NMAMapRoute* mapRoute;
 @property (weak, nonatomic) IBOutlet NMAMapView *mapView;
 @property (weak, nonatomic) IBOutlet UILabel *excludedLabel;
 @property (weak, nonatomic) IBOutlet UILabel *includedLabel;

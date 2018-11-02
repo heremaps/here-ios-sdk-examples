@@ -280,7 +280,6 @@
 		};
 		9D58082B218779DE007D5648 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C25CEE31E179809D2234E3F2;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,7 +297,6 @@
 		};
 		9D58082C218779DE007D5648 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80F6B2ACA994D05F89212CCE;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
