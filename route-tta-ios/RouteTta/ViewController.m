@@ -13,7 +13,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    /* Initialize a CoreRouter */
+    self.coreRouter = [[NMACoreRouter alloc] init];
+}
+
+- (void) viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [[NMATrafficManager sharedTrafficManager] removeObserver:self];
+}
+
+- (IBAction)calculateRoute:(UIButton *)sender {
     /* Define waypoints for the route */
     /* START: Holländerstraße, Wedding, 13407 Berlin */
     NMAGeoCoordinates* startPoint = [[NMAGeoCoordinates alloc] initWithLatitude:52.562755700200796 longitude:13.34599438123405];
@@ -43,9 +52,6 @@
     /* Calculate 1 route. */
     routeMode.resultLimit = 1;
     
-    /* Initialize a CoreRouter */
-    self.coreRouter = [[NMACoreRouter alloc] init];
-    
     // for calculating traffic on the route
     NMADynamicPenalty* penalty = [[NMADynamicPenalty alloc] init];
     penalty.trafficPenaltyMode = NMATrafficPenaltyModeOptimal;
@@ -62,9 +68,13 @@
          
          self.calculatedRoute = route;
          
+         if (self.mapRoute != nil) {
+             [self.mapView removeMapObject:self.mapRoute];
+         }
+         
          // add route on the map
-         NMAMapRoute* mapRoute = [[NMAMapRoute alloc] initWithRoute:self.calculatedRoute];
-         [self.mapView addMapObject:mapRoute];
+         self.mapRoute = [[NMAMapRoute alloc] initWithRoute:self.calculatedRoute];
+         [self.mapView addMapObject:self.mapRoute];
          [self.mapView setBoundingBox:route.boundingBox withAnimation:NMAMapAnimationNone];
          
          // start downloading traffic for route
@@ -72,12 +82,7 @@
          [manager requestTrafficOnRoute:route];
          [manager addObserver:self];
          [self setTtaTime];
-    }];
-}
-
-- (void) viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    [[NMATrafficManager sharedTrafficManager] removeObserver:self];
+     }];
 }
 
 - (void) setTtaTime {

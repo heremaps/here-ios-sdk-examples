@@ -15,43 +15,13 @@ class ViewController: UIViewController, NMATrafficManagerObserver {
     
     var coreRouter: NMACoreRouter?
     weak var calculatedRoute: NMARoute?
+    var mapRoute: NMAMapRoute?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // create route
-        let routeContainer = createRoute()
-        
         /* Initialize a CoreRouter */
         coreRouter = NMACoreRouter()
-        
-        // for calculating traffic on the route
-        let penalty = NMADynamicPenalty()
-        penalty.trafficPenaltyMode = NMATrafficPenaltyMode.optimal
-        coreRouter?.dynamicPenalty = penalty
-        
-        coreRouter?.calculateRoute(withStops: routeContainer.plan, routingMode: routeContainer.mode,
-                                   { (result, error) in
-            // check error and unwrap route
-            guard let route = result?.routes?.first, error == NMARoutingError.none else {
-                return
-            }
-        
-            // assign new route
-            self.calculatedRoute = route
-            // create map object from route
-            guard let mapRoute = NMAMapRoute(route) else {
-                return
-            }
-            self.mapView?.add(mapObject: mapRoute)
-            self.mapView?.set(boundingBox: route.boundingBox!, animation: NMAMapAnimation.none)
-            
-            // request for downloading traffic for current route
-            let manager = NMATrafficManager.sharedInstance()
-            manager.requestTraffic(on: route)
-            manager.add(observer: self)
-            self.setTtaTime()
-        })
     }
     
     func setTtaTime() {
@@ -83,5 +53,44 @@ class ViewController: UIViewController, NMATrafficManagerObserver {
     
     override func viewDidDisappear(_ animated: Bool) {
         NMATrafficManager.sharedInstance().remove(observer: self)
+    }
+    
+    @IBAction func calculateRoute(_ sender: UIButton) {
+        // for calculating traffic on the route
+        let penalty = NMADynamicPenalty()
+        penalty.trafficPenaltyMode = NMATrafficPenaltyMode.optimal
+        coreRouter?.dynamicPenalty = penalty
+        
+        // create route
+        let routeContainer = createRoute()
+        
+        coreRouter?.calculateRoute(withStops: routeContainer.plan, routingMode: routeContainer.mode,
+                                   { (result, error) in
+                                    // check error and unwrap route
+                                    guard let route = result?.routes?.first, error == NMARoutingError.none else {
+                                        return
+                                    }
+                                    
+                                    // check if map object already exist
+                                    if let tempMapRoute = self.mapRoute {
+                                        self.mapView?.remove(mapObject: tempMapRoute)
+                                    }
+                                    
+                                    // assign new route
+                                    self.calculatedRoute = route
+                                    // create map object from route
+                                    guard let mapRoute = NMAMapRoute(route) else {
+                                        return
+                                    }
+                                    
+                                    self.mapView?.add(mapObject: mapRoute)
+                                    self.mapView?.set(boundingBox: route.boundingBox!, animation: NMAMapAnimation.none)
+                                    
+                                    // request for downloading traffic for current route
+                                    let manager = NMATrafficManager.sharedInstance()
+                                    manager.requestTraffic(on: route)
+                                    manager.add(observer: self)
+                                    self.setTtaTime()
+        })
     }
 }
