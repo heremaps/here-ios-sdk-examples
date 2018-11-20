@@ -44,7 +44,7 @@ All of the following projects use **version 3.9** of the iOS Premium SDK
     - Select an eligible provisioning profile or enable "Automatically
       manage signing".
 
-3. In AppDelegate.m:
+3. In `AppDelegate.m`:
     - Enter an app id, app code and license key.
 
 ### Without CocoaPods
@@ -58,9 +58,9 @@ All of the following projects use **version 3.9** of the iOS Premium SDK
  
 2. In the "Builds Settings" of the App target:
     - Ensure "Frameworks Search Paths" includes the location of
-      NMAKit.framework.
+      `NMAKit.framework`.
  
-3. In AppDelegate.m:
+3. In `AppDelegate.m`:
     - Enter an app id, app code and license key.
 
 ## Build Requirements
