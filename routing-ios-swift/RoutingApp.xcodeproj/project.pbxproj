@@ -14,7 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		12DC7B452125BD71000B2E6D /* RouteTta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouteTta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		12DC7B452125BD71000B2E6D /* RoutingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoutingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12DC7B482125BD71000B2E6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12DC7B4A2125BD72000B2E6D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		12DC7B4D2125BD72000B2E6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,7 +34,7 @@
 		12DC7B462125BD71000B2E6D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				12DC7B452125BD71000B2E6D /* RouteTta.app */,
+				12DC7B452125BD71000B2E6D /* RoutingApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,9 +54,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		12DC7B442125BD71000B2E6D /* RouteTta */ = {
+		12DC7B442125BD71000B2E6D /* RoutingApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 12DC7B572125BD72000B2E6D /* Build configuration list for PBXNativeTarget "RouteTta" */;
+			buildConfigurationList = 12DC7B572125BD72000B2E6D /* Build configuration list for PBXNativeTarget "RoutingApp" */;
 			buildPhases = (
 				12DC7B412125BD71000B2E6D /* Sources */,
 				12DC7B432125BD71000B2E6D /* Resources */,
@@ -65,9 +65,9 @@
 			);
 			dependencies = (
 			);
-			name = RouteTta;
+			name = RoutingApp;
 			productName = RoutingApp;
-			productReference = 12DC7B452125BD71000B2E6D /* RouteTta.app */;
+			productReference = 12DC7B452125BD71000B2E6D /* RoutingApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -98,7 +98,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				12DC7B442125BD71000B2E6D /* RouteTta */,
+				12DC7B442125BD71000B2E6D /* RoutingApp */,
 			);
 		};
 /* End PBXProject section */
@@ -263,7 +263,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.RouteTta;
+				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.RoutingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -280,7 +280,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.RouteTta;
+				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.RoutingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -299,7 +299,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		12DC7B572125BD72000B2E6D /* Build configuration list for PBXNativeTarget "RouteTta" */ = {
+		12DC7B572125BD72000B2E6D /* Build configuration list for PBXNativeTarget "RoutingApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				12DC7B582125BD72000B2E6D /* Debug */,
