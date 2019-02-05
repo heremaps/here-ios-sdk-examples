@@ -3,7 +3,7 @@
 //  MapAttributeApp
 //
 //  Created by Martiushev, Semen on 9/6/18.
-//  Copyright © 2018 HERE Burnaby. All rights reserved.
+//  Copyright © 2019 HERE Burnaby. All rights reserved.
 //
 
 import UIKit
