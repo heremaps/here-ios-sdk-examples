@@ -5,10 +5,12 @@
 #import "MainViewController.h"
 #import <math.h>
 
-static const int OPTION_POLYGON = 0;
-static const int OPTION_POLYLINE = 1;
-static const int OPTION_MAP_MARKER = 2;
-static const int OPTION_MAP_CIRCLE = 3;
+typedef NS_ENUM(NSUInteger, MapObjectOption) {
+    MapObjectOptionPolygon = 0,
+    MapObjectOptionPolyline,
+    MapObjectOptionMapMarker,
+    MapObjectOptionMapCircle,
+};
 
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet NMAMapView* mapView;
@@ -107,17 +109,17 @@ static const int OPTION_MAP_CIRCLE = 3;
 
 - (IBAction)onOptionButtonClicked:(id)sender {
     UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-    [self addAddOptionToController:actionSheet optionId:OPTION_POLYGON title:@"Add polygon"];
-    [self addRemoveOptionToCotroller:actionSheet optionsId:OPTION_POLYGON title:@"Remove polygon"];
+    [self addAddOptionToController:actionSheet optionId:MapObjectOptionPolygon title:@"Add polygon"];
+    [self addRemoveOptionToCotroller:actionSheet optionsId:MapObjectOptionPolygon title:@"Remove polygon"];
 
-    [self addAddOptionToController:actionSheet optionId:OPTION_POLYLINE title:@"Add polyline"];
-    [self addRemoveOptionToCotroller:actionSheet optionsId:OPTION_POLYLINE title:@"Remove polyline"];
+    [self addAddOptionToController:actionSheet optionId:MapObjectOptionPolyline title:@"Add polyline"];
+    [self addRemoveOptionToCotroller:actionSheet optionsId:MapObjectOptionPolyline title:@"Remove polyline"];
 
-    [self addAddOptionToController:actionSheet optionId:OPTION_MAP_CIRCLE title:@"Add circle"];
-    [self addRemoveOptionToCotroller:actionSheet optionsId:OPTION_MAP_CIRCLE title:@"Remove circle"];
+    [self addAddOptionToController:actionSheet optionId:MapObjectOptionMapCircle title:@"Add circle"];
+    [self addRemoveOptionToCotroller:actionSheet optionsId:MapObjectOptionMapCircle title:@"Remove circle"];
 
-    [self addAddOptionToController:actionSheet optionId:OPTION_MAP_MARKER title:@"Add marker"];
-    [self addRemoveOptionToCotroller:actionSheet optionsId:OPTION_MAP_MARKER title:@"Remove marker"];
+    [self addAddOptionToController:actionSheet optionId:MapObjectOptionMapMarker title:@"Add marker"];
+    [self addRemoveOptionToCotroller:actionSheet optionsId:MapObjectOptionMapMarker title:@"Remove marker"];
     [actionSheet addAction:[UIAlertAction actionWithTitle:@"Navigate to markers" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         if (self->_mapMarkers.count > 0) {
             [self navigateToMarkers];
@@ -126,6 +128,11 @@ static const int OPTION_MAP_CIRCLE = 3;
 
     [actionSheet addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
 
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        UIButton *optionButton = (UIButton *)sender;
+        actionSheet.popoverPresentationController.sourceView = optionButton;
+        actionSheet.popoverPresentationController.sourceRect = optionButton.bounds;
+    }
 
     [self presentViewController:actionSheet animated:YES completion:nil];
 }
@@ -133,16 +140,16 @@ static const int OPTION_MAP_CIRCLE = 3;
 - (void)addAddOptionToController:(UIAlertController*)controller optionId:(int)optionId title:(NSString*)title {
     [controller addAction:[UIAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         switch (optionId) {
-            case OPTION_POLYGON:
+            case MapObjectOptionPolygon:
                 [self addPolygon];
                 break;
-            case OPTION_POLYLINE:
+            case MapObjectOptionPolyline:
                 [self addPolyline];
                 break;
-            case OPTION_MAP_MARKER:
+            case MapObjectOptionMapMarker:
                 [self addMapMarker];
                 break;
-            case OPTION_MAP_CIRCLE:
+            case MapObjectOptionMapCircle:
                 [self addCircle];
                 break;
             default:
@@ -154,8 +161,8 @@ static const int OPTION_MAP_CIRCLE = 3;
 - (void)addRemoveOptionToCotroller:(UIAlertController*)controller optionsId:(int)optionId title:(NSString*)title {
     [controller addAction:[UIAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         NSMutableArray* array = [self getArrayForOptionId:optionId];
-        if (array.count > 0) {
-            NMAMapObject* lastAdded = array[array.count - 1];
+        NMAMapObject* lastAdded = [array lastObject];
+        if (lastAdded) {
             [self.mapView removeMapObject:lastAdded];
             [array removeObject:lastAdded];
         }
@@ -165,13 +172,13 @@ static const int OPTION_MAP_CIRCLE = 3;
 - (NSMutableArray*) getArrayForOptionId:(int)optionId {
     switch (optionId) {
         default:
-        case OPTION_POLYGON:
+        case MapObjectOptionPolygon:
             return _geoPolygons;
-        case OPTION_POLYLINE:
+        case MapObjectOptionPolyline:
             return _geoPolylines;
-        case OPTION_MAP_MARKER:
+        case MapObjectOptionMapMarker:
             return _mapMarkers;
-        case OPTION_MAP_CIRCLE:
+        case MapObjectOptionMapCircle:
             return _mapCircles;
     }
 }
