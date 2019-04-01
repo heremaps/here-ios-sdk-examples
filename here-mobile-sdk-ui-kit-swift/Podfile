@@ -1,0 +1,4 @@
+target 'GuideMeToHERE' do
+    platform :ios, '12.0'
+    pod 'HEREMapsUI', '2.0'
+end
