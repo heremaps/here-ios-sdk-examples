@@ -18,7 +18,7 @@ Unless otherwise noted in `LICENSE` files for specific files or directories, the
 
 ## iOS Premium SDK
 
-All of the following projects use **version 3.10** of the iOS Premium SDK
+All of the following projects use **version 3.11** of the iOS Premium SDK
 
 * [Geocoding and Reverse Gecoding](geocoder-and-reverse-geocoder-ios) - Trigger a Geocode and Reverse Geocode request in HERE SDK.
 * [Here Positioning](here-positioning-ios) - Use HERE location data source.
@@ -67,7 +67,7 @@ All of the following projects use **version 3.10** of the iOS Premium SDK
 ## Build Requirements
  
 * XCode 10 or above
-* HERE Premium SDK Version 3.10 or above
+* HERE Premium SDK Version 3.11 or above
 
 ## Target Platform
  
