@@ -117,7 +117,7 @@ class MapPackageTableViewController : UITableViewController, NMAMapLoaderDelegat
         if progress < 1.0 {
             self.progressLabel?.text = "Progress:" + progress.description
         } else {
-            self.progressLabel?.text = "Installing..."
+            self.progressLabel?.text = "" // Already finished
         }
     }
 
@@ -212,6 +212,8 @@ extension MapPackageTableViewController {
                 let success = self.mapLoader.install(packageArray)
                 if !success {
                     self.showAlertWithMessage("MapLoader is being busy with other operations")
+                } else {
+                    self.progressLabel?.text = "Installing..."
                 }
             }
         }
