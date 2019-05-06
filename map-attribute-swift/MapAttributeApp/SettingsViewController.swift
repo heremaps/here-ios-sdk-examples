@@ -65,9 +65,9 @@ class SettingsViewController: UITableViewController {
         {
             let mapSchemeCtrl = UISegmentedControl(items: Array(self.mapSchemes.keys))
 
-            let textAttributes = [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 14.0)]
-            mapSchemeCtrl.setTitleTextAttributes(textAttributes, for:UIControlState.normal)
-            mapSchemeCtrl.setTitleTextAttributes(textAttributes, for:UIControlState.highlighted)
+            let textAttributes = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14.0)]
+            mapSchemeCtrl.setTitleTextAttributes(textAttributes, for:UIControl.State.normal)
+            mapSchemeCtrl.setTitleTextAttributes(textAttributes, for:UIControl.State.highlighted)
             self.mapSchemeCtrl = mapSchemeCtrl
             cell.contentView.addSubview(mapSchemeCtrl)
 
@@ -88,9 +88,9 @@ class SettingsViewController: UITableViewController {
         {
             let transitModeCtrl = UISegmentedControl(items: self.transitModes)
 
-            let textAttributes = [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 12.0)]
-            transitModeCtrl.setTitleTextAttributes(textAttributes, for:UIControlState.normal)
-            transitModeCtrl.setTitleTextAttributes(textAttributes, for:UIControlState.highlighted)
+            let textAttributes = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 12.0)]
+            transitModeCtrl.setTitleTextAttributes(textAttributes, for:UIControl.State.normal)
+            transitModeCtrl.setTitleTextAttributes(textAttributes, for:UIControl.State.highlighted)
             self.transitModeCtrl = transitModeCtrl
             cell.contentView.addSubview(transitModeCtrl)
 

@@ -160,7 +160,7 @@ extension MapPackageTableViewController {
                                             owner: self,
                                             options: nil)?[0] as? MapPackageTableViewCell
         }
-        cell?.selectionStyle = UITableViewCellSelectionStyle.none
+        cell?.selectionStyle = UITableViewCell.SelectionStyle.none
         let mapPackage: NMAMapPackage? = self.currentPackages[indexPath.row]
 
         // Display title and size information of each map package.

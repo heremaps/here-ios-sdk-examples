@@ -40,7 +40,7 @@ class ViewController: UIViewController {
 
         let rect = text.boundingRect(with: frame.size,
                                      options: options,
-                                     attributes: [NSAttributedStringKey.font :label.font],
+                                     attributes: [NSAttributedString.Key.font :label.font],
                                      context: nil)
 
         frame.size = rect.size
