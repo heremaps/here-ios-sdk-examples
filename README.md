@@ -65,7 +65,6 @@ All of the following projects use **version 3.11** of the iOS Premium SDK
     - Enter an app id, app code and license key.
 
 ## Build Requirements
-
  
 * XCode 10 or above
 * HERE Premium SDK Version 3.11 or above
