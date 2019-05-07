@@ -206,7 +206,7 @@ class MainViewController: UIViewController {
         let text = label.text! as NSString
         let rect = text.boundingRect(with: Defaults.frame.size,
                                       options: [.usesLineFragmentOrigin, .usesFontLeading],
-                                      attributes: [NSAttributedStringKey.font : label.font],
+                                      attributes: [NSAttributedString.Key.font : label.font],
                                       context: nil)
         var frame = Defaults.frame
         frame.size = rect.size
