@@ -4,7 +4,9 @@
  */
 
 #import <UIKit/UIKit.h>
+@import NMAKit;
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController<NMAVenue3dMapLayerDelegate,NMAVenue3dRoutingControllerObserver,
+                                                UITableViewDelegate, UITableViewDataSource>
 
 @end
