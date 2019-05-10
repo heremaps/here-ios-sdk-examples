@@ -13,6 +13,8 @@
 		464E18CE185B86C100B9DC78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 464E18CC185B86C100B9DC78 /* Main.storyboard */; };
 		464E18D1185B86C100B9DC78 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464E18D0185B86C100B9DC78 /* MainViewController.m */; };
 		464E18D3185B86C100B9DC78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 464E18D2185B86C100B9DC78 /* Assets.xcassets */; };
+		C33D3D702285A4B00047A8B9 /* FcwTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C33D3D6E2285A4B00047A8B9 /* FcwTableViewCell.m */; };
+		C33D3D712285A4B00047A8B9 /* FcwTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33D3D6F2285A4B00047A8B9 /* FcwTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +42,9 @@
 		464E18CF185B86C100B9DC78 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		464E18D0185B86C100B9DC78 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		464E18D2185B86C100B9DC78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C33D3D6D2285A4B00047A8B9 /* FcwTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FcwTableViewCell.h; sourceTree = "<group>"; };
+		C33D3D6E2285A4B00047A8B9 /* FcwTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FcwTableViewCell.m; sourceTree = "<group>"; };
+		C33D3D6F2285A4B00047A8B9 /* FcwTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FcwTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +90,9 @@
 				464E18CC185B86C100B9DC78 /* Main.storyboard */,
 				464E18CF185B86C100B9DC78 /* MainViewController.h */,
 				464E18D0185B86C100B9DC78 /* MainViewController.m */,
+				C33D3D6D2285A4B00047A8B9 /* FcwTableViewCell.h */,
+				C33D3D6E2285A4B00047A8B9 /* FcwTableViewCell.m */,
+				C33D3D6F2285A4B00047A8B9 /* FcwTableViewCell.xib */,
 				464E18D2185B86C100B9DC78 /* Assets.xcassets */,
 				464E18C1185B86C100B9DC78 /* Supporting Files */,
 			);
@@ -165,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C33D3D712285A4B00047A8B9 /* FcwTableViewCell.xib in Resources */,
 				464E18D3185B86C100B9DC78 /* Assets.xcassets in Resources */,
 				464E18C5185B86C100B9DC78 /* InfoPlist.strings in Resources */,
 				464E18CE185B86C100B9DC78 /* Main.storyboard in Resources */,
@@ -178,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C33D3D702285A4B00047A8B9 /* FcwTableViewCell.m in Sources */,
 				464E18CB185B86C100B9DC78 /* AppDelegate.m in Sources */,
 				464E18D1185B86C100B9DC78 /* MainViewController.m in Sources */,
 				464E18C7185B86C100B9DC78 /* main.m in Sources */,
