@@ -91,7 +91,7 @@ extension ViewController : NMAMapGestureDelegate {
     }
 
     /**
-     * callback when totation gesture occurred. It showed a message when rotation gesture was applied.
+     * callback when rotation gesture occurred. It showed a message when rotation gesture was applied.
      */
     func mapView(_ mapView: NMAMapView, didReceiveRotation rotation: Float, at location: CGPoint) {
         showMessage("Rotation gesture")
