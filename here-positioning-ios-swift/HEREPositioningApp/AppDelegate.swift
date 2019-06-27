@@ -7,9 +7,11 @@ import UIKit
 import NMAKit
 
 // To obtain the application credentials, please register at https://developer.here.com/develop/mobile-sdks
-let kSampleAppID = ""
-let kSampleAppCode = ""
-let kSampleMapLicenseKey = ""
+let credentials = (
+    appId: "",
+    appCode: "",
+    licenseKey: ""
+)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         //set application credentials
-        NMAApplicationContext.setAppId(kSampleAppID, appCode: kSampleAppCode, licenseKey: kSampleMapLicenseKey)
+        NMAApplicationContext.setAppId(credentials.appId, appCode: credentials.appCode, licenseKey: credentials.licenseKey)
         return true
     }
 }
