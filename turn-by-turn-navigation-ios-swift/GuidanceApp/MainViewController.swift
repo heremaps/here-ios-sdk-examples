@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2018 HERE Europe B.V.
+ * Copyright (c) 2011-2019 HERE Europe B.V.
  * All rights reserved.
  */
 
@@ -206,7 +206,7 @@ class MainViewController: UIViewController {
         let text = label.text! as NSString
         let rect = text.boundingRect(with: Defaults.frame.size,
                                       options: [.usesLineFragmentOrigin, .usesFontLeading],
-                                      attributes: [NSAttributedStringKey.font : label.font],
+                                      attributes: [NSAttributedString.Key.font : label.font],
                                       context: nil)
         var frame = Defaults.frame
         frame.size = rect.size

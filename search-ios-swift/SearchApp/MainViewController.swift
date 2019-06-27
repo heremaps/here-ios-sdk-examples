@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2018 HERE Europe B.V.
+ * Copyright (c) 2011-2019 HERE Europe B.V.
  * All rights reserved.
  */
 
@@ -23,9 +23,9 @@ class MainViewController: UIViewController {
         self.mapView.set(geoCenter: geoCoordCenter, animation:NMAMapAnimation.none)
         // set zoom level
         self.mapView.zoomLevel = 13.2
-        self.requestControl.selectedSegmentIndex = UISegmentedControlNoSegment
+        self.requestControl.selectedSegmentIndex = UISegmentedControl.noSegment
         self.resultListButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        self.view.bringSubview(toFront: self.resultListButton)
+        self.view.bringSubviewToFront(self.resultListButton)
         self.resultListButton.isHidden = true;
 
         // Initialize a request completion

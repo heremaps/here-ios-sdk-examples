@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2018 HERE Europe B.V.
+ * Copyright (c) 2011-2019 HERE Europe B.V.
  * All rights reserved.
  */
 
@@ -7,7 +7,7 @@ import UIKit
 import NMAKit
 
 // To obtain the application credentials, please register at https://developer.here.com/develop/mobile-sdks
-let keys = (
+let credentials = (
     appId: "",
     appCode: "",
     licenseKey: ""
@@ -17,8 +17,8 @@ let keys = (
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        NMAApplicationContext.setAppId(keys.appId, appCode: keys.appCode, licenseKey: keys.licenseKey)
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        NMAApplicationContext.setAppId(credentials.appId, appCode: credentials.appCode, licenseKey: credentials.licenseKey)
         return true
     }
 }

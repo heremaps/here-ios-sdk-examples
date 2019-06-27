@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2018 HERE Europe B.V.
+ * Copyright (c) 2011-2019 HERE Europe B.V.
  * All rights reserved.
  */
 
@@ -7,13 +7,13 @@ import UIKit
 
 class Helper {
 
-    static var indicator: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+    static var indicator: UIActivityIndicatorView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
 
     static func showIndicator(onView view:UIView) {
         indicator.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0)
         indicator.center = view.center
         view.addSubview(indicator)
-        view.bringSubview(toFront: indicator)
+        view.bringSubviewToFront(indicator)
         indicator.startAnimating()
     }
 
@@ -31,7 +31,7 @@ class Helper {
         label.numberOfLines = 0;
 
         if let rect = label.text?.boundingRect(with: frame.size, options: [NSStringDrawingOptions.usesLineFragmentOrigin,
-            NSStringDrawingOptions.usesFontLeading], attributes: [NSAttributedStringKey.font : label.font], context: nil) {
+            NSStringDrawingOptions.usesFontLeading], attributes: [NSAttributedString.Key.font : label.font], context: nil) {
             frame.size = rect.size;
             label.frame = frame;
         }

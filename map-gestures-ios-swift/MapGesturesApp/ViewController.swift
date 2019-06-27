@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2018 HERE Europe B.V.
+ * Copyright (c) 2011-2019 HERE Europe B.V.
  * All rights reserved.
  */
 
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
 
         let rect = text.boundingRect(with: frame.size,
                                      options: options,
-                                     attributes: [NSAttributedStringKey.font :label.font],
+                                     attributes: [NSAttributedString.Key.font :label.font],
                                      context: nil)
 
         frame.size = rect.size
@@ -91,7 +91,7 @@ extension ViewController : NMAMapGestureDelegate {
     }
 
     /**
-     * callback when totation gesture occurred. It showed a message when rotation gesture was applied.
+     * callback when rotation gesture occurred. It showed a message when rotation gesture was applied.
      */
     func mapView(_ mapView: NMAMapView, didReceiveRotation rotation: Float, at location: CGPoint) {
         showMessage("Rotation gesture")

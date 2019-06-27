@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2018 HERE Europe B.V.
+ * Copyright (c) 2011-2019 HERE Europe B.V.
  * All rights reserved.
  */
 
@@ -42,7 +42,7 @@ class ImageTileSource: NMAMapTileLayer, NMAMapTileLayerDataSource {
     func mapTileLayer(_ mapTileLayer: NMAMapTileLayer,
                       requestDataForTileAt x: UInt, _ y: UInt, _ zoomLevel: UInt) -> Data {
         if let pandaImg = UIImage(named: "panda.png") {
-            if let data = UIImagePNGRepresentation(pandaImg)?
+            if let data = pandaImg.pngData()?
                 .base64EncodedData(options: Data.Base64EncodingOptions.lineLength64Characters) {
                 if let base64Image = String(data: data, encoding: String.Encoding.utf8) {
                     if let decodedData = Data(base64Encoded: base64Image,

@@ -13,6 +13,8 @@
 		464E18CE185B86C100B9DC78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 464E18CC185B86C100B9DC78 /* Main.storyboard */; };
 		464E18D1185B86C100B9DC78 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464E18D0185B86C100B9DC78 /* MainViewController.m */; };
 		464E18D3185B86C100B9DC78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 464E18D2185B86C100B9DC78 /* Assets.xcassets */; };
+		C33D3D702285A4B00047A8B9 /* FcwTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C33D3D6E2285A4B00047A8B9 /* FcwTableViewCell.m */; };
+		C33D3D712285A4B00047A8B9 /* FcwTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33D3D6F2285A4B00047A8B9 /* FcwTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +42,9 @@
 		464E18CF185B86C100B9DC78 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		464E18D0185B86C100B9DC78 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		464E18D2185B86C100B9DC78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C33D3D6D2285A4B00047A8B9 /* FcwTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FcwTableViewCell.h; sourceTree = "<group>"; };
+		C33D3D6E2285A4B00047A8B9 /* FcwTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FcwTableViewCell.m; sourceTree = "<group>"; };
+		C33D3D6F2285A4B00047A8B9 /* FcwTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FcwTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +90,9 @@
 				464E18CC185B86C100B9DC78 /* Main.storyboard */,
 				464E18CF185B86C100B9DC78 /* MainViewController.h */,
 				464E18D0185B86C100B9DC78 /* MainViewController.m */,
+				C33D3D6D2285A4B00047A8B9 /* FcwTableViewCell.h */,
+				C33D3D6E2285A4B00047A8B9 /* FcwTableViewCell.m */,
+				C33D3D6F2285A4B00047A8B9 /* FcwTableViewCell.xib */,
 				464E18D2185B86C100B9DC78 /* Assets.xcassets */,
 				464E18C1185B86C100B9DC78 /* Supporting Files */,
 			);
@@ -130,7 +138,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = HEREPositioningApp;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "HERE Global B.V.";
 				TargetAttributes = {
 					464E18B6185B86C100B9DC78 = {
@@ -165,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C33D3D712285A4B00047A8B9 /* FcwTableViewCell.xib in Resources */,
 				464E18D3185B86C100B9DC78 /* Assets.xcassets in Resources */,
 				464E18C5185B86C100B9DC78 /* InfoPlist.strings in Resources */,
 				464E18CE185B86C100B9DC78 /* Main.storyboard in Resources */,
@@ -178,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C33D3D702285A4B00047A8B9 /* FcwTableViewCell.m in Sources */,
 				464E18CB185B86C100B9DC78 /* AppDelegate.m in Sources */,
 				464E18D1185B86C100B9DC78 /* MainViewController.m in Sources */,
 				464E18C7185B86C100B9DC78 /* main.m in Sources */,
@@ -215,20 +225,34 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -259,20 +283,33 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

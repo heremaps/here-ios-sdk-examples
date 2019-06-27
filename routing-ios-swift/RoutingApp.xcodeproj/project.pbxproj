@@ -22,16 +22,6 @@
 		12DC7B542125BD72000B2E6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFrameworksBuildPhase section */
-		12DC7B422125BD71000B2E6D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
 /* Begin PBXGroup section */
 		12DC7B3C2125BD71000B2E6D = {
 			isa = PBXGroup;
@@ -69,7 +59,6 @@
 			buildConfigurationList = 12DC7B572125BD72000B2E6D /* Build configuration list for PBXNativeTarget "RoutingApp" */;
 			buildPhases = (
 				12DC7B412125BD71000B2E6D /* Sources */,
-				12DC7B422125BD71000B2E6D /* Frameworks */,
 				12DC7B432125BD71000B2E6D /* Resources */,
 			);
 			buildRules = (
@@ -93,6 +82,7 @@
 				TargetAttributes = {
 					12DC7B442125BD71000B2E6D = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -274,9 +264,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.Routing;
+				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.RoutingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -291,9 +281,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.Routing;
+				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.RoutingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

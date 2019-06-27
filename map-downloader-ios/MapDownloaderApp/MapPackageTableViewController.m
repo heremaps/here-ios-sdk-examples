@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2017 HERE Europe B.V.
+ * Copyright (c) 2011-2019 HERE Europe B.V.
  * All rights reserved.
  */
 
@@ -11,8 +11,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem* cancelButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem* mapUpdateButton;
 @property (nonatomic) NMAMapLoader* mapLoader;
-@property (nonatomic)
-    NSMutableArray* currentPackages; // Map packages currently displayed in the table view.
+@property (nonatomic) NSMutableArray* currentPackages; // Map packages currently displayed in the table view.
 @property (nonatomic) UILabel* progressLabel;
 
 @end
@@ -38,7 +37,7 @@
 - (IBAction)didCancelButtonClick:(id)sender
 {
     // Cancel the current MapLoader operation.
-    Boolean success = [self.mapLoader cancelCurrentOperation];
+    BOOL success = [self.mapLoader cancelCurrentOperation];
     if (success)
     {
         self.progressLabel.text = @"Cancelling....";
@@ -51,7 +50,7 @@
 - (IBAction)didUpdateButtonClick:(id)sender
 {
     // Check map update.
-    Boolean success = [self.mapLoader checkForMapDataUpdate];
+    BOOL success = [self.mapLoader checkForMapDataUpdate];
     if (!success)
     {
         [self showAlertWithMessage:@"MapLoader is being busy with other operations"];
@@ -99,7 +98,7 @@
         [self showAlertWithMessage:
                   [NSString
                       stringWithFormat:@"MapLoader failed to get map packages with error code %lu",
-                      mapLoaderResult]];
+                      (unsigned long)mapLoaderResult]];
     }
 }
 
@@ -116,7 +115,7 @@
             // Update map if there is a new version available
             [self showAlertWithMessage:[NSString stringWithFormat:@"Found new map version %@",
                                                  newestMapVersion]];
-            Boolean success = [self.mapLoader performMapDataUpdate];
+            BOOL success = [self.mapLoader performMapDataUpdate];
             if (!success)
             {
                 [self showAlertWithMessage:@"MapLoader is being busy with other operations"];
@@ -149,7 +148,7 @@
     }
     else
     {
-        self.progressLabel.text = @"Installing...";
+        self.progressLabel.text = @""; // Already finished
     }
 }
 
@@ -247,7 +246,7 @@
         if (selectedPackage.installationStatus == NMAMapPackageInstallationImplicit
             || selectedPackage.installationStatus == NMAMapPackageInstallationExplicit)
         {
-            Boolean success = [self.mapLoader uninstallMapPackages:packageArray];
+            BOOL success = [self.mapLoader uninstallMapPackages:packageArray];
             if (!success)
             {
                 [self showAlertWithMessage:@"MapLoader is being busy with other operations"];
@@ -259,10 +258,14 @@
         }
         else
         {
-            Boolean success = [self.mapLoader installMapPackages:packageArray];
+            BOOL success = [self.mapLoader installMapPackages:packageArray];
             if (!success)
             {
                 [self showAlertWithMessage:@"MapLoader is being busy with other operations"];
+            }
+            else
+            {
+                self.progressLabel.text = @"Installing...";
             }
         }
     }

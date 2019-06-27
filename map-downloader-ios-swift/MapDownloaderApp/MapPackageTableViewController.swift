@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2018 HERE Europe B.V.
+ * Copyright (c) 2011-2019 HERE Europe B.V.
  * All rights reserved.
  */
 
@@ -117,7 +117,7 @@ class MapPackageTableViewController : UITableViewController, NMAMapLoaderDelegat
         if progress < 1.0 {
             self.progressLabel?.text = "Progress:" + progress.description
         } else {
-            self.progressLabel?.text = "Installing..."
+            self.progressLabel?.text = "" // Already finished
         }
     }
 
@@ -160,7 +160,7 @@ extension MapPackageTableViewController {
                                             owner: self,
                                             options: nil)?[0] as? MapPackageTableViewCell
         }
-        cell?.selectionStyle = UITableViewCellSelectionStyle.none
+        cell?.selectionStyle = UITableViewCell.SelectionStyle.none
         let mapPackage: NMAMapPackage? = self.currentPackages[indexPath.row]
 
         // Display title and size information of each map package.
@@ -212,6 +212,8 @@ extension MapPackageTableViewController {
                 let success = self.mapLoader.install(packageArray)
                 if !success {
                     self.showAlertWithMessage("MapLoader is being busy with other operations")
+                } else {
+                    self.progressLabel?.text = "Installing..."
                 }
             }
         }
