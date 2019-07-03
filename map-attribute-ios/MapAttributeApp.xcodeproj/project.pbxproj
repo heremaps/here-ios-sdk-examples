@@ -165,7 +165,7 @@
 			};
 			buildConfigurationList = 5FD23E181CFF9B4100F21EA3 /* Build configuration list for PBXProject "MapAttributeApp" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
