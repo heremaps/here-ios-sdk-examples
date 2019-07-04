@@ -3,7 +3,6 @@
  * All rights reserved.
  */
 
-
 #import "AppDelegate.h"
 #import <NMAKit/NMAKit.h>
 
@@ -13,7 +12,6 @@ NSString* const kSampleAppCode = @"{YOUR_APP_CODE}";
 NSString* const kSampleMapLicenseKey = @"{YOUR_LICENSE_KEY}";
 
 @implementation AppDelegate
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    //set application credentials

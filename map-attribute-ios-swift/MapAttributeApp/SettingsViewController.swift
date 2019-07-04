@@ -1,10 +1,7 @@
-//
-//  SettingsViewController.swift
-//  MapAttributeApp
-//
-//  Created by Martiushev, Semen on 9/6/18.
-//  Copyright © 2019 HERE Burnaby. All rights reserved.
-//
+/*
+ * Copyright (c) 2011-2019 HERE Europe B.V.
+ * All rights reserved.
+ */
 
 import UIKit
 import NMAKit
