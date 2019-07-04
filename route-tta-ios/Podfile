@@ -1,4 +1,4 @@
-target 'RouteTta' do
+target 'RouteTTAApp' do
     platform :ios, '10.0'
     pod 'HEREMaps', '>= 3.12'
 end
