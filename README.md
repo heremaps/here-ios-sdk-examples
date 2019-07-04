@@ -27,7 +27,7 @@ All of the following projects use **version 3.12** of the iOS Premium SDK
 * [Map Downloader](map-downloader-ios) - Download offline map data.
 * [Map Gestures](map-gestures-ios) - Define custom gesture actions.
 * [Map Objects](map-objects-ios) - Add map objects onto HERE map.
-* [Map Raster Tile](map-raster-tile) - Add custom raster tiles onto map.
+* [Map Raster Tile](map-raster-tile-ios) - Add custom raster tiles onto map.
 * [Map Rendering](map-rendering-ios) - Display the HERE map on a device.
 * [Routing](routing-ios) - Create a route from HERE Burnaby office to Langely BC and display it on the map.
 * [Search](search-ios) - Send different types of search requests.
