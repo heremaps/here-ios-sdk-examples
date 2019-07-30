@@ -7,9 +7,9 @@ import NMAKit
 
 // To obtain the application credentials, please register at https://developer.here.com/develop/mobile-sdks
 let credentials = (
-    appId: "",
-    appCode: "",
-    licenseKey: ""
+    appId: "{YOUR_APP_ID}",
+    appCode: "{YOUR_APP_CODE}",
+    licenseKey: "{YOUR_LICENSE_KEY}"
 )
 
 @UIApplicationMain

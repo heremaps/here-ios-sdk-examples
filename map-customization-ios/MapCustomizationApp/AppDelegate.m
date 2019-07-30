@@ -2,17 +2,15 @@
  * Copyright (c) 2011-2019 HERE Europe B.V.
  * All rights reserved.
  */
+
 #import "AppDelegate.h"
 #import <NMAKit/NMAKit.h>
 
 // To obtain the application credentials, please register at https://developer.here.com/develop/mobile-sdks
-NSString* const kSampleAppID = @"{App Id}";
-NSString* const kSampleAppCode = @"{App Code}";
-NSString* const kSampleMapLicenseKey = @"{License Key}";
+NSString* const kSampleAppID = @"{YOUR_APP_ID}";
+NSString* const kSampleAppCode = @"{YOUR_APP_CODE}";
+NSString* const kSampleMapLicenseKey = @"{YOUR_LICENSE_KEY}";
 
-@interface AppDelegate ()
-
-@end
 
 @implementation AppDelegate
 

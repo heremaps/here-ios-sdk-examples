@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/heremaps/here-ios-sdk-examples.svg?branch=master)](https://travis-ci.org/heremaps/here-ios-sdk-examples)
+[![Build Status](https://travis-ci.com/heremaps/here-ios-sdk-examples.svg?branch=master)](https://travis-ci.com/heremaps/here-ios-sdk-examples)
 
 # HERE SDK for iOS example projects
 
@@ -18,7 +18,7 @@ Unless otherwise noted in `LICENSE` files for specific files or directories, the
 
 ## iOS Premium SDK
 
-All of the following projects use **version 3.11** of the iOS Premium SDK
+All of the following projects use **version 3.12** of the iOS Premium SDK
 
 * [Geocoding and Reverse Gecoding](geocoder-and-reverse-geocoder-ios) - Trigger a Geocode and Reverse Geocode request in HERE SDK.
 * [Here Positioning](here-positioning-ios) - Use HERE location data source.
@@ -27,7 +27,7 @@ All of the following projects use **version 3.11** of the iOS Premium SDK
 * [Map Downloader](map-downloader-ios) - Download offline map data.
 * [Map Gestures](map-gestures-ios) - Define custom gesture actions.
 * [Map Objects](map-objects-ios) - Add map objects onto HERE map.
-* [Map Raster Tile](map-raster-tile) - Add custom raster tiles onto map.
+* [Map Raster Tile](map-raster-tile-ios) - Add custom raster tiles onto map.
 * [Map Rendering](map-rendering-ios) - Display the HERE map on a device.
 * [Routing](routing-ios) - Create a route from HERE Burnaby office to Langely BC and display it on the map.
 * [Search](search-ios) - Send different types of search requests.
@@ -67,7 +67,7 @@ All of the following projects use **version 3.11** of the iOS Premium SDK
 ## Build Requirements
  
 * XCode 10 or above
-* HERE Premium SDK Version 3.11 or above
+* HERE Premium SDK Version 3.12 or above
 
 ## Target Platform
  
