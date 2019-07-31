@@ -38,6 +38,7 @@
     // implement 2 protocol methods for demo purpose, please refer to HERE iOS SDK API documentation
     // for details
     self.navigationManager.delegate = self;
+    self.navigationManager.speedWarningEnabled = YES;
 }
 
 - (IBAction)navigationControlButton:(id)sender
@@ -62,8 +63,7 @@
         // Restore the map orientation to show entire route on screen
         [self.mapView setBoundingBox:self.geoBoundingBox withAnimation:NMAMapAnimationLinear];
         [self.mapView setOrientation:0];
-        self.navigationManager.mapTrackingAutoZoomEnabled = false;
-        self.navigationManager.mapTrackingEnabled = false;
+        [self setMapTrackingEnabled:NO];
         [self.navigationControlButton setTitle:@"Start Navigation" forState:UIControlStateNormal];
         self.route = nil;
     }
@@ -72,7 +72,7 @@
 - (void)createRoute
 {
     // Create an NSMutableArray to add two stops
-    NSMutableArray* stops = [[NSMutableArray alloc] initWithCapacity:4];
+    NSMutableArray* stops = [[NSMutableArray alloc] initWithCapacity:2];
 
     // START: 4350 Still Creek Dr
     NMAGeoCoordinates* hereBurnaby =
@@ -108,6 +108,7 @@
                           // Let's add the 1st result onto the map
                           self.route = routeResult.routes[0];
                           NMAMapRoute* mapRoute = [NMAMapRoute mapRouteWithRoute:self.route];
+                          mapRoute.traveledColor = [UIColor clearColor];
                           [self.mapView addMapObject:mapRoute];
 
                           // In order to see the entire route, we orientate the
@@ -147,41 +148,23 @@
                                  preferredStyle:UIAlertControllerStyleAlert];
     
     //Add Buttons
-    
+
     UIAlertAction* deviceButton = [UIAlertAction
-                                actionWithTitle:@"Navigation"
-                                style:UIAlertActionStyleDefault
-                                handler:^(UIAlertAction * action) {
-
-                                    /// Start the turn-by-turn navigation.Please note if the transport mode of the passed-in
-                                    // route is pedestrian, the NavigationManager automatically triggers the guidance which is
-                                    // suitable for walking.
-                                    [self.navigationManager startTurnByTurnNavigationWithRoute:self.route];
-
-                                    // Set the map tracking properties
-                                    [NMANavigationManager sharedNavigationManager].mapTrackingEnabled = YES;
-                                    [NMANavigationManager sharedNavigationManager].mapTrackingAutoZoomEnabled = YES;
-                                    [NMANavigationManager sharedNavigationManager].mapTrackingOrientation
-                                    = NMAMapTrackingOrientationDynamic;
-                                    [NMANavigationManager sharedNavigationManager].speedWarningEnabled = YES;
-                                }];
-
+                                   actionWithTitle:@"Navigation"
+                                   style:UIAlertActionStyleDefault
+                                   handler:^(UIAlertAction * action) {
+        /// Start the turn-by-turn navigation.Please note if the transport mode of the passed-in
+        // route is pedestrian, the NavigationManager automatically triggers the guidance which is
+        // suitable for walking.
+        [self startTurnByTurnNavigationWithRoute:self.route useSimulation:NO];
+    }];
     UIAlertAction* simulateButton = [UIAlertAction
-                               actionWithTitle:@"Simulation"
-                               style:UIAlertActionStyleDefault
+                                     actionWithTitle:@"Simulation"
+                                     style:UIAlertActionStyleDefault
                                      handler:^(UIAlertAction * action) {
-                                         // Simulation navigation by init the PositionSource with route and set movement speed
-                                         NMARoutePositionSource *source = [[NMARoutePositionSource alloc] initWithRoute:self.route];
-                                         source.movementSpeed = 60;
-                                         [NMAPositioningManager sharedPositioningManager].dataSource = source;
-                                         // Set the map tracking properties
-                                         [NMANavigationManager sharedNavigationManager].mapTrackingEnabled = YES;
-                                         [NMANavigationManager sharedNavigationManager].mapTrackingAutoZoomEnabled = YES;
-                                         [NMANavigationManager sharedNavigationManager].mapTrackingOrientation
-                                         = NMAMapTrackingOrientationDynamic;
-                                         [NMANavigationManager sharedNavigationManager].speedWarningEnabled = YES;
-                                         [self.navigationManager startTurnByTurnNavigationWithRoute:self.route];
-                               }];
+        
+        [self startTurnByTurnNavigationWithRoute:self.route useSimulation:YES];
+    }];
 
     [alert addAction:deviceButton];
     [alert addAction:simulateButton];
@@ -225,7 +208,7 @@
 
     [self.view addSubview:label];
 
-    [UIView animateWithDuration:2.0
+    [UIView animateWithDuration:3.0
         animations:^{
           label.alpha = 0;
         }
@@ -233,4 +216,29 @@
           [label removeFromSuperview];
         }];
 }
+
+- (void)startTurnByTurnNavigationWithRoute:(NMARoute *)route useSimulation:(BOOL)shouldSimulate
+{
+    NSError *error = [self.navigationManager startTurnByTurnNavigationWithRoute:route];
+    if (!error) {
+        // Set the map tracking properties
+        [self setMapTrackingEnabled:YES];
+        if (shouldSimulate) {
+            // Simulation navigation by init the PositionSource with route and set movement speed
+            NMARoutePositionSource *source = [[NMARoutePositionSource alloc] initWithRoute:route];
+            source.movementSpeed = 60;
+            [NMAPositioningManager sharedPositioningManager].dataSource = source;
+        }
+    } else {
+        [self showMessage:[NSString stringWithFormat:
+                           @"Error:start navigation returned error code %ld", (long)error.code]];
+    }
+}
+
+- (void)setMapTrackingEnabled:(BOOL)enabled
+{
+    self.navigationManager.mapTrackingEnabled = enabled;
+    self.navigationManager.mapTrackingAutoZoomEnabled = enabled;
+}
+
 @end
