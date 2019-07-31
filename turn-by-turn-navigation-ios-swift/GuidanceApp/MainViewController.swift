@@ -21,7 +21,7 @@ class MainViewController: UIViewController {
 
         static let frame = CGRect(x: 110, y: 200, width: 220, height: 120)
 
-        static let durationInterval = 2.0
+        static let durationInterval = 3.0
     }
 
     @IBOutlet weak var mapView: NMAMapView!
@@ -57,6 +57,7 @@ class MainViewController: UIViewController {
         // implement 2 protocol methods for demo purpose, please refer to HERE iOS SDK API documentation
         // for details
         navigationManager.delegate = self
+        navigationManager.isSpeedWarningEnabled = true
     }
 
     @IBAction func navigationControlButton(_ sender: Any) {
@@ -82,8 +83,7 @@ class MainViewController: UIViewController {
         // Restore the map orientation to show entire route on screen
         self.geoBoundingBox.map{ mapView.set(boundingBox: $0, animation: .linear) }
         mapView.orientation = 0
-        navigationManager.mapTrackingAutoZoomEnabled = false
-        navigationManager.mapTrackingEnabled = false
+        self.enableMapTracking(false)
         navigationControlButton.setTitle("Start Navigation", for: .normal)
 
         route = nil;
@@ -127,6 +127,7 @@ class MainViewController: UIViewController {
             // Let's add the 1st result onto the map
             self.route = routes[0]
             let mapRoute = NMAMapRoute(routes[0])
+            mapRoute?.traveledColor = .clear
             _ = mapRoute.map{ self.mapView.add(mapObject: $0) }
 
             // In order to see the entire route, we orientate the
@@ -162,13 +163,7 @@ class MainViewController: UIViewController {
             // Start the turn-by-turn navigation.Please note if the transport mode of the passed-in
             // route is pedestrian, the NavigationManager automatically triggers the guidance which is
             // suitable for walking.
-            self.navigationManager.startTurnByTurnNavigation(route)
-
-            // Set the map tracking properties
-            self.navigationManager.mapTrackingEnabled = true
-            self.navigationManager.mapTrackingAutoZoomEnabled = true
-            self.navigationManager.mapTrackingOrientation = .dynamic
-            self.navigationManager.isSpeedWarningEnabled = true
+            self.startTurnByTurnNavigation(with: route, useSimulation: false)
         }
 
         let simulateButton = UIAlertAction(title: "Simulation",
@@ -178,16 +173,7 @@ class MainViewController: UIViewController {
                 return
             }
 
-            // Simulation navigation by init the PositionSource with route and set movement speed
-            let source = NMARoutePositionSource(route: route)
-            source.movementSpeed = 60
-            NMAPositioningManager.sharedInstance().dataSource = source
-            // Set the map tracking properties
-            self.navigationManager.mapTrackingEnabled = true
-            self.navigationManager.mapTrackingAutoZoomEnabled = true
-            self.navigationManager.mapTrackingOrientation = .dynamic
-            self.navigationManager.isSpeedWarningEnabled = true
-            self.navigationManager.startTurnByTurnNavigation(route)
+            self.startTurnByTurnNavigation(with: route, useSimulation: true)
         }
 
         alert.addAction(deviceButton)
@@ -218,6 +204,26 @@ class MainViewController: UIViewController {
             label.alpha = 0
         }) { _ in
             label.removeFromSuperview()
+        }
+    }
+
+    private func enableMapTracking(_ enabled: Bool) {
+        navigationManager.mapTrackingAutoZoomEnabled = enabled
+        navigationManager.mapTrackingEnabled = enabled
+    }
+
+    private func startTurnByTurnNavigation(with route: NMARoute, useSimulation: Bool) {
+        if let error = self.navigationManager.startTurnByTurnNavigation(route) {
+            self.showMessage("Error:start navigation returned error code \(error._code)")
+        } else {
+            // Set the map tracking properties
+            self.enableMapTracking(true)
+            if useSimulation {
+                // Simulation navigation by init the PositionSource with route and set movement speed
+                let source = NMARoutePositionSource(route: route)
+                source.movementSpeed = 60
+                NMAPositioningManager.sharedInstance().dataSource = source
+            }
         }
     }
 }
