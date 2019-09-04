@@ -20,6 +20,7 @@ Unless otherwise noted in `LICENSE` files for specific files or directories, the
 
 All of the following projects use **version 3.12** of the iOS Premium SDK
 
+* [AutoSuggest](auto-suggest-ios) - Send different types of AutoSuggest requests.
 * [Geocoding and Reverse Gecoding](geocoder-and-reverse-geocoder-ios) - Trigger a Geocode and Reverse Geocode request in HERE SDK.
 * [Here Positioning](here-positioning-ios) - Use HERE location data source.
 * [Map Attribute](map-attribute-ios) - Map attributes manipulations.
@@ -33,7 +34,6 @@ All of the following projects use **version 3.12** of the iOS Premium SDK
 * [Search](search-ios) - Send different types of search requests.
 * [Turn-by-Turn Navigation](turn-by-turn-navigation-ios) - Trigger a turn-by-turn navigation from HERE Burnaby office to Langley BC.
 * [Here Mobile SDK UI Kit](here-mobile-sdk-ui-kit-swift) - Use the HERE Mobile SDK UI Kit (MSDKUI 2.0) to show maneuver instructions, speed limits and current speed.
-
 ## How to build apps
 
 ### Using CocoaPods
@@ -65,10 +65,10 @@ All of the following projects use **version 3.12** of the iOS Premium SDK
     - Enter an app id, app code and license key.
 
 ## Build Requirements
- 
+
 * XCode 10 or above
 * HERE Premium SDK Version 3.12 or above
 
 ## Target Platform
- 
+
 * iOS 11 or above
