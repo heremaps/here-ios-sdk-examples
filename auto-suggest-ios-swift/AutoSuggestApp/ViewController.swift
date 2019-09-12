@@ -169,8 +169,9 @@ UIPickerViewDelegate, UIPickerViewDataSource {
         self.view.endEditing(true)
         let text = searchLabel.text
         let coords = centerLabel?.text?.components(separatedBy:",")
-        guard coords?.count == 2 else return
-
+        guard coords?.count == 2 else {
+            return
+        }
         let  geo = NMAGeoCoordinates(latitude: (coords![0] as NSString).doubleValue,
                                      longitude: (coords![1] as NSString).doubleValue)
 

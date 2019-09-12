@@ -25,7 +25,7 @@
         [place.placeDetailsRequest startWithBlock:^(NMARequest* request, id data, NSError* error) {
             if (data) {
                 NMAPlace* place = (NMAPlace*)data;
-                NSString* lableText = [NSMutableString new];
+                NSMutableString* lableText = [NSMutableString new];
                 [lableText appendFormat:@"Name: %@",  place.name];
                 [lableText appendFormat:@"\nAlternative names:"];
 
@@ -76,7 +76,7 @@
     cell.textLabel.text = [NSString stringWithFormat:@"Name:%@", item.name];
 
     if ([item isKindOfClass:NMAPlaceLink.class]) {
-        NSString* text = [NSMutableString new];
+        NSMutableString* text = [NSMutableString new];
         NMAPlaceLink* placeLink = (NMAPlaceLink*)item;
         [text appendFormat:@"%@Vicinity:%@", text, placeLink.vicinityDescription];
         [text appendFormat:@"%@\nCategory:%@", text, placeLink.category.name];

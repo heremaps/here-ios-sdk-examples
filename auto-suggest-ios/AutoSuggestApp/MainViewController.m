@@ -136,7 +136,7 @@
     NMAAutoSuggest* item = [_searchResultData objectAtIndex:indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"Type:%@", [self typeToString:item.type]];
 
-    NSString* text = [NSMutableString new];
+    NSMutableString* text = [NSMutableString new];
     [text appendFormat:@"Title:%@", item.title];
     [text appendFormat:@"\nHighlighted Title:%@", item.highlightedTitle];
 
