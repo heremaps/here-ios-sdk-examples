@@ -21,7 +21,7 @@ class ResultTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell! = tableView.dequeueReusableCell(withIdentifier: "tableCell")
 
-        // Display vicinity information of each NMAPlaceLink item.Please refer to HERE iOS SDK API
+        // Display vicinity information of each NMAPlaceLink item.Please refer to HERE Mobile SDK for iOS API
         // doc for all supported APIs.
         let link = self.resultsArray[indexPath.row];
         if link is NMAPlaceLink {
