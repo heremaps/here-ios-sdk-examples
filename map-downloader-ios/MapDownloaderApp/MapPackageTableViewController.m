@@ -202,7 +202,7 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     NMAMapPackage* mapPackage = [self.currentPackages objectAtIndex:indexPath.row];
 
-    // Display title and size information of each map package.Please refer to HERE iOS SDK API doc
+    // Display title and size information of each map package.Please refer to HERE Mobile SDK for iOS API doc
     // for all support APIs.
     cell.mapPackageTitleLabel.text = mapPackage.title;
 

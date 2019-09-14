@@ -54,7 +54,7 @@ class MainViewController: UIViewController {
 
         // Set this controller to be the delegate of NavigationManager, so that it can listening to the
         // navigation events through the different protocols.In this example, we will
-        // implement 2 protocol methods for demo purpose, please refer to HERE iOS SDK API documentation
+        // implement 2 protocol methods for demo purpose, please refer to HERE Mobile SDK for iOS API documentation
         // for details
         navigationManager.delegate = self
         navigationManager.isSpeedWarningEnabled = true

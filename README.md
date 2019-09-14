@@ -1,10 +1,10 @@
 [![Build Status](https://travis-ci.com/heremaps/here-ios-sdk-examples.svg?branch=master)](https://travis-ci.com/heremaps/here-ios-sdk-examples)
 
-# HERE SDK for iOS example projects
+# HERE Mobile SDK for iOS example projects
 
 Copyright (c) 2011-2019 HERE Europe B.V.
 
-This repository holds a series of Objective-C and Swift projects using the **HERE SDK for iOS**. More information about the API can be found on [developer.here.com](https://developer.here.com/develop/mobile-sdks) under the *Android & iOS SDKs* section.
+This repository holds a series of Objective-C and Swift projects using the **HERE Mobile SDK for iOS**. More information about the API can be found on [developer.here.com](https://developer.here.com/develop/mobile-sdks) under the *Android & iOS SDKs* section.
 
 This set of self-contained, use-case based projects is designed to be cloned by developers for their own use.
 
@@ -16,12 +16,12 @@ This set of self-contained, use-case based projects is designed to be cloned by 
 
 Unless otherwise noted in `LICENSE` files for specific files or directories, the [LICENSE](LICENSE) in the root applies to all content in this repository.
 
-## iOS Premium SDK
+## HERE Mobile SDK for iOS (Premium)
 
-All of the following projects use **version 3.12** of the iOS Premium SDK
+All of the following projects use **version 3.12** of the HERE Mobile SDK for iOS (Premium)
 
 * [AutoSuggest](auto-suggest-ios) - Send different types of AutoSuggest requests.
-* [Geocoding and Reverse Gecoding](geocoder-and-reverse-geocoder-ios) - Trigger a Geocode and Reverse Geocode request in HERE SDK.
+* [Geocoding and Reverse Gecoding](geocoder-and-reverse-geocoder-ios) - Trigger a Geocode and Reverse Geocode request in HERE Mobile SDK.
 * [Here Positioning](here-positioning-ios) - Use HERE location data source.
 * [Map Attribute](map-attribute-ios) - Map attributes manipulations.
 * [Map Customization](map-customization-ios) - Customize the map scheme.
@@ -39,7 +39,7 @@ All of the following projects use **version 3.12** of the iOS Premium SDK
 ### Using CocoaPods
 
 1. Run "pod install" or "pod update" in the application's root directory to install
-   the HERE SDK.
+   the HERE Mobile SDK.
 
 2. In the "General" settings of the App target:
     - Select an eligible provisioning profile or enable "Automatically
@@ -67,7 +67,7 @@ All of the following projects use **version 3.12** of the iOS Premium SDK
 ## Build Requirements
 
 * XCode 10 or above
-* HERE Premium SDK Version 3.12 or above
+* HERE Mobile SDK for iOS (Premium) Version 3.12 or above
 
 ## Target Platform
 

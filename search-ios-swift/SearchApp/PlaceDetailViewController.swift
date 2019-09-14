@@ -28,7 +28,7 @@ class PlaceDetailViewController: UIViewController {
             if request is NMAPlaceRequest {
                 // Display the name and the location of the place.Additional place details info ca also
                 // be
-                // retrieved at this moment as well.Please refer to the HERE iOS SDK API doc for
+                // retrieved at this moment as well.Please refer to the HERE Mobile SDK for iOS API doc for
                 // details.
                 if let place = data as? NMAPlace {
                     self.placeNameLabel.text = place.name;
