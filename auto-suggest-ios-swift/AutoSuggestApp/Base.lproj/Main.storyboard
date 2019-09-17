@@ -177,7 +177,7 @@
                         <viewLayoutGuide key="safeArea" id="wLo-HL-xTp"/>
                     </view>
                     <navigationItem key="navigationItem" id="LlC-Mj-CXE">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="owT-Vh-AYF">
+                        <barButtonItem key="rightBarButtonItem" id="owT-Vh-AYF">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DeB-3E-ZGQ">
                                 <rect key="frame" x="311" y="7" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
