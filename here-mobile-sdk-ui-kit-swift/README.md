@@ -6,7 +6,7 @@ pod install --repo-update
 ```
 
 This will integrate the required dependencies (using CocoaPods):
-- HERE Mobile SDK 3.9
+- HERE Mobile SDK 3.12
 - HERE Mobile SDK UI Kit (MSDKUI) 2.0
 
 Once completed, open the Xcode project by double-clicking the newly generated `GuideMeToHERE.xcworkspace` and enter your HERE credentials in `AppDelegate.swift`.

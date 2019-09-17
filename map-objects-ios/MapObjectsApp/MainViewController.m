@@ -17,6 +17,15 @@ typedef NS_ENUM(NSUInteger, MapObjectOption) {
 @property (weak, nonatomic) IBOutlet NMAMapView* mapView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl* segmentedCtrl;
 
+// Used for displaying the coordinates of draggable marker
+@property (strong, nonatomic) UIView *coordinatesUpdateView;
+@property (strong, nonatomic) UILabel *coordinatesLabel;
+
+// Identifiers for MapMarker event handlers
+@property (nonatomic) NSInteger mapMarkerMoveBeganEventHandlerId;
+@property (nonatomic) NSInteger mapMarkerMoveEndedEventHandlerId;
+@property (nonatomic) NSInteger mapMarkerMovedEventHandlerId;
+
 @end
 
 @implementation MainViewController {
@@ -36,6 +45,53 @@ typedef NS_ENUM(NSUInteger, MapObjectOption) {
 
     // set map view with geo center
     [self.mapView setGeoCenter:[[NMAGeoCoordinates alloc] initWithLatitude:52.500556 longitude:13.398889]];
+}
+
+- (void)setupCoordinatesView
+{
+    CGFloat kCoordinatesViewHeight = 120.0f;
+    CGRect frame = CGRectMake(0, 0, self.view.frame.size.width, kCoordinatesViewHeight);
+    [self createCoordinatesUpdateViewWithFrame:frame];
+    [self createCoordinatesLabelWithFrame:frame];
+}
+
+-(void)createCoordinatesUpdateViewWithFrame:(CGRect)frame
+{
+    _coordinatesUpdateView = [[UIView alloc] initWithFrame:frame];
+    _coordinatesUpdateView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:_coordinatesUpdateView];
+
+    _coordinatesUpdateView.translatesAutoresizingMaskIntoConstraints = NO;
+    NSDictionary *coordinatesUpdateViewBindings = @{ @"_coordinatesUpdateView" : _coordinatesUpdateView };
+    [self.view addConstraints:
+     [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(0)-[_coordinatesUpdateView]-(0)-|"
+                                             options:0 metrics:nil
+                                               views:coordinatesUpdateViewBindings]];
+    NSString *updateViewVFCV = [NSString stringWithFormat:@"V:|-(>=0)-[_coordinatesUpdateView(%f)]-(0)-|",
+                                           frame.size.height];
+    [self.view addConstraints:
+     [NSLayoutConstraint constraintsWithVisualFormat:updateViewVFCV
+                                             options:0 metrics:nil
+                                               views:coordinatesUpdateViewBindings]];
+}
+
+-(void)createCoordinatesLabelWithFrame:(CGRect)frame
+{
+    _coordinatesLabel = [[UILabel alloc] initWithFrame:frame];
+    _coordinatesLabel.numberOfLines = 0;
+    _coordinatesLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    _coordinatesLabel.text = @"Make long press gesture on MapMarker to start dragging, "
+    "then move finger to move marker to desired position.";
+    [_coordinatesUpdateView addSubview:_coordinatesLabel];
+
+    _coordinatesLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    NSDictionary *coordinatesLabelBindings = @{ @"_coordinatesLabel" : _coordinatesLabel };
+    [_coordinatesUpdateView addConstraints:
+     [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(0)-[_coordinatesLabel]-(0)-|"
+                                             options:0 metrics:nil views:coordinatesLabelBindings]];
+    [_coordinatesUpdateView addConstraints:
+     [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(0)-[_coordinatesLabel]-(0)-|"
+                                             options:0 metrics:nil views:coordinatesLabelBindings]];
 }
 
 /**
@@ -84,10 +140,108 @@ typedef NS_ENUM(NSUInteger, MapObjectOption) {
     NMAImage* markerImage = [NMAImage imageWithUIImage:[UIImage imageNamed:@"cafe.png"]];
     //create NMAMapMarker located with geo coordinate and icon image
     NMAMapMarker* mapMarker = [NMAMapMarker mapMarkerWithGeoCoordinates:self.mapView.geoCenter icon:markerImage];
+    //make marker able to receive dragging gesture from map
+    mapMarker.draggable = YES;
     //add NMAMapMarker to map view
     [self.mapView addMapObject:mapMarker];
+    //add view and handlers for *MarkerDrag* events:
+    [self setupMapMarkerEventHandlersIfNeeded];
 
     [_mapMarkers addObject:mapMarker];
+}
+
+/**
+ * Add view and handlers when first mapMarker is added.
+ */
+-(void)setupMapMarkerEventHandlersIfNeeded
+{
+    if ( ![_mapMarkers count] ) {
+        [self setupCoordinatesView];
+        [self setupMapMarkerEventHandlers];
+    }
+}
+
+/**
+ * Remove view and handlers when last mapMarker is removed.
+ */
+-(void)removeMapMarkerEventHandlersIfNeeded
+{
+    if ( ![_mapMarkers count] ) {
+        [self removeCoordinatesView];
+        [self removeMapMarkerEventHandlers];
+    }
+}
+
+/**
+ * Add handlers for map events:
+ * - NMAMapEventMarkerDragBegan,
+ * - NMAMapEventMarkerDragged,
+ * - NMAMapEventMarkerDragEnded.
+ */
+-(void)setupMapMarkerEventHandlers
+{
+    self.mapMarkerMoveBeganEventHandlerId = [self.mapView respondToEvents:NMAMapEventMarkerDragBegan
+                                                                withBlock:^BOOL(NMAMapEvent event,
+                                                                                NMAMapView *mapView,
+                                                                                NMAMapMarker *eventData)
+                                             {
+                                                 [self updateLabelWithCoordinates:eventData.coordinates
+                                                                        fromEvent:@"NMAMapEventMarkerDragBegan"];
+                                                 return YES;
+                                             }];
+
+    self.mapMarkerMoveEndedEventHandlerId = [self.mapView respondToEvents:NMAMapEventMarkerDragEnded
+                                                                withBlock:^BOOL(NMAMapEvent event,
+                                                                                NMAMapView *mapView,
+                                                                                NMAMapMarker *eventData)
+                                             {
+                                                 [self updateLabelWithCoordinates:eventData.coordinates
+                                                                        fromEvent:@"NMAMapEventMarkerDragEnded"];
+                                                 return YES;
+                                             }];
+
+    self.mapMarkerMovedEventHandlerId = [self.mapView respondToEvents:NMAMapEventMarkerDragged
+                                                            withBlock:^BOOL(NMAMapEvent event,
+                                                                            NMAMapView *mapView,
+                                                                            NMAMapMarker *eventData)
+                                         {
+                                             [self updateLabelWithCoordinates:eventData.coordinates
+                                                                    fromEvent:@"NMAMapEventMarkerDragged"];
+                                             return YES;
+                                         }];
+}
+
+-(void)removeCoordinatesView
+{
+    [_coordinatesUpdateView removeFromSuperview];
+    _coordinatesUpdateView = nil;
+    _coordinatesLabel = nil;
+}
+
+/**
+ * Remove handlers for map events:
+ * - NMAMapEventMarkerDragBegan,
+ * - NMAMapEventMarkerDragged,
+ * - NMAMapEventMarkerDragEnded.
+ */
+-(void)removeMapMarkerEventHandlers
+{
+    [self.mapView removeEventBlockWithIdentifier:self.mapMarkerMoveBeganEventHandlerId];
+    [self.mapView removeEventBlockWithIdentifier:self.mapMarkerMovedEventHandlerId];
+    [self.mapView removeEventBlockWithIdentifier:self.mapMarkerMoveEndedEventHandlerId];
+}
+
+/**
+ * Visualize the coordinates during the mapMarker drag event.
+ * Only last dragged mapMarker event data is displayed.
+ */
+-(void)updateLabelWithCoordinates:(NMAGeoCoordinates *)coordinates
+                        fromEvent:(NSString *)eventType
+{
+    NSString *text = [NSString stringWithFormat:@"%@ :\n <latitude:%f, longitude: %f>", eventType,
+                      coordinates.latitude, coordinates.longitude];
+    NSLog(@"%@", text);
+    _coordinatesLabel.text = text;
 }
 
 /**
@@ -166,6 +320,9 @@ typedef NS_ENUM(NSUInteger, MapObjectOption) {
         if (lastAdded) {
             [self.mapView removeMapObject:lastAdded];
             [array removeObject:lastAdded];
+            if (MapObjectOptionMapMarker == optionId) {
+                [self removeMapMarkerEventHandlersIfNeeded];
+            }
         }
     }]];
 }

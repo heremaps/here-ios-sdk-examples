@@ -109,7 +109,7 @@ typedef void (^NMARequestCompletionBlock)(NMARequest* request, id data, NSError*
 - (void)triggerSearchRequest
 {
     // Trigger a SearchRequest based on the current map center and search query "Hotel".Please refer
-    // to HERE iOS SDK API doc for other supported location parameters and categories
+    // to HERE Mobile SDK for iOS API doc for other supported location parameters and categories
     NMADiscoveryRequest* searchRequest =
         [[NMAPlaces sharedPlaces] createSearchRequestWithLocation:[self.mapView geoCenter]
                                                             query:@"Hotel"];
@@ -126,7 +126,7 @@ typedef void (^NMARequestCompletionBlock)(NMARequest* request, id data, NSError*
 
 - (void)triggerHereRequest
 {
-    // Trigger a HereRequest based on the current map center.Please refer to HERE iOS SDK API
+    // Trigger a HereRequest based on the current map center.Please refer to HERE Mobile SDK for iOS API
     // doc for othe supported location parameters and categories.
     NMADiscoveryRequest* hereRequest =
         [[NMAPlaces sharedPlaces] createHereRequestWithLocation:[self.mapView geoCenter]
@@ -145,7 +145,7 @@ typedef void (^NMARequestCompletionBlock)(NMARequest* request, id data, NSError*
 - (void)triggerExploreRequest
 {
     // Trigger an ExploreRequest based on the bounding box of the current map and the filter for
-    // Shopping category.Please refer to HERE iOS SDK API doc for other supported location
+    // Shopping category.Please refer to HERE Mobile SDK for iOS API doc for other supported location
     // parameters and categories
     NMACategoryFilter* filter = [NMACategoryFilter new];
     [filter addCategoryFilterFromUniqueId:@"shopping"];
@@ -167,7 +167,7 @@ typedef void (^NMARequestCompletionBlock)(NMARequest* request, id data, NSError*
 - (void)triggerAroundRequest
 {
     // Trigger and AroundRequest based on the current map center and the filter for Eat&Drink
-    // category.Please refer to HERE iOS SDK API doc for other supported location parameters and
+    // category.Please refer to HERE Mobile SDK for iOS API doc for other supported location parameters and
     // categories
     NMACategoryFilter* filter = [NMACategoryFilter new];
     [filter addCategoryFilterFromUniqueId:@"eat-drink"];

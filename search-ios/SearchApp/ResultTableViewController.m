@@ -32,7 +32,7 @@
                                       reuseIdentifier:cellIdentifier];
     }
 
-    // Display vicinity information of each NMAPlaceLink item.Please refer to HERE iOS SDK API
+    // Display vicinity information of each NMAPlaceLink item.Please refer to HERE Mobile SDK for iOS API
     // doc for all supported APIs.
     NMALink* link = [self.resultsArray objectAtIndex:indexPath.row];
     if ([link isKindOfClass:[NMAPlaceLink class]])

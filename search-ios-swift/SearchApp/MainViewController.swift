@@ -82,7 +82,7 @@ class MainViewController: UIViewController {
     func triggerSearchRequest ()
     {
         // Trigger a SearchRequest based on the current map center and search query "Hotel".Please refer
-        // to HERE iOS SDK API doc for other supported location parameters and categories
+        // to HERE Mobile SDK for iOS API doc for other supported location parameters and categories
         let searchRequest = NMAPlaces.sharedInstance()?.createSearchRequest(location: self.mapView.geoCenter, query: "Hotel")
 
         if let error = searchRequest?.start(self.requestCompletion) as NSError? {
@@ -92,7 +92,7 @@ class MainViewController: UIViewController {
     }
 
     func triggerHereRequest() {
-        // Trigger a HereRequest based on the current map center.Please refer to HERE iOS SDK API
+        // Trigger a HereRequest based on the current map center.Please refer to HERE Mobile SDK for iOS API
         // doc for othe supported location parameters and categories.
         let hereRequest = NMAPlaces.sharedInstance()?.createHereRequest(location: self.mapView.geoCenter, filters: nil)
         if let error = hereRequest?.start(self.requestCompletion) as NSError? {
@@ -103,7 +103,7 @@ class MainViewController: UIViewController {
 
     func triggerExploreRequest() {
         // Trigger an ExploreRequest based on the bounding box of the current map and the filter for
-        // Shopping category.Please refer to HERE iOS SDK API doc for other supported location
+        // Shopping category.Please refer to HERE Mobile SDK for iOS API doc for other supported location
         // parameters and categories
         let filter = NMACategoryFilter()
         filter.add(fromUniqueId: "shopping")
@@ -116,7 +116,7 @@ class MainViewController: UIViewController {
 
     func triggerAroundRequest () {
         // Trigger and AroundRequest based on the current map center and the filter for Eat&Drink
-        // category.Please refer to HERE iOS SDK API doc for other supported location parameters and
+        // category.Please refer to HERE Mobile SDK for iOS API doc for other supported location parameters and
         // categories
         let filter = NMACategoryFilter()
         filter.add(fromUniqueId:"eat-drink")

@@ -19,7 +19,7 @@ import NMAKit
 import UIKit
 
 /// This example app shows how to build a simple navigation app using the
-/// HERE Mobile SDK for iOS 3.9 (Premium) and the HERE Mobile SDK UI Kit v2.0.
+/// HERE Mobile SDK for iOS 3.12 (Premium) and the HERE Mobile SDK UI Kit v2.0.
 /// Once a valid position is found the app will calculate a car route and start
 /// navigation to HERE Berlin, Germany. The app shows a map view, a maneuver
 /// view, the current driving speed and possible speed limits along the way.

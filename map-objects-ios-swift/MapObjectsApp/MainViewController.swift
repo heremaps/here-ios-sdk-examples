@@ -19,6 +19,15 @@ class MainViewController: UIViewController {
     private var mapMarker : NMAMapMarker?
     private var mapCircle : NMAMapCircle?
 
+    // Used for displaying the coordinates of draggable marker
+    private var coordinatesUpdateView : UIView?
+    private var coordinatesLabel : UILabel?
+
+    // Identifiers for MapMarker event handlers
+    private var mapMarkerMoveBeganEventHandlerId : Int = 0
+    private var mapMarkerMoveEndedEventHandlerId : Int = 0
+    private var mapMarkerMovedEventHandlerId : Int = 0
+
     private class Defaults {
         static let latitude = 52.500556
         static let longitude = 13.398889
@@ -54,6 +63,7 @@ class MainViewController: UIViewController {
         //if NMAMapMarker map object alreasy exists, remove it from map view.
         _ = mapMarker.map{ mapView.remove(mapObject: $0) }
         mapMarker = nil
+        removeMapMarkerEventHandlers()
 
         //if NMAMapCircle map object alreasy exists, remove it from map view.
         _ = mapCircle.map{ mapView.remove(mapObject: $0) }
@@ -122,8 +132,123 @@ class MainViewController: UIViewController {
         let markerImage = NMAImage(uiImage: UIImage(named: Defaults.imageName)!)
         //create NMAMapMarker located with geo coordinate and icon image
         mapMarker = markerImage.map{ NMAMapMarker(geoCoordinates: geoCoord, icon: $0) }
+        //make marker able to receive dragging gesture from map
+        mapMarker?.isDraggable = true
+        //add view and handlers for *MarkerDrag* events:
+        setupMapMarkerEventHandlers()
         //add NMAMapMarker to map view
         _ = mapMarker.map{ mapView.add(mapObject: $0) }
+    }
+
+    private func setupCoordinatesView()
+    {
+        let kCoordinatesViewHeight: CGFloat = 120.0
+        let frame = CGRect.init(x: 0.0, y: 0.0, width: self.view.frame.size.width,
+                                height: kCoordinatesViewHeight)
+        createCoordinatesUpdateView(withFrame:frame)
+        createCoordinatesLabel(withFrame:frame)
+    }
+
+    private func createCoordinatesUpdateView(withFrame frame: CGRect)
+    {
+        coordinatesUpdateView = UIView.init(frame: frame)
+        coordinatesUpdateView?.backgroundColor = UIColor.white
+        self.view.addSubview(coordinatesUpdateView!)
+
+        coordinatesUpdateView?.translatesAutoresizingMaskIntoConstraints = false
+        let coordinatesUpdateViewBindings: [String: Any] = ["coordinatesUpdateView": coordinatesUpdateView!]
+        self.view.addConstraints(
+            NSLayoutConstraint.constraints(withVisualFormat: "H:|-(0)-[coordinatesUpdateView]-(0)-|",
+                                           options: [], metrics: nil, views: coordinatesUpdateViewBindings))
+        let updateViewVFCV = "V:|-(>=0)-[coordinatesUpdateView(\(frame.size.height))]-(0)-|"
+        self.view.addConstraints(
+            NSLayoutConstraint.constraints(withVisualFormat: updateViewVFCV,
+                                           options: [], metrics: nil, views: coordinatesUpdateViewBindings))
+    }
+
+    private func createCoordinatesLabel(withFrame frame: CGRect)
+    {
+        coordinatesLabel = UILabel.init(frame: frame)
+        coordinatesLabel?.numberOfLines = 0
+        coordinatesLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
+        coordinatesLabel?.text = "Make long press gesture on MapMarker to start dragging" +
+        " then move finger to move marker to desired position."
+        coordinatesUpdateView?.addSubview(coordinatesLabel!)
+
+        coordinatesLabel?.translatesAutoresizingMaskIntoConstraints = false
+        let coordinatesLabelBindings: [String: Any] = ["coordinatesLabel": coordinatesLabel!]
+        coordinatesUpdateView?.addConstraints(
+            NSLayoutConstraint.constraints(withVisualFormat: "H:|-(0)-[coordinatesLabel]-(0)-|",
+                                           options: [], metrics: nil, views: coordinatesLabelBindings))
+        coordinatesUpdateView?.addConstraints(
+            NSLayoutConstraint.constraints(withVisualFormat: "V:|-(0)-[coordinatesLabel]-(0)-|",
+                                           options: [], metrics: nil, views: coordinatesLabelBindings))
+    }
+
+    /**
+     * Visualize the coordinates during the mapMarker drag event.
+     * Only last dragged mapMarker event data is displayed.
+     */
+    private func updateLabelWith(_ coordinates: NMAGeoCoordinates?, event eventType: String) {
+        let text = "\(eventType) :\n <latitude:\(coordinates!.latitude)," +
+                                    " longitude:\(coordinates!.longitude)>"
+        print(text);
+        coordinatesLabel?.text = text
+    }
+
+    /**
+     * Add view and handlers when first mapMarker is added.
+     */
+    private func setupMapMarkerEventHandlers() {
+        setupCoordinatesView()
+
+        /**
+         * Add handlers for map events:
+         * - NMAMapEventMarkerDragBegan,
+         * - NMAMapEventMarkerDragged,
+         * - NMAMapEventMarkerDragEnded.
+         */
+        mapMarkerMoveBeganEventHandlerId = mapView.respond(to: NMAMapEvent.markerDragBegan)
+        { (_: NMAMapEvent, _ : NMAMapView, eventData: Any?  ) -> Bool in
+
+            let mapMarkerFromEvent = eventData as! NMAMapMarker
+            self.updateLabelWith(mapMarkerFromEvent.coordinates, event: "NMAMapEventMarkerDragBegan")
+            return true
+        }
+
+        mapMarkerMoveEndedEventHandlerId = mapView.respond(to: NMAMapEvent.markerDragEnded)
+        { (_: NMAMapEvent, _ : NMAMapView, eventData: Any?  ) -> Bool in
+
+            let mapMarkerFromEvent = eventData as! NMAMapMarker
+            self.updateLabelWith(mapMarkerFromEvent.coordinates, event: "NMAMapEventMarkerDragEnded")
+            return true
+        }
+
+        mapMarkerMovedEventHandlerId = mapView.respond(to: NMAMapEvent.markerDragged)
+        { (_: NMAMapEvent, _ : NMAMapView, eventData: Any?  ) -> Bool in
+            let mapMarkerFromEvent = eventData as! NMAMapMarker
+            self.updateLabelWith(mapMarkerFromEvent.coordinates, event: "NMAMapEventMarkerDragged")
+            return true
+        }
+    }
+
+    /**
+     * Remove view and handlers when last mapMarker is removed.
+     */
+    private func removeMapMarkerEventHandlers() {
+        /**
+         * Remove handlers for map events:
+         * - NMAMapEventMarkerDragBegan,
+         * - NMAMapEventMarkerDragged,
+         * - NMAMapEventMarkerDragEnded.
+         */
+        mapView.removeEventBlock(blockIdentifier: mapMarkerMoveBeganEventHandlerId)
+        mapView.removeEventBlock(blockIdentifier: mapMarkerMoveEndedEventHandlerId)
+        mapView.removeEventBlock(blockIdentifier: mapMarkerMovedEventHandlerId)
+
+        coordinatesUpdateView?.removeFromSuperview()
+        coordinatesUpdateView = nil
+        coordinatesLabel = nil
     }
 
     /**
