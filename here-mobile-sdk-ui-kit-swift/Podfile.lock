@@ -7,7 +7,7 @@ DEPENDENCIES:
   - HEREMapsUI (= 2.0)
 
 SPEC REPOS:
-  trunk:
+  https://github.com/cocoapods/specs.git:
     - HEREMaps
     - HEREMapsUI
 
@@ -17,4 +17,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 07feae432693eb703bcb835bbf90a0b0f4b11102
 
-COCOAPODS: 1.8.1
+COCOAPODS: 1.5.3
