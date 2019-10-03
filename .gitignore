@@ -2,6 +2,7 @@
 /**/*.xcodeproj/xcuserdata/
 /**/*.xcodeproj/project.xcworkspace/xcuserdata/
 /**/build/
+/**/*.xcworkspace/
 
 # CocoaPods
 /**/Pods/
