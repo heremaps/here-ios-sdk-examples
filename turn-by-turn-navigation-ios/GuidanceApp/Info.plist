@@ -8,6 +8,8 @@
 	<string>This is needed for the Augumented Reality feature</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>This is needed to determine your current location</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>This is needed for the indoor positioning feature</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>This is needed to determine your current location</string>
 	<key>CFBundleDevelopmentRegion</key>
