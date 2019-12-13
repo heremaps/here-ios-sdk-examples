@@ -13,7 +13,7 @@
     self.coreRouter = [[NMACoreRouter alloc] init];
 }
 
-- (void) viewDidDisappear:(BOOL)animated {
+- (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     [[NMATrafficManager sharedTrafficManager] removeObserver:self];
 }
@@ -43,7 +43,7 @@
     routeMode.transportMode = NMATransportModeCar;
     /* Disable highway in this route. */
     routeMode.routingOptions = NMARoutingOptionAvoidHighway;
-    /* Calculate the shortest route available. */
+    /* Calculate the fastest route available. */
     routeMode.routingType = NMARoutingTypeFastest;
     /* Calculate 1 route. */
     routeMode.resultLimit = 1;
@@ -81,7 +81,7 @@
      }];
 }
 
-- (void) setTtaTime {
+- (void)setTtaTime {
     const NSTimeInterval timeIncluded = [_calculatedRoute ttaIncludingTrafficForSubleg:NMARouteSublegWhole].duration;
     const NSTimeInterval timeExcluded = [_calculatedRoute ttaExcludingTrafficForSubleg:NMARouteSublegWhole].duration;
     self.includedLabel.text = [NSString stringWithFormat:@"ttaIncluded:%.f", timeIncluded];

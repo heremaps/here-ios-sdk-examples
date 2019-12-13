@@ -31,6 +31,7 @@ All of the following projects use **version 3.13** of the HERE Mobile SDK for iO
 * [Map Raster Tile](map-raster-tile-ios) - Add custom raster tiles onto map.
 * [Map Rendering](map-rendering-ios) - Display the HERE map on a device.
 * [Routing](routing-ios) - Create a route from HERE Burnaby office to Langely BC and display it on the map.
+* [Route TTA](route-tta-ios) - Calculate TTA (time to arrival) for a route.
 * [Search](search-ios) - Send different types of search requests.
 * [Turn-by-Turn Navigation](turn-by-turn-navigation-ios) - Trigger a turn-by-turn navigation from HERE Burnaby office to Langley BC.
 * [Here Mobile SDK UI Kit](here-mobile-sdk-ui-kit-swift) - Use the HERE Mobile SDK UI Kit (MSDKUI 2.0) to show maneuver instructions, speed limits and current speed.
@@ -53,13 +54,12 @@ All of the following projects use **version 3.13** of the HERE Mobile SDK for iO
 1. In the "General" settings of the App target:
     - Select an eligible provisioning profile or enable "Automatically
       manage signing".
-    - Add NMAKit.framework to the "Embedded Binaries" section otherwise you
+    - Add NMAKit.framework to the "Embedded Binaries" section in Xcode 10 or to "Embedded Content" section in Xcode 11. Otherwise you
       will get a "dyld: Library not loaded: @rpath/NMAKit.framework/NMAKit"
       error at runtime.
 
 2. In the "Builds Settings" of the App target:
-    - Ensure "Frameworks Search Paths" includes the location of
-      `NMAKit.framework`.
+    - Ensure "Frameworks Search Paths" includes the location of `NMAKit.framework`. Drag and drop `NMAKit.framework` to $(PROJECT_DIR) in case of import error.
 
 3. In `AppDelegate.m`:
     - Enter an app id, app code and license key.
