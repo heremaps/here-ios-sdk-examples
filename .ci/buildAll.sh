@@ -11,5 +11,5 @@ for APP_PATH in $APP_PROJECTS; do
     # Get project name without extension.
     PROJECT_NAME=$(basename "$APP_PATH" .xcworkspace)
     # Build workspace with scheme.
-    xcodebuild -workspace "$PROJECT_NAME".xcworkspace -scheme "$PROJECT_NAME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO clean build
+    xcodebuild -quiet -workspace "$PROJECT_NAME".xcworkspace -scheme "$PROJECT_NAME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO clean build
 done
