@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -170,7 +170,7 @@
 				};
 			};
 			buildConfigurationList = 5FE88F3F1DB5567A00C6C3BB /* Build configuration list for PBXProject "MapRasterTilesApp" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -358,7 +358,10 @@
 				);
 				INFOPLIST_FILE = MapRasterTilesApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.MapRasterTiles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -376,7 +379,10 @@
 				);
 				INFOPLIST_FILE = MapRasterTilesApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.MapRasterTiles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

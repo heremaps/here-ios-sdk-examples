@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -107,7 +107,7 @@
 				};
 			};
 			buildConfigurationList = 5F554CC91D9B0F1900E6D7D3 /* Build configuration list for PBXProject "MapCustomizationApp" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -291,7 +291,10 @@
 					"$(PROJECT_DIR)/MapCustomizationApp",
 				);
 				INFOPLIST_FILE = MapCustomizationApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.MapCustomization;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -308,7 +311,10 @@
 					"$(PROJECT_DIR)/MapCustomizationApp",
 				);
 				INFOPLIST_FILE = MapCustomizationApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.MapCustomization;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -167,7 +167,7 @@
 				};
 			};
 			buildConfigurationList = 5FDB34581D3D969600330FC1 /* Build configuration list for PBXProject "MapGesturesApp" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -350,7 +350,10 @@
 				);
 				INFOPLIST_FILE = MapGesturesApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.MapGestures;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -367,7 +370,10 @@
 				);
 				INFOPLIST_FILE = MapGesturesApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = nma.iOSHereSDKSamples.MapGestures;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
