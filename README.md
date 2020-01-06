@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/heremaps/here-ios-sdk-examples.svg?branch=master)](https://travis-ci.com/heremaps/here-ios-sdk-examples)
 
-# HERE Mobile SDK for iOS example projects
+# HERE Mobile SDK 3.x for iOS example projects
 
 Copyright (c) 2011-2019 HERE Europe B.V.
 
