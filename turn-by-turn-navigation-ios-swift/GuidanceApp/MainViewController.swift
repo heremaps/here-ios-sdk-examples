@@ -27,14 +27,15 @@ class MainViewController: UIViewController {
     @IBOutlet weak var mapView: NMAMapView!
     @IBOutlet weak var navigationControlButton: UIButton!
 
-    // Initialize the NMACoreRouter
-    private lazy var router = NMACoreRouter()
-
     // Get the NavigationManager instance.It is responsible for providing voice and visual
     // instructions while driving and walking.
     private lazy var navigationManager = NMANavigationManager.sharedInstance()
 
+    // Initialize the NMACoreRouter
+    private lazy var router = NMACoreRouter()
+
     private var route : NMARoute?
+    private var mapRoute : NMAMapRoute?
     private var geoBoundingBox : NMAGeoBoundingBox?
 
     override func viewDidLoad() {
@@ -60,6 +61,7 @@ class MainViewController: UIViewController {
         navigationManager.isSpeedWarningEnabled = true
     }
 
+    // MARK: User actions
     @IBAction func navigationControlButton(_ sender: Any) {
         // To start a turn-by-turn navigation, a concrete route object is required.We use same steps
         // from Routing sample app to create a route from 4350 Still Creek Dr to Langley BC without
@@ -69,7 +71,7 @@ class MainViewController: UIViewController {
         // route calculation immediately after the MapEngine is initialized.The
         // NMARoutingErrorInsufficientMapData error code may be returned by CoreRouter in this case.
 
-        if self.route == nil {
+        if route == nil {
             createRoute()
             return
         }
@@ -81,17 +83,29 @@ class MainViewController: UIViewController {
         }
 
         // Restore the map orientation to show entire route on screen
-        self.geoBoundingBox.map{ mapView.set(boundingBox: $0, animation: .linear) }
+        geoBoundingBox.map{ mapView.set(boundingBox: $0, animation: .linear) }
         mapView.orientation = 0
-        self.enableMapTracking(false)
+        enableMapTracking(false)
         navigationControlButton.setTitle("Start Navigation", for: .normal)
 
-        route = nil;
+        route = nil
+        if mapRoute != nil {
+            _ = mapRoute.map{ mapView.remove(mapObject: $0) }
+        }
+        mapRoute = nil
+        geoBoundingBox = nil
     }
 
+    // MARK: Route creation and navigation code
     private func createRoute() {
         // Create an NSMutableArray to add two stops
         var stops = [Any]()
+
+        // The navigation reroute callbacks are triggered when there is divergence between the
+        // navigation route and user actual route. To achieve this situation:
+        // 1) the `Navigation` (not `Simulation`) mode should be used,
+        // 2) the route below should be configured using own route coordinates
+        // 3) during navigation user should move other route than the navigation route.
 
         // START: 4350 Still Creek Dr
         let hereBurnaby = NMAGeoCoordinates(latitude: Defaults.hereBurnabyLatitude,
@@ -111,39 +125,31 @@ class MainViewController: UIViewController {
                                          routingOptions: .avoidHighway)
 
         // Trigger the route calculation
-        self.router.calculateRoute(withStops: stops ,
+        router.calculateRoute(withStops: stops ,
                                    routingMode: routingMode)
-        { routeResult, error in
+        { [weak self] routeResult, error in
             guard error == .none else {
-                self.showMessage("Error:route calculation returned error code \(error.rawValue)")
-                return;
+                self?.showMessage("Error:route calculation returned error code \(error.rawValue)")
+                return
             }
 
             guard let result = routeResult, let routes = result.routes, routes.count > 0 else {
-                self.showMessage("Error:route result returned is not valid")
+                self?.showMessage("Error:route result returned is not valid")
                 return
             }
 
             // Let's add the 1st result onto the map
-            self.route = routes[0]
-            let mapRoute = NMAMapRoute(routes[0])
-            mapRoute?.traveledColor = .clear
-            _ = mapRoute.map{ self.mapView.add(mapObject: $0) }
+            self?.route = routes[0]
+            self?.updateMapRoute(with: self?.route)
 
-            // In order to see the entire route, we orientate the
-            // map view accordingly
-            if let boundingBox = self.route?.boundingBox {
-                self.geoBoundingBox = boundingBox
-                self.mapView.set(boundingBox: boundingBox, animation: .linear)
-                self.startNavigation()
-            }
+            self?.startNavigation()
         }
     }
 
     private func startNavigation() {
         navigationControlButton.setTitle("Stop Navigation", for: .normal)
         // Display the position indicator on map
-        mapView?.positionIndicator.isVisible = true
+        mapView.positionIndicator.isVisible = true
         // Configure NavigationManager to launch navigation on current map
         navigationManager.map = mapView
 
@@ -154,26 +160,26 @@ class MainViewController: UIViewController {
         //Add Buttons
 
         let deviceButton = UIAlertAction(title: "Navigation",
-                                         style: .default) { _ in
+                                         style: .default) { [weak self] _ in
 
-            guard let route = self.route else {
+            guard let route = self?.route else {
                 return
             }
 
-            // Start the turn-by-turn navigation.Please note if the transport mode of the passed-in
+            // Start the turn-by-turn navigation. Please note if the transport mode of the passed-in
             // route is pedestrian, the NavigationManager automatically triggers the guidance which is
             // suitable for walking.
-            self.startTurnByTurnNavigation(with: route, useSimulation: false)
+            self?.startTurnByTurnNavigation(with: route, useSimulation: false)
         }
 
         let simulateButton = UIAlertAction(title: "Simulation",
-                                           style: .default) { _ in
+                                           style: .default) { [weak self] _ in
 
-            guard let route = self.route else {
+            guard let route = self?.route else {
                 return
             }
 
-            self.startTurnByTurnNavigation(with: route, useSimulation: true)
+            self?.startTurnByTurnNavigation(with: route, useSimulation: true)
         }
 
         alert.addAction(deviceButton)
@@ -182,12 +188,55 @@ class MainViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
 
+    private func updateMapRoute(with route: NMARoute?) {
+        // remove previously created map route from map
+        if let previousMapRoute = mapRoute {
+            mapView.remove(mapObject:previousMapRoute)
+        }
+
+        guard let unwrappedRoute = route else {
+            return
+        }
+
+        mapRoute = NMAMapRoute(unwrappedRoute)
+        mapRoute?.traveledColor = .clear
+        _ = mapRoute.map{ mapView?.add(mapObject: $0) }
+
+        // In order to see the entire route, we orientate the
+        // map view accordingly
+        if let boundingBox = unwrappedRoute.boundingBox {
+            geoBoundingBox = boundingBox
+            mapView.set(boundingBox: boundingBox, animation: .linear)
+        }
+    }
+
+    private func enableMapTracking(_ enabled: Bool) {
+        navigationManager.mapTrackingAutoZoomEnabled = enabled
+        navigationManager.mapTrackingEnabled = enabled
+    }
+
+    private func startTurnByTurnNavigation(with route: NMARoute, useSimulation: Bool) {
+        if let error = navigationManager.startTurnByTurnNavigation(route) {
+            showMessage("Error:start navigation returned error code \(error._code)")
+        } else {
+            // Set the map tracking properties
+            enableMapTracking(true)
+            if useSimulation {
+                // Simulation navigation by init the PositionSource with route and set movement speed
+                let source = NMARoutePositionSource(route: route)
+                source.movementSpeed = 60
+                NMAPositioningManager.sharedInstance().dataSource = source
+            }
+        }
+    }
+
+    // MARK: UI Utility
     private func showMessage(_ message: String) {
         let label = UILabel(frame: Defaults.frame)
         label.backgroundColor = UIColor.groupTableViewBackground
         label.textColor = UIColor.blue
         label.text = message
-        label.numberOfLines = 0;
+        label.numberOfLines = 0
 
         let text = label.text! as NSString
         let rect = text.boundingRect(with: Defaults.frame.size,
@@ -206,31 +255,43 @@ class MainViewController: UIViewController {
             label.removeFromSuperview()
         }
     }
-
-    private func enableMapTracking(_ enabled: Bool) {
-        navigationManager.mapTrackingAutoZoomEnabled = enabled
-        navigationManager.mapTrackingEnabled = enabled
-    }
-
-    private func startTurnByTurnNavigation(with route: NMARoute, useSimulation: Bool) {
-        if let error = self.navigationManager.startTurnByTurnNavigation(route) {
-            self.showMessage("Error:start navigation returned error code \(error._code)")
-        } else {
-            // Set the map tracking properties
-            self.enableMapTracking(true)
-            if useSimulation {
-                // Simulation navigation by init the PositionSource with route and set movement speed
-                let source = NMARoutePositionSource(route: route)
-                source.movementSpeed = 60
-                NMAPositioningManager.sharedInstance().dataSource = source
-            }
-        }
-    }
 }
 
 extension MainViewController : NMANavigationManagerDelegate {
+
+    func navigationManagerWillReroute(_ navigationManager: NMANavigationManager) {
+        showMessage("New navigation route will be created")
+    }
+
+    func navigationManager(_ navigationManager: NMANavigationManager,
+                           didUpdateRoute routeResult: NMARouteResult) {
+
+        let result = routeResult
+        guard let routes = result.routes, routes.count > 0 else {
+            // The routeResult doesn't contain route for redraw.
+            // It might occur when navigation stop was called.
+            return
+        }
+
+        // Let's add the 1st result onto the map
+        route = routes[0]
+        updateMapRoute(with: route)
+    }
+
+    func navigationManager(_ navigationManager: NMANavigationManager, didRerouteWithError error: NMARoutingError) {
+        var message : String
+        if error != NMARoutingError.none {
+            message = "successfully"
+        } else {
+            message = "with error \(error)"
+        }
+        showMessage("Navigation manager finished attempt to route " + message)
+    }
+
     // Signifies that there is new instruction information available
-    func navigationManager(_ navigationManager: NMANavigationManager, didUpdateManeuvers currentManeuver: NMAManeuver?, _ nextManeuver: NMAManeuver?) {
+    func navigationManager(_ navigationManager: NMANavigationManager,
+                           didUpdateManeuvers currentManeuver: NMAManeuver?,
+                           _ nextManeuver: NMAManeuver?) {
         showMessage("New maneuver is available")
     }
 
@@ -238,4 +299,5 @@ extension MainViewController : NMANavigationManagerDelegate {
     func navigationManagerDidFindPosition(_ navigationManager: NMANavigationManager) {
         showMessage("New position has been found")
     }
+
 }
