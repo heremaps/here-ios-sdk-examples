@@ -1,17 +1,18 @@
 /*
- * Copyright (c) 2011-2019 HERE Europe B.V.
+ * Copyright (c) 2011-2020 HERE Europe B.V.
  * All rights reserved.
  */
 
 #import "MainViewController.h"
 
 @interface MainViewController ()
-@property (weak, nonatomic) IBOutlet NMAMapView* mapView;
-@property (weak, nonatomic) IBOutlet UIButton* navigationControlButton;
-@property (nonatomic) NMACoreRouter* router;
-@property (nonatomic) NMARoute* route;
-@property (nonatomic) NMANavigationManager* navigationManager;
-@property (nonatomic) NMAGeoBoundingBox* geoBoundingBox;
+@property (weak, nonatomic) IBOutlet NMAMapView *mapView;
+@property (weak, nonatomic) IBOutlet UIButton *navigationControlButton;
+@property (strong, nonatomic) NMANavigationManager *navigationManager;
+@property (strong, nonatomic) NMACoreRouter *router;
+@property (strong, nonatomic) NMARoute *route;
+@property (strong, nonatomic) NMAMapRoute *mapRoute;
+@property (strong, nonatomic) NMAGeoBoundingBox *geoBoundingBox;
 @end
 
 @implementation MainViewController
@@ -41,6 +42,8 @@
     self.navigationManager.speedWarningEnabled = YES;
 }
 
+#pragma mark - User actions
+
 - (IBAction)navigationControlButton:(id)sender
 {
     // To start a turn-by-turn navigation, a concrete route object is required.We use same steps
@@ -66,13 +69,24 @@
         [self setMapTrackingEnabled:NO];
         [self.navigationControlButton setTitle:@"Start Navigation" forState:UIControlStateNormal];
         self.route = nil;
+        [self.mapView removeMapObject:self.mapRoute];
+        self.mapRoute = nil;
+        self.geoBoundingBox = nil;
     }
 }
+
+#pragma mark - Route creation and navigation code
 
 - (void)createRoute
 {
     // Create an NSMutableArray to add two stops
     NSMutableArray* stops = [[NSMutableArray alloc] initWithCapacity:2];
+
+    // The navigation reroute callbacks are triggered when there is divergence between the
+    // navigation route and user actual route. To achieve this situation:
+    // 1) the `Navigation` (not `Simulation`) mode should be used,
+    // 2) the route below should be configured using own route coordinates
+    // 3) during navigation user should move other route than the navigation route.
 
     // START: 4350 Still Creek Dr
     NMAGeoCoordinates* hereBurnaby =
@@ -96,41 +110,29 @@
         self.router = [[NMACoreRouter alloc] init];
     }
 
+    // Avoid retain cycle of self object
+    __weak __typeof__(self) weakSelf = self;
     // Trigger the route calculation
     [self.router
         calculateRouteWithStops:stops
                     routingMode:routingMode
                 completionBlock:^( NMARouteResult* routeResult, NMARoutingError error ) {
-                  if ( !error )
-                  {
-                      if ( routeResult && routeResult.routes.count >= 1 )
-                      {
-                          // Let's add the 1st result onto the map
-                          self.route = routeResult.routes[0];
-                          NMAMapRoute* mapRoute = [NMAMapRoute mapRouteWithRoute:self.route];
-                          mapRoute.traveledColor = [UIColor clearColor];
-                          [self.mapView addMapObject:mapRoute];
-
-                          // In order to see the entire route, we orientate the
-                          // map view
-                          // accordingly
-                          self.geoBoundingBox = self.route.boundingBox;
-                          [self.mapView setBoundingBox:self.route.boundingBox
-                                         withAnimation:NMAMapAnimationLinear];
-                          [self startNavigation];
-                      }
-                      else
-                      {
-                          [self showMessage:@"Error:route result returned is not valid"];
-                      }
-                  }
-                  else
-                  {
-                      [self showMessage:[NSString
-                                            stringWithFormat:
-                                                @"Error:route calculation returned error code %d",
-                                                (int)error]];
-                  }
+                    // make strong self object for method calls in block
+                    __typeof__(self) strongSelf = weakSelf;
+                    if ( !error ) {
+                        if ( routeResult && routeResult.routes.count >= 1 ) {
+                            // Let's add the 1st result onto the map
+                            strongSelf.route = routeResult.routes[0];
+                            [strongSelf updateMapRouteWithRoute:strongSelf.route];
+                            // initiate the navigation
+                            [strongSelf startNavigation];
+                        } else {
+                            [strongSelf showMessage:@"Error:route result returned is not valid"];
+                        }
+                    } else {
+                        [strongSelf showMessage:[NSString stringWithFormat:@"Error:route calculation returned error code %d",
+                                           (int)error]];
+                    }
                 }];
 }
 
@@ -141,7 +143,9 @@
     self.mapView.positionIndicator.visible = YES;
     // Configure NavigationManager to launch navigation on current map
     [self.navigationManager setMap:self.mapView];
-    
+
+    // Avoid retain cycle of self object
+    __weak __typeof__(self) weakSelf = self;
     UIAlertController * alert = [UIAlertController
                                  alertControllerWithTitle:@"Choose Navigation mode"
                                  message:@"Please choose a mode"
@@ -153,23 +157,107 @@
                                    actionWithTitle:@"Navigation"
                                    style:UIAlertActionStyleDefault
                                    handler:^(UIAlertAction * action) {
-        /// Start the turn-by-turn navigation.Please note if the transport mode of the passed-in
+        // make strong self object for method calls in block
+        __typeof__(self) strongSelf = weakSelf;
+        // Start the turn-by-turn navigation. Please note if the transport mode of the passed-in
         // route is pedestrian, the NavigationManager automatically triggers the guidance which is
         // suitable for walking.
-        [self startTurnByTurnNavigationWithRoute:self.route useSimulation:NO];
+        [strongSelf startTurnByTurnNavigationWithRoute:strongSelf.route useSimulation:NO];
     }];
     UIAlertAction* simulateButton = [UIAlertAction
                                      actionWithTitle:@"Simulation"
                                      style:UIAlertActionStyleDefault
                                      handler:^(UIAlertAction * action) {
-        
-        [self startTurnByTurnNavigationWithRoute:self.route useSimulation:YES];
+        // make strong self object for method calls in block
+        __typeof__(self) strongSelf = weakSelf;
+        [strongSelf startTurnByTurnNavigationWithRoute:strongSelf.route useSimulation:YES];
     }];
 
     [alert addAction:deviceButton];
     [alert addAction:simulateButton];
 
     [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)startTurnByTurnNavigationWithRoute:(NMARoute *)route useSimulation:(BOOL)shouldSimulate
+{
+    NSError *error = [self.navigationManager startTurnByTurnNavigationWithRoute:route];
+    if (!error) {
+        // Set the map tracking properties
+        [self setMapTrackingEnabled:YES];
+        if (shouldSimulate) {
+            // Simulation navigation by init the PositionSource with route and set movement speed
+            NMARoutePositionSource *source = [[NMARoutePositionSource alloc] initWithRoute:route];
+            source.movementSpeed = 60;
+            [NMAPositioningManager sharedPositioningManager].dataSource = source;
+        }
+    } else {
+        [self showMessage:[NSString stringWithFormat:
+                           @"Error:start navigation returned error code %ld", (long)error.code]];
+    }
+}
+
+- (void)setMapTrackingEnabled:(BOOL)enabled
+{
+    self.navigationManager.mapTrackingEnabled = enabled;
+    self.navigationManager.mapTrackingAutoZoomEnabled = enabled;
+}
+
+- (void)updateMapRouteWithRoute:(NMARoute *)route
+{
+    // remove previously created map route from map
+    if (self.mapRoute) {
+        [self.mapView removeMapObject:self.mapRoute];
+    }
+    // create new one based on provided route
+    if (route) {
+        self.mapRoute = [NMAMapRoute mapRouteWithRoute:route];
+        self.mapRoute.traveledColor = [UIColor clearColor];
+        [self.mapView addMapObject:self.mapRoute];
+
+        // In order to see the entire route, we orientate the
+        // map view accordingly
+        self.geoBoundingBox = route.boundingBox;
+        [self.mapView setBoundingBox:route.boundingBox
+                       withAnimation:NMAMapAnimationLinear];
+    }
+}
+
+#pragma mark - NMANavigationManagerDelegate methods
+
+- (void)navigationManagerWillReroute:(NMANavigationManager *)navigationManager
+{
+    [self showMessage:@"New navigation route will be created"];
+}
+
+
+- (void)navigationManager:(NMANavigationManager *)navigationManager
+ didUpdateRouteWithResult:(NMARouteResult *)routeResult
+{
+    if ( routeResult && routeResult.routes.count >= 1 )
+    {
+        // Let's add the 1st result onto the map
+        self.route = routeResult.routes[0];
+        [self updateMapRouteWithRoute:self.route];
+    }
+    else
+    {
+        // The routeResult doesn't contain route for redraw.
+        // It might occur when navigation stop was called.
+    }
+}
+
+- (void)navigationManager:(NMANavigationManager *)navigationManager
+      didRerouteWithError:(NMARoutingError)error
+{
+    NSString *message = nil;
+    if (error != NMARoutingErrorNone) {
+        message = @"successfully";
+    } else {
+        message = [NSString stringWithFormat:@"with error %lu", (unsigned long)error];
+    }
+    [self showMessage:[NSString stringWithFormat:@"Navigation manager finished attempt to route %@",
+                       message]];
 }
 
 // Signifies that there is new instruction information available
@@ -185,6 +273,8 @@
 {
     [self showMessage:@"New position has been found"];
 }
+
+#pragma mark - UI utility
 
 - (void)showMessage:(NSString*)message
 {
@@ -215,30 +305,6 @@
         completion:^( BOOL finished ) {
           [label removeFromSuperview];
         }];
-}
-
-- (void)startTurnByTurnNavigationWithRoute:(NMARoute *)route useSimulation:(BOOL)shouldSimulate
-{
-    NSError *error = [self.navigationManager startTurnByTurnNavigationWithRoute:route];
-    if (!error) {
-        // Set the map tracking properties
-        [self setMapTrackingEnabled:YES];
-        if (shouldSimulate) {
-            // Simulation navigation by init the PositionSource with route and set movement speed
-            NMARoutePositionSource *source = [[NMARoutePositionSource alloc] initWithRoute:route];
-            source.movementSpeed = 60;
-            [NMAPositioningManager sharedPositioningManager].dataSource = source;
-        }
-    } else {
-        [self showMessage:[NSString stringWithFormat:
-                           @"Error:start navigation returned error code %ld", (long)error.code]];
-    }
-}
-
-- (void)setMapTrackingEnabled:(BOOL)enabled
-{
-    self.navigationManager.mapTrackingEnabled = enabled;
-    self.navigationManager.mapTrackingAutoZoomEnabled = enabled;
 }
 
 @end

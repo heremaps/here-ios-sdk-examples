@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2019 HERE Europe B.V.
+ * Copyright (c) 2011-2020 HERE Europe B.V.
  * All rights reserved.
  */
 
@@ -8,9 +8,9 @@ import NMAKit
 
 // To obtain the application credentials, please register at https://developer.here.com/develop/mobile-sdks
 let credentials = (
-    appId: "YOUR_APP_ID",
-    appCode: "YOUR_APP_CODE",
-    licenseKey: "YOUR_LICENSE_KEY"
+    appId: "{YOUR_APP_ID}",
+    appCode: "{YOUR_APP_CODE}",
+    licenseKey: "{YOUR_LICENSE_KEY}"
 )
 
 @UIApplicationMain

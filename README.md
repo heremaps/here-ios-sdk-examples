@@ -1,8 +1,8 @@
 [![Build Status](https://travis-ci.com/heremaps/here-ios-sdk-examples.svg?branch=master)](https://travis-ci.com/heremaps/here-ios-sdk-examples)
 
-# HERE Mobile SDK for iOS example projects
+# HERE Mobile SDK 3.x for iOS example projects
 
-Copyright (c) 2011-2019 HERE Europe B.V.
+Copyright (c) 2011-2020 HERE Europe B.V.
 
 This repository holds a series of Objective-C and Swift projects using the **HERE Mobile SDK for iOS**. More information about the API can be found on [developer.here.com](https://developer.here.com/develop/mobile-sdks) under the *Android & iOS SDKs* section.
 
@@ -18,7 +18,7 @@ Unless otherwise noted in `LICENSE` files for specific files or directories, the
 
 ## HERE Mobile SDK for iOS (Premium)
 
-All of the following projects use **version 3.14** of the HERE Mobile SDK for iOS (Premium)
+All of the following projects use **version 3.15** of the HERE Mobile SDK for iOS (Premium)
 
 * [AutoSuggest](auto-suggest-ios) - Send different types of AutoSuggest requests.
 * [Geocoding and Reverse Gecoding](geocoder-and-reverse-geocoder-ios) - Trigger a Geocode and Reverse Geocode request in HERE Mobile SDK.
@@ -54,7 +54,7 @@ All of the following projects use **version 3.14** of the HERE Mobile SDK for iO
 1. In the "General" settings of the App target:
     - Select an eligible provisioning profile or enable "Automatically
       manage signing".
-    - Add NMAKit.framework to the "Embedded Binaries" section in Xcode 10 or to "Embedded Content" section in Xcode 11. Otherwise you
+    - Add NMAKit.framework to the "Embedded Content" section in Xcode. Otherwise you
       will get a "dyld: Library not loaded: @rpath/NMAKit.framework/NMAKit"
       error at runtime.
 
@@ -66,8 +66,8 @@ All of the following projects use **version 3.14** of the HERE Mobile SDK for iO
 
 ## Build Requirements
 
-* XCode 11 or above
-* HERE Mobile SDK for iOS (Premium) Version 3.14 or above
+* Xcode 11 or above
+* HERE Mobile SDK for iOS (Premium) Version 3.15 or above
 
 ## Target Platform
 
