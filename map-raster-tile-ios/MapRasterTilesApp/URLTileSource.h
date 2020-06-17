@@ -3,7 +3,7 @@
  * All rights reserved.
  */
 
-#import "NMAKit/NMAkit.h"
+#import "NMAKit/NMAKit.h"
 
 /**
  * A layer of custom raster tiles for display in an NMAMapView.
