@@ -37,26 +37,6 @@
          </BuildableReference>
       </MacroExpansion>
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4BC9B1A81D7A400B0009B634"
-               BuildableName = "RoutingAppTests"
-               BlueprintName = "RoutingAppTests"
-               ReferencedContainer = "container:RoutingApp.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4BC9B1B31D7A400B0009B634"
-               BuildableName = "RoutingAppUITests"
-               BlueprintName = "RoutingAppUITests"
-               ReferencedContainer = "container:RoutingApp.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
