@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C7261761EB8B12000386A31 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261751EB8B12000386A31 /* SystemConfiguration.framework */; };
-		1C7261781EB8B12600386A31 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261771EB8B12600386A31 /* GLKit.framework */; };
-		1C72617A1EB8B13400386A31 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261791EB8B13400386A31 /* libz.1.2.5.tbd */; };
-		1C72617C1EB8B14100386A31 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C72617B1EB8B14100386A31 /* libsqlite3.tbd */; };
-		1C72617E1EB8B14B00386A31 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C72617D1EB8B14B00386A31 /* libc++.tbd */; };
 		5F8F96381D10B06300DBE6CD /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F96371D10B06300DBE6CD /* SettingsViewController.m */; };
 		5FD23E221CFF9B4200F21EA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD23E211CFF9B4200F21EA3 /* main.m */; };
 		5FD23E251CFF9B4200F21EA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD23E241CFF9B4200F21EA3 /* AppDelegate.m */; };
@@ -61,11 +56,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C72617E1EB8B14B00386A31 /* libc++.tbd in Frameworks */,
-				1C72617C1EB8B14100386A31 /* libsqlite3.tbd in Frameworks */,
-				1C72617A1EB8B13400386A31 /* libz.1.2.5.tbd in Frameworks */,
-				1C7261781EB8B12600386A31 /* GLKit.framework in Frameworks */,
-				1C7261761EB8B12000386A31 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C7261941EB8B20100386A31 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261931EB8B20100386A31 /* SystemConfiguration.framework */; };
-		1C7261961EB8B20700386A31 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261951EB8B20700386A31 /* GLKit.framework */; };
-		1C7261981EB8B20D00386A31 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261971EB8B20D00386A31 /* libz.1.2.5.tbd */; };
-		1C72619A1EB8B21200386A31 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261991EB8B21200386A31 /* libsqlite3.tbd */; };
-		1C72619C1EB8B21900386A31 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C72619B1EB8B21900386A31 /* libc++.tbd */; };
 		4B1AF6311DB7F53000ABC855 /* MapPackageTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1AF6301DB7F53000ABC855 /* MapPackageTableCell.xib */; };
 		4B1AF6361DB7F6B200ABC855 /* MapPackageTableCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AF6351DB7F6B200ABC855 /* MapPackageTableCellTableViewCell.m */; };
 		4BF271791DB6E01400E2AD48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF271781DB6E01400E2AD48 /* main.m */; };
@@ -61,11 +56,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C72619C1EB8B21900386A31 /* libc++.tbd in Frameworks */,
-				1C72619A1EB8B21200386A31 /* libsqlite3.tbd in Frameworks */,
-				1C7261981EB8B20D00386A31 /* libz.1.2.5.tbd in Frameworks */,
-				1C7261961EB8B20700386A31 /* GLKit.framework in Frameworks */,
-				1C7261941EB8B20100386A31 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
