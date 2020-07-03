@@ -68,7 +68,7 @@ class SettingsViewController: UITableViewController {
             self.mapSchemeCtrl = mapSchemeCtrl
             cell.contentView.addSubview(mapSchemeCtrl)
 
-            if let index = Array(self.mapSchemes.values).index(of: self.mapScheme) {
+            if let index = Array(self.mapSchemes.values).firstIndex(of: self.mapScheme) {
                 mapSchemeCtrl.selectedSegmentIndex = index;
             }
 
