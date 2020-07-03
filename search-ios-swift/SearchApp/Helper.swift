@@ -31,7 +31,7 @@ class Helper {
         label.numberOfLines = 0;
 
         if let rect = label.text?.boundingRect(with: frame.size, options: [NSStringDrawingOptions.usesLineFragmentOrigin,
-            NSStringDrawingOptions.usesFontLeading], attributes: [NSAttributedString.Key.font : label.font], context: nil) {
+            NSStringDrawingOptions.usesFontLeading], attributes: [NSAttributedString.Key.font : label.font!], context: nil) {
             frame.size = rect.size;
             label.frame = frame;
         }
