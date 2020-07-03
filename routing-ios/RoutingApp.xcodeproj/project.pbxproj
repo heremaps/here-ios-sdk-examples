@@ -7,34 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C7261E41EB8B3AD00386A31 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261E31EB8B3AD00386A31 /* SystemConfiguration.framework */; };
-		1C7261E61EB8B3B100386A31 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261E51EB8B3B100386A31 /* GLKit.framework */; };
-		1C7261E81EB8B3B900386A31 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261E71EB8B3B900386A31 /* libz.1.2.5.tbd */; };
-		1C7261EA1EB8B3BE00386A31 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261E91EB8B3BE00386A31 /* libsqlite3.tbd */; };
-		1C7261EC1EB8B3C400386A31 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7261EB1EB8B3C400386A31 /* libc++.tbd */; };
 		4BC9B1951D7A400B0009B634 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9B1941D7A400B0009B634 /* main.m */; };
 		4BC9B1981D7A400B0009B634 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9B1971D7A400B0009B634 /* AppDelegate.m */; };
 		4BC9B19B1D7A400B0009B634 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9B19A1D7A400B0009B634 /* MainViewController.m */; };
 		4BC9B19E1D7A400B0009B634 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BC9B19C1D7A400B0009B634 /* Main.storyboard */; };
 		4BC9B1A01D7A400B0009B634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BC9B19F1D7A400B0009B634 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		4BC9B1AA1D7A400B0009B634 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4BC9B1881D7A400B0009B634 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4BC9B18F1D7A400B0009B634;
-			remoteInfo = RoutingApp;
-		};
-		4BC9B1B51D7A400B0009B634 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4BC9B1881D7A400B0009B634 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4BC9B18F1D7A400B0009B634;
-			remoteInfo = RoutingApp;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1C7261E11EB8B3A500386A31 /* Embed Frameworks */ = {
@@ -64,31 +42,10 @@
 		4BC9B19D1D7A400B0009B634 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BC9B19F1D7A400B0009B634 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BC9B1A41D7A400B0009B634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FBD7A1B222CB807E004E6D05 /* RoutingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoutingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FBD7A1B322CB807E004E6D05 /* RoutingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoutingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4BC9B18D1D7A400B0009B634 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1C7261EC1EB8B3C400386A31 /* libc++.tbd in Frameworks */,
-				1C7261EA1EB8B3BE00386A31 /* libsqlite3.tbd in Frameworks */,
-				1C7261E81EB8B3B900386A31 /* libz.1.2.5.tbd in Frameworks */,
-				1C7261E61EB8B3B100386A31 /* GLKit.framework in Frameworks */,
-				1C7261E41EB8B3AD00386A31 /* SystemConfiguration.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4BC9B1A61D7A400B0009B634 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4BC9B1B11D7A400B0009B634 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -116,8 +73,6 @@
 				4BC9B1921D7A400B0009B634 /* RoutingApp */,
 				4B8E32751E27070D0009D1A5 /* RoutingApp.app */,
 				1C7261E21EB8B3AD00386A31 /* Frameworks */,
-				FBD7A1B222CB807E004E6D05 /* RoutingAppTests.xctest */,
-				FBD7A1B322CB807E004E6D05 /* RoutingAppUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,42 +120,6 @@
 			productReference = 4B8E32751E27070D0009D1A5 /* RoutingApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4BC9B1A81D7A400B0009B634 /* RoutingAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4BC9B1C01D7A400B0009B634 /* Build configuration list for PBXNativeTarget "RoutingAppTests" */;
-			buildPhases = (
-				4BC9B1A51D7A400B0009B634 /* Sources */,
-				4BC9B1A61D7A400B0009B634 /* Frameworks */,
-				4BC9B1A71D7A400B0009B634 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4BC9B1AB1D7A400B0009B634 /* PBXTargetDependency */,
-			);
-			name = RoutingAppTests;
-			productName = RoutingAppTests;
-			productReference = FBD7A1B222CB807E004E6D05 /* RoutingAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		4BC9B1B31D7A400B0009B634 /* RoutingAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4BC9B1C31D7A400B0009B634 /* Build configuration list for PBXNativeTarget "RoutingAppUITests" */;
-			buildPhases = (
-				4BC9B1B01D7A400B0009B634 /* Sources */,
-				4BC9B1B11D7A400B0009B634 /* Frameworks */,
-				4BC9B1B21D7A400B0009B634 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4BC9B1B61D7A400B0009B634 /* PBXTargetDependency */,
-			);
-			name = RoutingAppUITests;
-			productName = RoutingAppUITests;
-			productReference = FBD7A1B322CB807E004E6D05 /* RoutingAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -212,14 +131,6 @@
 				TargetAttributes = {
 					4BC9B18F1D7A400B0009B634 = {
 						CreatedOnToolsVersion = 7.3.1;
-					};
-					4BC9B1A81D7A400B0009B634 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 4BC9B18F1D7A400B0009B634;
-					};
-					4BC9B1B31D7A400B0009B634 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 4BC9B18F1D7A400B0009B634;
 					};
 				};
 			};
@@ -237,8 +148,6 @@
 			projectRoot = "";
 			targets = (
 				4BC9B18F1D7A400B0009B634 /* RoutingApp */,
-				4BC9B1A81D7A400B0009B634 /* RoutingAppTests */,
-				4BC9B1B31D7A400B0009B634 /* RoutingAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -250,20 +159,6 @@
 			files = (
 				4BC9B1A01D7A400B0009B634 /* Assets.xcassets in Resources */,
 				4BC9B19E1D7A400B0009B634 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4BC9B1A71D7A400B0009B634 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4BC9B1B21D7A400B0009B634 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,34 +175,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4BC9B1A51D7A400B0009B634 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4BC9B1B01D7A400B0009B634 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4BC9B1AB1D7A400B0009B634 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4BC9B18F1D7A400B0009B634 /* RoutingApp */;
-			targetProxy = 4BC9B1AA1D7A400B0009B634 /* PBXContainerItemProxy */;
-		};
-		4BC9B1B61D7A400B0009B634 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4BC9B18F1D7A400B0009B634 /* RoutingApp */;
-			targetProxy = 4BC9B1B51D7A400B0009B634 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4BC9B19C1D7A400B0009B634 /* Main.storyboard */ = {
@@ -467,69 +335,6 @@
 			};
 			name = Release;
 		};
-		4BC9B1C11D7A400B0009B634 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = RoutingAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = nma.UniversalTestAppPremiumLib.RoutingAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RoutingApp.app/RoutingApp";
-			};
-			name = Debug;
-		};
-		4BC9B1C21D7A400B0009B634 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = RoutingAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = nma.UniversalTestAppPremiumLib.RoutingAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RoutingApp.app/RoutingApp";
-			};
-			name = Release;
-		};
-		4BC9B1C41D7A400B0009B634 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = RoutingAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = nma.UniversalTestAppPremiumLib.RoutingAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = RoutingApp;
-			};
-			name = Debug;
-		};
-		4BC9B1C51D7A400B0009B634 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				INFOPLIST_FILE = RoutingAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = nma.UniversalTestAppPremiumLib.RoutingAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = RoutingApp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -547,24 +352,6 @@
 			buildConfigurations = (
 				4BC9B1BE1D7A400B0009B634 /* Debug */,
 				4BC9B1BF1D7A400B0009B634 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4BC9B1C01D7A400B0009B634 /* Build configuration list for PBXNativeTarget "RoutingAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4BC9B1C11D7A400B0009B634 /* Debug */,
-				4BC9B1C21D7A400B0009B634 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4BC9B1C31D7A400B0009B634 /* Build configuration list for PBXNativeTarget "RoutingAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4BC9B1C41D7A400B0009B634 /* Debug */,
-				4BC9B1C51D7A400B0009B634 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

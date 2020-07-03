@@ -18,7 +18,7 @@ Unless otherwise noted in `LICENSE` files for specific files or directories, the
 
 ## HERE Mobile SDK for iOS (Premium)
 
-All of the following projects use **version 3.15** of the HERE Mobile SDK for iOS (Premium)
+All of the following projects use **version 3.16** of the HERE Mobile SDK for iOS (Premium)
 
 * [AutoSuggest](auto-suggest-ios) - Send different types of AutoSuggest requests.
 * [Geocoding and Reverse Gecoding](geocoder-and-reverse-geocoder-ios) - Trigger a Geocode and Reverse Geocode request in HERE Mobile SDK.
@@ -67,7 +67,7 @@ All of the following projects use **version 3.15** of the HERE Mobile SDK for iO
 ## Build Requirements
 
 * Xcode 11 or above
-* HERE Mobile SDK for iOS (Premium) Version 3.15 or above
+* HERE Mobile SDK for iOS (Premium) Version 3.16 or above
 
 ## Target Platform
 
