@@ -21,6 +21,7 @@ Unless otherwise noted in `LICENSE` files for specific files or directories, the
 All of the following projects use **version 3.16** of the HERE Mobile SDK for iOS (Premium)
 
 * [AutoSuggest](auto-suggest-ios) - Send different types of AutoSuggest requests.
+* [CLE2](cle2-ios) - Use custom location extensions.
 * [Geocoding and Reverse Gecoding](geocoder-and-reverse-geocoder-ios) - Trigger a Geocode and Reverse Geocode request in HERE Mobile SDK.
 * [Here Positioning](here-positioning-ios) - Use HERE location data source.
 * [Map Attribute](map-attribute-ios) - Map attributes manipulations.
