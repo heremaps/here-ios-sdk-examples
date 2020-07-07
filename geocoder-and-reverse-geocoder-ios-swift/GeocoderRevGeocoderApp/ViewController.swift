@@ -7,21 +7,13 @@ import UIKit
 import NMAKit
 
 class ViewController: UIViewController {
-    
-    let marker: NMAMapMarker
+
     let address = "4350 Still Creek Dr,Burnaby"
     let searchCenter = NMAGeoCoordinates(latitude: 49.266787, longitude: -123.056640)
     let searchRadius = 5000
     
     var position: NMAGeoCoordinates?
-    
-    required init?(coder aDecoder: NSCoder) {
-        marker = NMAMapMarker()
-        marker.icon = NMAImage(uiImage: #imageLiteral(resourceName: "location"))
-        super.init(coder: aDecoder)
-    }
-    
-    @IBOutlet weak var map: NMAMapView!
+
     @IBOutlet weak var reverseGeocodeBtn: UIButton!
     @IBOutlet weak var geocodeBtn: UIButton!
     @IBOutlet weak var locationLabel: UILabel!
@@ -31,14 +23,7 @@ class ViewController: UIViewController {
         reverseGeocodeBtn.layer.cornerRadius = 4
         geocodeBtn.layer.cornerRadius = 4
     }
-    
-    func addMarker(coordinates coord: NMAGeoCoordinates) {
-        map.remove(mapObject: marker)
-        marker.coordinates = coord
-        map.add(mapObject: marker)
-        map.set(geoCenter: coord, animation: NMAMapAnimation.none)
-    }
-    
+
     func parseResultFromReverseGeocodeRequest(request: NMARequest?, requestData data: Any?, error: Error?) {
         reverseGeocodeBtn.isEnabled = true
 
@@ -81,7 +66,6 @@ class ViewController: UIViewController {
         if let tempPosition = (arr.object(at: 0) as? NMAGeocodeResult)?.location?.position {
             position = tempPosition
             locationLabel.text = "Lat: \(tempPosition.latitude) \n Long: \(tempPosition.longitude)"
-            addMarker(coordinates: tempPosition)
         }
     }
     
