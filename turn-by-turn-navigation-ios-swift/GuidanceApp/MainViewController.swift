@@ -280,7 +280,7 @@ extension MainViewController : NMANavigationManagerDelegate {
 
     func navigationManager(_ navigationManager: NMANavigationManager, didRerouteWithError error: NMARoutingError) {
         var message : String
-        if error != NMARoutingError.none {
+        if error == NMARoutingError.none {
             message = "successfully"
         } else {
             message = "with error \(error)"

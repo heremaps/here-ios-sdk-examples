@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,77 +16,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rxJ-kU-dw0" customClass="NMAMapView">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HN4-Mh-vRj">
-                                        <rect key="frame" x="259" y="601" width="100" height="30"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="FYS-Ul-amd"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                        <state key="normal" title="Rev Geocode">
-                                            <color key="titleColor" red="0.92664451969999995" green="1" blue="0.99763406129999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="clickOnReverseGeocodeBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oWb-6J-VNo"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Push geocode" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Sn-cV-d5j">
-                                        <rect key="frame" x="16" y="24" width="343" height="20.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dtc-oC-PoL">
-                                        <rect key="frame" x="16" y="601" width="100" height="30"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="WMl-RJ-rtJ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                        <state key="normal" title="Geocode">
-                                            <color key="titleColor" red="0.92664451969999995" green="1" blue="0.99763406129999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="clickOnGeocodeBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I0p-Aa-d2D"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HN4-Mh-vRj">
+                                <rect key="frame" x="198" y="616" width="161" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="Rev Geocode">
+                                    <color key="titleColor" red="0.92664451969999995" green="1" blue="0.99763406129999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickOnReverseGeocodeBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oWb-6J-VNo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dtc-oC-PoL">
+                                <rect key="frame" x="16" y="616" width="174" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="Geocode">
+                                    <color key="titleColor" red="0.92664451969999995" green="1" blue="0.99763406129999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickOnGeocodeBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I0p-Aa-d2D"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Result" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Sn-cV-d5j">
+                                <rect key="frame" x="163.5" y="323.5" width="48" height="20.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="8Sn-cV-d5j" firstAttribute="leading" secondItem="rxJ-kU-dw0" secondAttribute="leading" constant="16" id="0ps-85-rbX"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Dtc-oC-PoL" secondAttribute="trailing" constant="20" symbolic="YES" id="16o-nJ-wqC"/>
-                                    <constraint firstItem="HN4-Mh-vRj" firstAttribute="top" secondItem="Dtc-oC-PoL" secondAttribute="top" id="2M7-7y-bQx"/>
-                                    <constraint firstAttribute="bottom" secondItem="HN4-Mh-vRj" secondAttribute="bottom" constant="16" id="5L3-nZ-x7d"/>
-                                    <constraint firstItem="HN4-Mh-vRj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rxJ-kU-dw0" secondAttribute="leading" constant="20" symbolic="YES" id="6Zn-Rg-Xf1"/>
-                                    <constraint firstAttribute="bottom" secondItem="Dtc-oC-PoL" secondAttribute="bottom" constant="16" id="L42-SP-RQw"/>
-                                    <constraint firstItem="8Sn-cV-d5j" firstAttribute="top" secondItem="rxJ-kU-dw0" secondAttribute="top" constant="24" id="Pds-et-s7F"/>
-                                    <constraint firstItem="Dtc-oC-PoL" firstAttribute="leading" secondItem="rxJ-kU-dw0" secondAttribute="leading" constant="16" id="WXK-it-DYg"/>
-                                    <constraint firstAttribute="trailing" secondItem="HN4-Mh-vRj" secondAttribute="trailing" constant="16" id="doY-g4-BVg"/>
-                                    <constraint firstAttribute="trailing" secondItem="8Sn-cV-d5j" secondAttribute="trailing" constant="16" id="gBC-RB-c5F"/>
-                                    <constraint firstAttribute="trailing" secondItem="HN4-Mh-vRj" secondAttribute="trailing" constant="16" id="syo-JC-bh1"/>
-                                    <constraint firstItem="HN4-Mh-vRj" firstAttribute="bottom" secondItem="Dtc-oC-PoL" secondAttribute="bottom" id="u1O-Dr-CLg"/>
-                                </constraints>
-                            </view>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="rxJ-kU-dw0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Aw-Jt-rmF"/>
-                            <constraint firstItem="rxJ-kU-dw0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BsH-zE-Aoo"/>
-                            <constraint firstItem="rxJ-kU-dw0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LPE-ze-1T3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rxJ-kU-dw0" secondAttribute="bottom" id="adi-oL-7OQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rxJ-kU-dw0" secondAttribute="trailing" id="cH6-sQ-kck"/>
-                            <constraint firstItem="rxJ-kU-dw0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xxM-O5-TTU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8Sn-cV-d5j" secondAttribute="trailing" id="CTu-Hp-dZg"/>
+                            <constraint firstItem="Dtc-oC-PoL" firstAttribute="bottom" secondItem="HN4-Mh-vRj" secondAttribute="bottom" id="MDy-jG-rzJ"/>
+                            <constraint firstItem="HN4-Mh-vRj" firstAttribute="width" secondItem="Dtc-oC-PoL" secondAttribute="width" multiplier="1.46032" constant="-93.095238095238074" id="Niv-iX-VzF"/>
+                            <constraint firstItem="HN4-Mh-vRj" firstAttribute="leading" secondItem="Dtc-oC-PoL" secondAttribute="trailing" constant="8" id="PLm-jo-KJY"/>
+                            <constraint firstItem="Dtc-oC-PoL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TYp-ma-Cr3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Dtc-oC-PoL" secondAttribute="bottom" constant="21" id="Vbu-P1-Ji9"/>
+                            <constraint firstItem="8Sn-cV-d5j" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="aNN-L3-E7e"/>
+                            <constraint firstItem="HN4-Mh-vRj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cXq-iR-Ycs"/>
+                            <constraint firstItem="8Sn-cV-d5j" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jX8-HD-W1V"/>
+                            <constraint firstItem="8Sn-cV-d5j" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sDq-m7-aHe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="geocodeBtn" destination="Dtc-oC-PoL" id="D9L-8F-1qk"/>
                         <outlet property="locationLabel" destination="8Sn-cV-d5j" id="s50-dh-aqr"/>
-                        <outlet property="map" destination="rxJ-kU-dw0" id="o9r-rY-rhs"/>
                         <outlet property="reverseGeocodeBtn" destination="HN4-Mh-vRj" id="c7u-Q9-Za9"/>
                     </connections>
                 </viewController>
