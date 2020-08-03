@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -151,7 +151,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = yourcompany;
+				ORGANIZATIONNAME = "HERE Burnaby";
 				TargetAttributes = {
 					5FE88F431DB5567A00C6C3BB = {
 						CreatedOnToolsVersion = 8.0;
@@ -160,7 +160,7 @@
 				};
 			};
 			buildConfigurationList = 5FE88F3F1DB5567A00C6C3BB /* Build configuration list for PBXProject "MapRasterTilesApp" */;
-			compatibilityVersion = "Xcode 10.0";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -149,7 +149,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = yourcompany;
+				ORGANIZATIONNAME = "HERE Burnaby";
 				TargetAttributes = {
 					5FDB345C1D3D969600330FC1 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -157,7 +157,7 @@
 				};
 			};
 			buildConfigurationList = 5FDB34581D3D969600330FC1 /* Build configuration list for PBXProject "MapGesturesApp" */;
-			compatibilityVersion = "Xcode 10.0";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (

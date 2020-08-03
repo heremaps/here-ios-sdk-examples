@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -92,7 +92,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = "HERE-Burnaby";
+				ORGANIZATIONNAME = "HERE Burnaby";
 				TargetAttributes = {
 					E4C5D52720FF4A91005A217C = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -101,7 +101,7 @@
 				};
 			};
 			buildConfigurationList = E4C5D52320FF4A91005A217C /* Build configuration list for PBXProject "MapEngineinitializationApp" */;
-			compatibilityVersion = "Xcode 10.0";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
