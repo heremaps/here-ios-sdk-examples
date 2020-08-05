@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -98,7 +98,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1000;
-				ORGANIZATIONNAME = yourcompany;
+				ORGANIZATIONNAME = "HERE Burnaby";
 				TargetAttributes = {
 					5F554CCD1D9B0F1900E6D7D3 = {
 						CreatedOnToolsVersion = 8.0;
@@ -107,7 +107,7 @@
 				};
 			};
 			buildConfigurationList = 5F554CC91D9B0F1900E6D7D3 /* Build configuration list for PBXProject "MapCustomizationApp" */;
-			compatibilityVersion = "Xcode 10.0";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
