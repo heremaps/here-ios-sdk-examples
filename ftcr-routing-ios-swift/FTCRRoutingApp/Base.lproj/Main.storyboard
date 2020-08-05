@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="FTCRRoutingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qp2-IS-alK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRk-Na-UI0">
+                                <rect key="frame" x="193" y="44" width="221" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="29v-BC-D9Z"/>
+                                </constraints>
+                                <state key="normal" title="Create FTCR Route"/>
+                                <connections>
+                                    <action selector="createFTCRRouteButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="01Q-ZI-PvF"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3HR-3u-PF5" customClass="NMAMapView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EvV-eK-HJf" firstAttribute="trailing" secondItem="XRk-Na-UI0" secondAttribute="trailing" id="7qg-AJ-uBH"/>
+                            <constraint firstItem="3HR-3u-PF5" firstAttribute="top" secondItem="XRk-Na-UI0" secondAttribute="bottom" constant="8" id="JsM-eC-QcM"/>
+                            <constraint firstItem="XRk-Na-UI0" firstAttribute="leading" secondItem="EvV-eK-HJf" secondAttribute="leading" constant="193" id="don-ED-21X"/>
+                            <constraint firstItem="XRk-Na-UI0" firstAttribute="top" secondItem="EvV-eK-HJf" secondAttribute="top" id="eGA-Os-rT6"/>
+                            <constraint firstItem="3HR-3u-PF5" firstAttribute="leading" secondItem="EvV-eK-HJf" secondAttribute="leading" id="eky-UR-cPo"/>
+                            <constraint firstItem="EvV-eK-HJf" firstAttribute="trailing" secondItem="3HR-3u-PF5" secondAttribute="trailing" id="sUo-DU-OkK"/>
+                            <constraint firstItem="EvV-eK-HJf" firstAttribute="bottom" secondItem="3HR-3u-PF5" secondAttribute="bottom" id="tFj-Vl-eOp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EvV-eK-HJf"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="3HR-3u-PF5" id="fT1-ak-7Lk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+</document>

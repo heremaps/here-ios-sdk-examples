@@ -26,7 +26,7 @@
                                 </constraints>
                                 <state key="normal" title="Create FTCR Route"/>
                                 <connections>
-                                    <action selector="createFTCRRouteButtonDidClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qoE-ih-ML7"/>
+                                    <action selector="createFTCRRouteButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qoE-ih-ML7"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hM-vB-ZhB" customClass="NMAMapView">
@@ -46,7 +46,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="createFTCRRouteButton" destination="bZl-Gz-mUE" id="9Q7-l1-7AQ"/>
                         <outlet property="mapView" destination="0hM-vB-ZhB" id="Iwc-Vu-JIa"/>
                     </connections>
                 </viewController>

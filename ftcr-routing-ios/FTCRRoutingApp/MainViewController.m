@@ -9,8 +9,7 @@
 @interface MainViewController ()
 
 @property (weak, nonatomic) IBOutlet NMAMapView *mapView;
-@property (weak, nonatomic) IBOutlet UIButton *createFTCRRouteButton;
-@property (nonatomic) NMAFTCRRouter *router;
+@property (nonatomic) NMAFTCRRouter *ftcrRouter;
 @property (nonatomic) NMAMapFTCRRoute *mapRoute;
 
 @end
@@ -22,9 +21,11 @@
 {
     [super viewDidLoad];
 
-    // set zoom level
+    // Set zoom level
     self.mapView.zoomLevel = 13;
-    self.createFTCRRouteButton.titleLabel.adjustsFontSizeToFitWidth = YES;
+
+    // Initialize the NMAFTCRRouter
+    self.ftcrRouter = [NMAFTCRRouter new];
 }
 
 - (void)createFTCRRoute
@@ -42,13 +43,16 @@
     // Initialize route plan with waypoints
     NMAFTCRRoutePlan *routePlan = [[NMAFTCRRoutePlan alloc] initWithWaypoints:@[start, end]];
 
-    // Initialize the NMAFTCRRouter
-    if (!self.router)
-    {
-        self.router = [NMAFTCRRouter new];
-    }
+    //Setup additional options
+    NMAFTCRRouteOptions *routeOptions = [NMAFTCRRouteOptions new];
+    routeOptions.transportMode = NMAFTCRTransportModeCar;
+    routeOptions.routingType = NMAFTCRRoutingTypeFastest;
+    routeOptions.departureTime = [NSDate date];
+    routeOptions.tunnelsAvoidance = NMAFTCRRouteAvoidanceAvoid;
 
-    [self.router calculateRouteWithPlan:routePlan
+    routePlan.options = routeOptions;
+
+    [self.ftcrRouter calculateRouteWithPlan:routePlan
                         completionBlock:^(NSArray<NMAFTCRRoute *> *routes, NSError *error) {
         if (!error) {
             if (routes.count > 0) {
@@ -70,11 +74,10 @@
     }];
 }
 
-- (IBAction)createFTCRRouteButtonDidClick:(id)sender
+- (IBAction)createFTCRRouteButtonClicked:(id)sender
 {
-    // Clear map if previous results are still on map.
-    if (self.mapRoute)
-    {
+    // Clear map if previous result is still on the map
+    if (self.mapRoute) {
         [self.mapView removeMapObject:self.mapRoute];
         self.mapRoute = nil;
     }
