@@ -34,6 +34,7 @@ All of the following projects use **version 3.16** of the HERE Mobile SDK for iO
 * [Map Rendering](map-rendering-ios) - Display the HERE map on a device.
 * [Routing](routing-ios) - Create a route from HERE Burnaby office to Langely BC and display it on the map.
 * [Route TTA](route-tta-ios) - Calculate TTA (time to arrival) for a route.
+* [SwiftUI](swiftui-ios-swift) - SwiftUI wrapper for map view.
 * [Search](search-ios) - Send different types of search requests.
 * [Turn-by-Turn Navigation](turn-by-turn-navigation-ios) - Trigger a turn-by-turn navigation from HERE Burnaby office to Langley BC.
 * [Here Mobile SDK UI Kit](here-mobile-sdk-ui-kit-swift) - Use the HERE Mobile SDK UI Kit (MSDKUI 2.0) to show maneuver instructions, speed limits and current speed.
@@ -74,3 +75,4 @@ All of the following projects use **version 3.16** of the HERE Mobile SDK for iO
 ## Target Platform
 
 * iOS 12 or above
+* iOS 13 or above for [SwiftUI](swiftui-ios-swift) sample
