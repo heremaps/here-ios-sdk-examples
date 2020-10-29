@@ -1,4 +1,4 @@
 target 'CLE2App' do
-    platform :ios, '12.0'
-    pod 'HEREMaps', '>= 3.16'
+    platform :ios, '13.0'
+    pod 'HEREMaps', '>= 3.17'
 end

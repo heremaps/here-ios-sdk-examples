@@ -18,7 +18,7 @@ Unless otherwise noted in `LICENSE` files for specific files or directories, the
 
 ## HERE Mobile SDK for iOS (Premium)
 
-All of the following projects use **version 3.16** of the HERE Mobile SDK for iOS (Premium)
+All of the following projects use **version 3.17** of the HERE Mobile SDK for iOS (Premium)
 
 * [AutoSuggest](auto-suggest-ios) - Send different types of AutoSuggest requests.
 * [CLE2](cle2-ios) - Use custom location extensions.
@@ -57,22 +57,18 @@ All of the following projects use **version 3.16** of the HERE Mobile SDK for iO
 1. In the "General" settings of the App target:
     - Select an eligible provisioning profile or enable "Automatically
       manage signing".
-    - Add NMAKit.framework to the "Embedded Content" section in Xcode. Otherwise you
+    - Add NMAKit.xcframework to the "Frameworks, Libraries and Embedded Content" section in Xcode. Avoid "Don Not Embed" option. Otherwise you
       will get a "dyld: Library not loaded: @rpath/NMAKit.framework/NMAKit"
       error at runtime.
 
-2. In the "Builds Settings" of the App target:
-    - Ensure "Frameworks Search Paths" includes the location of `NMAKit.framework`. Drag and drop `NMAKit.framework` to $(PROJECT_DIR) in case of import error.
-
-3. In `AppDelegate.m`:
+2. In `AppDelegate.m`:
     - Enter an app id, app code and license key.
 
 ## Build Requirements
 
-* Xcode 11 or above
-* HERE Mobile SDK for iOS (Premium) Version 3.16 or above
+* Xcode 12 or above
+* HERE Mobile SDK for iOS (Premium) Version 3.17 or above
 
 ## Target Platform
 
-* iOS 12 or above
-* iOS 13 or above for [SwiftUI](swiftui-ios-swift) sample
+* iOS 13 or above
