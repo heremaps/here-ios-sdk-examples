@@ -90,7 +90,6 @@ UIPickerViewDelegate, UIPickerViewDataSource {
         languagePickerView = UIPickerView(frame: CGRect(x:0, y:50, width: 100, height: 150))
         languagePickerView?.dataSource = self
         languagePickerView?.delegate = self
-        languagePickerView?.showsSelectionIndicator = true
         languageLabel.inputView = languagePickerView
 
     }

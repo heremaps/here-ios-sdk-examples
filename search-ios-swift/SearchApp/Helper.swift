@@ -7,7 +7,7 @@ import UIKit
 
 class Helper {
 
-    static var indicator: UIActivityIndicatorView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
+    static var indicator: UIActivityIndicatorView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
 
     static func showIndicator(onView view:UIView) {
         indicator.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0)
@@ -25,7 +25,7 @@ class Helper {
         var frame = CGRect(x: 110, y: 200, width: 220, height: 120);
 
         let label = UILabel(frame: frame);
-        label.backgroundColor = UIColor.groupTableViewBackground
+        label.backgroundColor = UIColor.systemGroupedBackground
         label.textColor = UIColor.blue
         label.text = message;
         label.numberOfLines = 0;

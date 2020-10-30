@@ -34,7 +34,6 @@
     _languagePickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 50, 100, 150)];
     [_languagePickerView setDataSource:self];
     [_languagePickerView setDelegate:self];
-    _languagePickerView.showsSelectionIndicator = YES;
     _languageTextField.inputView = _languagePickerView;
 }
 
