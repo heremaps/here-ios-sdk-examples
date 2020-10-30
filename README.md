@@ -43,7 +43,7 @@ All of the following projects use **version 3.17** of the HERE Mobile SDK for iO
 ### Using CocoaPods
 
 1. Run "pod install" or "pod update" in the application's root directory to install
-   the HERE Mobile SDK.
+   the HERE Mobile SDK. This will integrate NMAKit.xcframework into your project
 
 2. In the "General" settings of the App target:
     - Select an eligible provisioning profile or enable "Automatically
