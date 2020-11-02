@@ -57,7 +57,7 @@ All of the following projects use **version 3.17** of the HERE Mobile SDK for iO
 1. In the "General" settings of the App target:
     - Select an eligible provisioning profile or enable "Automatically
       manage signing".
-    - Add NMAKit.xcframework to the "Frameworks, Libraries and Embedded Content" section in Xcode. Avoid "Don Not Embed" option. Otherwise you
+    - Add NMAKit.xcframework to the "Frameworks, Libraries and Embedded Content" section in Xcode. Avoid "Do Not Embed" option. Otherwise you
       will get a "dyld: Library not loaded: @rpath/NMAKit.framework/NMAKit"
       error at runtime.
 
