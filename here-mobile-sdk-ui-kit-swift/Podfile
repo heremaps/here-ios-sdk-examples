@@ -2,11 +2,3 @@ target 'GuideMeToHERE' do
     platform :ios, '12.0'
     pod 'HEREMapsUI', '2.0'
 end
-
-# Please use a following workaround if you get Simulator linking errors.
-# Switching to HEREMapsUI 2.1.7 (HERE SDK 3.17) would not require it.
-post_install do |installer|
-  installer.pods_project.build_configurations.each do |config|
-    config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
-  end
-end
