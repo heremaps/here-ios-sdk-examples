@@ -1,11 +1,7 @@
 #!/bin/sh
 
 # Find paths that contain an xcodeproj directory.
-
-# TEMPORARY DISABLE MSDKUI project build as it requires Xcode 12 fix
-APP_PROJECTS=$(find "$PWD" -mindepth 2 -maxdepth 2 -type d -name "*.xcworkspace" -not -path "*/here-mobile-sdk-ui-kit-swift/*")
-# APP_PROJECTS=$(find "$PWD" -mindepth 2 -maxdepth 2 -type d -name "*.xcworkspace")
-
+APP_PROJECTS=$(find "$PWD" -mindepth 2 -maxdepth 2 -type d -name "*.xcworkspace")
 SDK=iphonesimulator14.0
 DESTINATION="OS=14.0,name=iPhone 11"
 
