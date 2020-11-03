@@ -13,7 +13,7 @@ static UIActivityIndicatorView* indicator;
     if (!indicator)
     {
         indicator = [[UIActivityIndicatorView alloc]
-            initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+            initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
     }
     indicator.frame = CGRectMake(0.0, 0.0, 40.0, 40.0);
     indicator.center = view.center;
@@ -36,7 +36,7 @@ static UIActivityIndicatorView* indicator;
     CGRect frame = CGRectMake(110, 200, 220, 120);
 
     UILabel* label = [[UILabel alloc] initWithFrame:frame];
-    label.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    label.backgroundColor = [UIColor systemGroupedBackgroundColor];
     label.textColor = [UIColor blueColor];
     label.text = message;
     label.numberOfLines = 0;

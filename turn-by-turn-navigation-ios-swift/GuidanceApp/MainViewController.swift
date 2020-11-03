@@ -233,7 +233,7 @@ class MainViewController: UIViewController {
     // MARK: UI Utility
     private func showMessage(_ message: String) {
         let label = UILabel(frame: Defaults.frame)
-        label.backgroundColor = UIColor.groupTableViewBackground
+        label.backgroundColor = UIColor.systemGroupedBackground
         label.textColor = UIColor.blue
         label.text = message
         label.numberOfLines = 0

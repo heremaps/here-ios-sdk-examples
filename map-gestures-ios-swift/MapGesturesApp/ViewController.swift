@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         var frame = CGRect(x: 110, y: 200, width: 220, height: 120)
 
         let label = UILabel(frame: frame)
-        label.backgroundColor = UIColor.groupTableViewBackground
+        label.backgroundColor = UIColor.systemGroupedBackground
         label.textColor = UIColor.blue
         label.text = message
         label.numberOfLines = 0

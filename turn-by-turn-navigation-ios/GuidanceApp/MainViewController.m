@@ -281,7 +281,7 @@
     CGRect frame = CGRectMake( 110, 200, 220, 120 );
 
     UILabel* label = [[UILabel alloc] initWithFrame:frame];
-    label.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    label.backgroundColor = [UIColor systemGroupedBackgroundColor];
     label.textColor = [UIColor blueColor];
     label.text = message;
     label.numberOfLines = 0;
