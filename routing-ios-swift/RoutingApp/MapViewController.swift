@@ -9,8 +9,8 @@ import CoreFoundation
 
 // two Geo points for route.
 let route = [
-    NMAGeoCoordinates(latitude: 49.259149, longitude: -123.008555),
-    NMAGeoCoordinates(latitude: 49.0736, longitude: -122.559549)
+    NMAGeoCoordinates(latitude: 52.406425, longitude:13.193975),
+    NMAGeoCoordinates(latitude: 52.638623, longitude:13.441998)
 ]
 
 class ViewController: UIViewController {
@@ -30,14 +30,14 @@ class ViewController: UIViewController {
         super.viewDidDisappear(animated)
         progress?.cancel()
     }
-    
+
     /*
      Initialize CoreRouter and set center for map.
     */
     private func initValues() {
         coreRouter = NMACoreRouter()
         mapView.set(
-            geoCenter: NMAGeoCoordinates(latitude: 49.260327, longitude: -123.115025),
+            geoCenter: NMAGeoCoordinates(latitude: 52.406425, longitude:13.193975),
             zoomLevel: 10, animation: NMAMapAnimation.none
         )
     }
@@ -92,5 +92,16 @@ class ViewController: UIViewController {
             self.mapView.set(boundingBox: box, animation: NMAMapAnimation.linear)
             self.mapView.add(mapObject: mapRoute)
         })
+    }
+
+    @IBAction func didShowEnvZoneChange(_ sender: Any) {
+        if (sender is UISwitch) {
+            if ((sender as! UISwitch).isOn) {
+                mapView.show(fleetFeature:NMAMapFleetFeatureType.environmentalZones)
+
+            } else {
+                mapView.hide(fleetFeature:NMAMapFleetFeatureType.environmentalZones)
+            }
+        }
     }
 }
