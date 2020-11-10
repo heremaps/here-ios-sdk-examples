@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,10 +34,26 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2h7-n8-LlP">
+                                <rect key="frame" x="20" y="46.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="didEnvZoneChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ezz-Uq-FOH"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show zones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDX-GA-aLh">
+                                <rect key="frame" x="77" y="51.5" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="YDX-GA-aLh" firstAttribute="centerY" secondItem="2h7-n8-LlP" secondAttribute="centerY" id="9B4-IY-tpv"/>
+                            <constraint firstItem="2h7-n8-LlP" firstAttribute="centerY" secondItem="MqL-ez-mOK" secondAttribute="centerY" id="JA6-5J-8vn"/>
+                            <constraint firstItem="2h7-n8-LlP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="PGP-SM-j5Q"/>
                             <constraint firstItem="LIi-iC-54h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PL6-ch-pRJ"/>
+                            <constraint firstItem="YDX-GA-aLh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="77" id="Tbb-oa-fDB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MqL-ez-mOK" secondAttribute="trailing" id="YHW-Rp-Ncv"/>
                             <constraint firstItem="MqL-ez-mOK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="193" id="c3M-sA-4ba"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LIi-iC-54h" secondAttribute="bottom" id="ji0-Za-UEe"/>
@@ -49,6 +65,7 @@
                     <connections>
                         <outlet property="createRouteButton" destination="MqL-ez-mOK" id="0MV-yJ-hV7"/>
                         <outlet property="mapView" destination="LIi-iC-54h" id="S4g-KQ-G0K"/>
+                        <outlet property="showEnvZones" destination="2h7-n8-LlP" id="EhO-rI-VUM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
