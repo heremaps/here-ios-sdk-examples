@@ -38,6 +38,7 @@ All of the following projects use **version 3.17** of the HERE Mobile SDK for iO
 * [Search](search-ios) - Send different types of search requests.
 * [Turn-by-Turn Navigation](turn-by-turn-navigation-ios) - Trigger a turn-by-turn navigation from HERE Burnaby office to Langley BC.
 * [Here Mobile SDK UI Kit](here-mobile-sdk-ui-kit-swift) - Use the HERE Mobile SDK UI Kit (MSDKUI 2.0) to show maneuver instructions, speed limits and current speed.
+
 ## How to build apps
 
 ### Using CocoaPods
