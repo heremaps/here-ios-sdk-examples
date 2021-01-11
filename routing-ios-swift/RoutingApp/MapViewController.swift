@@ -62,7 +62,10 @@ class ViewController: UIViewController {
         if !(progress?.isFinished ?? false) {
             progress?.cancel()
         }
-        
+
+        // Use banned areas if needed
+        addBannedAreas(coreRouter);
+
         // store progress.
         progress = coreRouter.calculateRoute(withStops: route, routingMode: routingMode, { (routeResult, error) in
             if (error != NMARoutingError.none) {
@@ -92,6 +95,35 @@ class ViewController: UIViewController {
             self.mapView.set(boundingBox: box, animation: NMAMapAnimation.linear)
             self.mapView.add(mapObject: mapRoute)
         })
+    }
+
+    private func addBannedAreas(_ router: NMACoreRouter) {
+        // Example of usage banned areas API
+        let dynamicPenalty = NMADynamicPenalty();
+
+        // There are two options to avoid certain areas during routing,
+        // 1. Add banned area using addBannedArea API
+
+        let coordinates = [NMAGeoCoordinates(latitude:52.631692, longitude:13.437591),
+            NMAGeoCoordinates(latitude:52.631905, longitude:13.437787),
+            NMAGeoCoordinates(latitude:52.632577, longitude:13.438357)];
+
+        let geoPolygon = NMAGeoPolygon(coordinates:coordinates);
+        // Note, the maximum supported number of banned areas is 20.
+        dynamicPenalty.addBannedArea(NMAMapPolygon(polygon: geoPolygon));
+
+
+        // 2. Add banned road link using addPenaltyForRoadElement API
+        // Note, map data needs to be present to get RoadElement by the GeoCoordinate.
+        let roadElement = mapView.roadElement(at: NMAGeoCoordinates(latitude:52.406611, longitude:13.194916));
+        if (roadElement != nil) {
+            // use speed = 0 to completely exclude road link from routing
+            dynamicPenalty.addPenalty(for:roadElement!,
+                     drivingDirection:NMADrivingDirection.both,
+                                    speed:0);
+        }
+
+        router.dynamicPenalty = dynamicPenalty;
     }
 
     @IBAction func didShowEnvZoneChange(_ sender: Any) {
