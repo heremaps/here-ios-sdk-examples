@@ -57,6 +57,9 @@
         self.router = [[NMACoreRouter alloc] init];
     }
 
+    // Use banned areas if needed
+    [self addBannedAreasForCoreRouter:self.router];
+
     // Trigger the route calculation
     [self.router
         calculateRouteWithStops:stops
@@ -86,6 +89,35 @@
                       NSLog( @"Error:route calculation returned error code %d", (int)error );
                   }
                 }];
+}
+
+- (void)addBannedAreasForCoreRouter:(NMACoreRouter *)router
+{
+    // Example of usage banned areas API
+    NMADynamicPenalty* dynamicPenalty = [[NMADynamicPenalty alloc] init];
+    // There are two options to avoid certain areas during routing,
+    // 1. Add banned area using addBannedArea API
+    NSArray* coordinates = @[
+        [[NMAGeoCoordinates alloc] initWithLatitude:52.631692 longitude:13.437591],
+        [[NMAGeoCoordinates alloc] initWithLatitude:52.631905 longitude:13.437787],
+        [[NMAGeoCoordinates alloc] initWithLatitude:52.632577 longitude:13.438357]];
+
+    NMAGeoPolygon* geoPolygon = [[NMAGeoPolygon alloc] initWithCoordinates:coordinates];
+    // Note, the maximum supported number of banned areas is 20.
+    [dynamicPenalty addBannedArea:[[NMAMapPolygon alloc] initWithPolygon:geoPolygon]];
+
+    // 2. Add banned road link using addPenaltyForRoadElement API
+    // Note, map data needs to be present to get RoadElement by the GeoCoordinate.
+    NMARoadElement* roadElement = [self.mapView roadElementAtCoordinates:
+        [[NMAGeoCoordinates alloc] initWithLatitude:52.406611 longitude:13.194916]];
+    if (roadElement) {
+        // use speed = 0 to completely exclude road link from routing
+        [dynamicPenalty addPenaltyForRoadElement:roadElement
+                            withDrivingDirection:NMADrivingDirectionBoth
+                                           speed:0];
+    }
+
+    router.dynamicPenalty = dynamicPenalty;
 }
 
 - (IBAction)buttonDidClicked:(id)sender
