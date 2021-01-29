@@ -1,6 +1,7 @@
 This app shows how several [HERE Mobile SDK UI Kit v2.0](https://github.com/heremaps/msdkui-ios) components can work together to provide a simple user interface for navigation. Once the first valid location of the device is obtained, the app starts navigation to HERE Berlin.
 
 To build and run the app, navigate from the _Terminal_ to your Xcode project folder and execute:
+
 ```
 pod install --repo-update
 ```

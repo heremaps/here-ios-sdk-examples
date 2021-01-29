@@ -7,6 +7,7 @@
 #import <NMAKit/NMAKit.h>
 
 @interface MainViewController ()
+@property (weak, nonatomic) IBOutlet UISwitch *showEnvZones;
 @property (weak, nonatomic) IBOutlet NMAMapView* mapView;
 @property (weak, nonatomic) IBOutlet UIButton* createRouteButton;
 @property (nonatomic) NMACoreRouter* router;
@@ -20,7 +21,7 @@
     [super viewDidLoad];
     // create geo coordinate
     NMAGeoCoordinates* geoCoordCenter =
-        [[NMAGeoCoordinates alloc] initWithLatitude:49.260327 longitude:-123.115025];
+        [[NMAGeoCoordinates alloc] initWithLatitude:52.406425 longitude:13.193975];
     // set map view with geo center
     [self.mapView setGeoCenter:geoCoordCenter withAnimation:NMAMapAnimationNone];
     // set zoom level
@@ -35,12 +36,12 @@
     // Create an NSMutableArray to add two stops
     NSMutableArray* stops = [[NSMutableArray alloc] initWithCapacity:4];
 
-    // START: 4350 Still Creek Dr
+    // START: South of Berlin
     NMAGeoCoordinates* hereBurnaby =
-        [[NMAGeoCoordinates alloc] initWithLatitude:49.259149 longitude:-123.008555];
-    // END: Langley BC
+        [[NMAGeoCoordinates alloc] initWithLatitude:52.406425 longitude:13.193975];
+    // END: North of Berlin
     NMAGeoCoordinates* langley =
-        [[NMAGeoCoordinates alloc] initWithLatitude:49.0736 longitude:-122.559549];
+        [[NMAGeoCoordinates alloc] initWithLatitude:52.638623 longitude:13.441998];
     [stops addObject:hereBurnaby];
     [stops addObject:langley];
 
@@ -55,6 +56,9 @@
     {
         self.router = [[NMACoreRouter alloc] init];
     }
+
+    // Use banned areas if needed
+    [self addBannedAreasForCoreRouter:self.router];
 
     // Trigger the route calculation
     [self.router
@@ -87,6 +91,35 @@
                 }];
 }
 
+- (void)addBannedAreasForCoreRouter:(NMACoreRouter *)router
+{
+    // Example of usage banned areas API
+    NMADynamicPenalty* dynamicPenalty = [[NMADynamicPenalty alloc] init];
+    // There are two options to avoid certain areas during routing,
+    // 1. Add banned area using addBannedArea API
+    NSArray* coordinates = @[
+        [[NMAGeoCoordinates alloc] initWithLatitude:52.631692 longitude:13.437591],
+        [[NMAGeoCoordinates alloc] initWithLatitude:52.631905 longitude:13.437787],
+        [[NMAGeoCoordinates alloc] initWithLatitude:52.632577 longitude:13.438357]];
+
+    NMAGeoPolygon* geoPolygon = [[NMAGeoPolygon alloc] initWithCoordinates:coordinates];
+    // Note, the maximum supported number of banned areas is 20.
+    [dynamicPenalty addBannedArea:[[NMAMapPolygon alloc] initWithPolygon:geoPolygon]];
+
+    // 2. Add banned road link using addPenaltyForRoadElement API
+    // Note, map data needs to be present to get RoadElement by the GeoCoordinate.
+    NMARoadElement* roadElement = [self.mapView roadElementAtCoordinates:
+        [[NMAGeoCoordinates alloc] initWithLatitude:52.406611 longitude:13.194916]];
+    if (roadElement) {
+        // use speed = 0 to completely exclude road link from routing
+        [dynamicPenalty addPenaltyForRoadElement:roadElement
+                            withDrivingDirection:NMADrivingDirectionBoth
+                                           speed:0];
+    }
+
+    router.dynamicPenalty = dynamicPenalty;
+}
+
 - (IBAction)buttonDidClicked:(id)sender
 {
     // Clear map if previous results are still on map, otherwise proceed to creating route
@@ -98,6 +131,13 @@
     else
     {
         [self createRoute];
+    }
+}
+- (IBAction)didEnvZoneChanged:(id)sender {
+    if (_showEnvZones.on) {
+        [_mapView showFleetFeature:NMAMapFleetFeatureTypeEnvironmentalZones];
+    } else {
+        [_mapView hideFleetFeature:NMAMapFleetFeatureTypeEnvironmentalZones];
     }
 }
 
