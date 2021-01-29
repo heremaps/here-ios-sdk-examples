@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 @property (weak, nonatomic) IBOutlet UITextField *collectionSizeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *languageTextField;
+@property (weak, nonatomic) IBOutlet UITextField *countryTextField;
 @property (weak, nonatomic) IBOutlet UISwitch *resultTypeAddressSwith;
 @property (weak, nonatomic) IBOutlet UISwitch *resultTypePlaceSwith;
 @property (weak, nonatomic) IBOutlet UISwitch *resultTypeCategorySwith;
@@ -21,23 +22,27 @@
 
 @end
 
+typedef NS_ENUM(NSUInteger, PickerViewTag) {
+    PickerViewTagLanguage = 1,
+    PickerViewTagCountry
+};
+
 @implementation MainViewController {
-    IBOutlet UIPickerView *_languagePickerView;
     NSArray<NMAAutoSuggest*> *_searchResultData;
     NSArray *_availableLanguages;
+    NSMutableArray *_availableCountries;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initializeAvailableLanguages];
 
-    _languagePickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 50, 100, 150)];
-    [_languagePickerView setDataSource:self];
-    [_languagePickerView setDelegate:self];
-    _languageTextField.inputView = _languagePickerView;
+    [self initializeAvailableLanguages];
+    [self initializeAvailableContries];
+
+    [self setupPickerViews];
 }
 
-- (NMAPlacesAutoSuggestionResultType) getResultType {
+- (NMAPlacesAutoSuggestionResultType)getResultType {
     NMAPlacesAutoSuggestionResultType resultType = 0;
     if ([_resultTypeAddressSwith isOn]) {
         resultType ^= NMAPlacesAutoSuggestionResultAddress;
@@ -61,6 +66,7 @@
 - (IBAction)searchButtonClicked:(id)sender {
     [self.view endEditing:YES];
     NSString* text = [_searchTextField text];
+
     // parse input, it has to have two double values seperated by commas
     NSArray<NSString *>* coords = [[_centerTextField text] componentsSeparatedByString:@","];
     if (coords.count < 2) {
@@ -68,18 +74,27 @@
         return;
     }
 
-    NMAGeoCoordinates* geo = [NMAGeoCoordinates geoCoordinatesWithLatitude:[coords[0] doubleValue] longitude:[coords[1] doubleValue]];
+    NMAGeoCoordinates* geo = [NMAGeoCoordinates geoCoordinatesWithLatitude:[coords[0] doubleValue]
+                                                                 longitude:[coords[1] doubleValue]];
+    // Create address filter if specified
+    NMAAddressFilter *addressFilter = nil;
+    if (_countryTextField.text.length > 0) {
+        addressFilter = [NMAAddressFilter new];
+        addressFilter.countryCode = _countryTextField.text;
+    }
+
     NMAAutoSuggestionRequest* autoSuggestionRequest
         = [[NMAPlaces sharedPlaces] createAutoSuggestionRequestWithLocation:geo
                                                                 partialTerm:text
-                                                                 resultType:[self getResultType]];
+                                                                 resultType:[self getResultType]
+                                                                     filter:addressFilter];
 
     autoSuggestionRequest.languagePreference = _languageTextField.text;
 
-    // permorm request
+    // Perform request
     [autoSuggestionRequest startWithBlock:^(NMARequest *request, id data, NSError *error) {
         if (error.code != NMARequestErrorNone) {
-            [self showError:(int) error.code];
+            [self showError:error.code];
         } else {
             self->_searchResultData = data;
             [self->_resultTableView reloadData];
@@ -87,10 +102,10 @@
     }];
 }
 
--(void) showError:(int)code {
+-(void)showError:(NSInteger)code {
     UIAlertController * alert = [UIAlertController
                                  alertControllerWithTitle:@"Searchging"
-                                 message:[NSString stringWithFormat:@"Search error: %d", code]
+                                 message:[NSString stringWithFormat:@"Search error: %zd", code]
                                  preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* cancel = [UIAlertAction
                                 actionWithTitle:@"Cancel"
@@ -101,21 +116,44 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
+#pragma mark - UIPickerView
+- (void)setupPickerViews {
+    UIPickerView *languagePickerView = [[UIPickerView alloc] initWithFrame:CGRectZero];
+    languagePickerView.delegate = self;
+    languagePickerView.dataSource = self;
+    languagePickerView.tag = PickerViewTagLanguage;
+    _languageTextField.inputView = languagePickerView;
+
+    UIPickerView *countryPickerView = [[UIPickerView alloc] initWithFrame:CGRectZero];
+    countryPickerView.delegate = self;
+    countryPickerView.dataSource = self;
+    countryPickerView.tag = PickerViewTagCountry;
+    _countryTextField.inputView = countryPickerView;
+}
+
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    _languageTextField.text = self->_availableLanguages[row];
+    if (pickerView.tag == PickerViewTagLanguage) {
+        _languageTextField.text = self->_availableLanguages[row];
+    } else {
+        _countryTextField.text = self->_availableCountries[row];
+    }
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return self->_availableLanguages[row];
+    return pickerView.tag == PickerViewTagLanguage ?
+        self->_availableLanguages[row] : self->_availableCountries[row];
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return self->_availableLanguages.count;
+    return pickerView.tag == PickerViewTagLanguage ?
+        self->_availableLanguages.count : self->_availableCountries.count;
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
 }
+
+#pragma mark - UITableView
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _searchResultData.count;
@@ -254,6 +292,21 @@
         @"uz-Latn-UZ",
         @"vi-VN"
     ];
+}
+
+-(void)initializeAvailableContries {
+
+    // Get available country codes from iOS system
+    NSArray *systemCountryCodes = [NSLocale ISOCountryCodes];
+    self->_availableCountries = [NSMutableArray arrayWithCapacity:systemCountryCodes.count + 1];
+
+    // Add empty string to select no country
+    [self->_availableCountries addObject:@""];
+
+    // Convert 2-digit long country codes to corresponding 3-digit values
+    for (NSString *twoDigitsCode in systemCountryCodes) {
+        [self->_availableCountries addObject:[NMACountryInfo toAlpha3CountryCode:twoDigitsCode]];
+    }
 }
 
 @end

@@ -8,6 +8,12 @@ import NMAKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,
 UIPickerViewDelegate, UIPickerViewDataSource {
+
+    private enum PickerViewTag: Int {
+        case language = 1
+        case country
+    }
+
     static let availableLanguages = [
         "",
         "af-ZA",
@@ -73,33 +79,51 @@ UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var resultTypeQuerySwitch: UISwitch!
     @IBOutlet weak var resultTypeChainSwitch: UISwitch!
 
-    @IBOutlet weak var languageLabel: UITextField!
-    @IBOutlet weak var colSizeLabel: UITextField!
-    @IBOutlet weak var centerLabel: UITextField!
-    @IBOutlet weak var searchLabel: UITextField!
+    @IBOutlet weak var languageTextField: UITextField!
+    @IBOutlet weak var countryTextField: UITextField!
+    @IBOutlet weak var collectionSizeTextField: UITextField!
+    @IBOutlet weak var centerTextField: UITextField!
+    @IBOutlet weak var searchTextField: UITextField!
 
     @IBOutlet weak var resultTableView:UITableView!
 
-    @IBOutlet var languagePickerView:UIPickerView?
-
     var searchResultData = [NMAAutoSuggest]()
-
+    var availableCountries = [""]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        languagePickerView = UIPickerView(frame: CGRect(x:0, y:50, width: 100, height: 150))
-        languagePickerView?.dataSource = self
-        languagePickerView?.delegate = self
-        languageLabel.inputView = languagePickerView
+        setupPickerViews()
+        setupCountries()
+    }
 
+    // MARK: - UIPickerView
+    func setupPickerViews() {
+        let languagePickerView = UIPickerView(frame: .zero)
+        languagePickerView.dataSource = self
+        languagePickerView.delegate = self
+        languagePickerView.tag = PickerViewTag.language.rawValue
+        languageTextField.inputView = languagePickerView
+
+        let countryPickerView = UIPickerView(frame: .zero)
+        countryPickerView.dataSource = self
+        countryPickerView.delegate = self
+        countryPickerView.tag = PickerViewTag.country.rawValue
+        countryTextField.inputView = countryPickerView
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        languageLabel.text = ViewController.availableLanguages[row]
+
+        if pickerView.tag == PickerViewTag.language.rawValue {
+            languageTextField.text = ViewController.availableLanguages[row]
+        } else {
+            countryTextField.text = availableCountries[row]
+        }
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return ViewController.availableLanguages[row]
+        return pickerView.tag == PickerViewTag.language.rawValue ?
+            ViewController.availableLanguages[row] : availableCountries[row]
     }
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -107,13 +131,14 @@ UIPickerViewDelegate, UIPickerViewDataSource {
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return ViewController.availableLanguages.count
+        return pickerView.tag == PickerViewTag.language.rawValue ?
+            ViewController.availableLanguages.count : availableCountries.count
     }
 
+    // MARK: - UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchResultData.count
     }
-
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
@@ -157,7 +182,7 @@ UIPickerViewDelegate, UIPickerViewDataSource {
 
                 self.searchResultData = (data as? [NMAAutoSuggest])!
                 self.resultTableView.reloadData()
-                self.searchLabel.text = query.completion
+                self.searchTextField.text = query.completion
             })
         } else {
             performSegue(withIdentifier: "showDetail", sender: self)
@@ -166,18 +191,25 @@ UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBAction func onSearchEvent(_ sender: Any) {
         self.view.endEditing(true)
-        let text = searchLabel.text
-        let coords = centerLabel?.text?.components(separatedBy:",")
+        let text = searchTextField.text
+        let coords = centerTextField?.text?.components(separatedBy:",")
         guard coords?.count == 2 else {
             return
         }
         let  geo = NMAGeoCoordinates(latitude: (coords![0] as NSString).doubleValue,
                                      longitude: (coords![1] as NSString).doubleValue)
 
-        let autoSuggestionRequest = NMAPlaces.sharedInstance()!.createAutoSuggestionRequest(location:geo,
-            partialTerm:text, resultType:getResultType())
+        // Create address filter if specified
+        var addressFilter: NMAAddressFilter?
+        if countryTextField.text!.count > 0 {
+            addressFilter = NMAAddressFilter.init()
+            addressFilter!.countryCode = countryTextField.text;
+        }
 
-        autoSuggestionRequest?.languagePreference = languageLabel.text
+        let autoSuggestionRequest = NMAPlaces.sharedInstance()!.createAutoSuggestionRequest(location:geo,
+            partialTerm:text, resultType:getResultType(), filter: addressFilter)
+
+        autoSuggestionRequest?.languagePreference = languageTextField.text
 
         autoSuggestionRequest?.start({ request, data, inError in
 
@@ -234,5 +266,14 @@ UIPickerViewDelegate, UIPickerViewDataSource {
 
         return NMAPlacesAutoSuggestionResultType(rawValue: NMAPlacesAutoSuggestionResultType.RawValue(resultType))
     }
+
+    private func setupCountries() {
+        // Get available country codes from iOS system
+        let systemCountryCodes = NSLocale.isoCountryCodes
+
+        // Convert 2-digit long country codes to corresponding 3-digit values
+        availableCountries += systemCountryCodes.compactMap{NMACountryInfo.toAlpha3CountryCode($0)}
+    }
+    
 }
 
