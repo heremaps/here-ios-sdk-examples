@@ -1,4 +1,4 @@
 target 'AutoSuggestApp' do
     platform :ios, '13.0'
-    pod 'HEREMaps', '>= 3.17'
+    pod 'HEREMaps', '>= 3.18'
 end
