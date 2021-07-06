@@ -44,7 +44,7 @@ typedef void (^NMARequestCompletionBlock)(NMARequest* request, id data, NSError*
 
         if (error.code != NMARequestErrorNone)
         {
-            NSLog(@"discovery request error %d", (int)error.code);
+            NSLog(@"discovery request error %zd", error.code);
             return;
         }
 
@@ -116,10 +116,7 @@ typedef void (^NMARequestCompletionBlock)(NMARequest* request, id data, NSError*
     NSError* error = [searchRequest startWithBlock:self.completionBlock];
     if (error.code != NMARequestErrorNone)
     {
-        [Helper
-            showMessage:[NSString stringWithFormat:@"Error:search request fired with error code %d",
-                                  (int)error.code]
-                 OnView:self.view];
+        [Helper showMessageWithErrorCode:error.code domain:@"search" onView:self.view];
         [Helper hideIndicator];
     }
 }
@@ -134,10 +131,7 @@ typedef void (^NMARequestCompletionBlock)(NMARequest* request, id data, NSError*
     NSError* error = [hereRequest startWithBlock:self.completionBlock];
     if (error.code != NMARequestErrorNone)
     {
-        [Helper
-            showMessage:[NSString stringWithFormat:@"Error:here request fired with error code %d",
-                                  (int)error.code]
-                 OnView:self.view];
+        [Helper showMessageWithErrorCode:error.code domain:@"here" onView:self.view];
         [Helper hideIndicator];
     }
 }
@@ -156,10 +150,7 @@ typedef void (^NMARequestCompletionBlock)(NMARequest* request, id data, NSError*
     NSError* error = [exploreRequest startWithBlock:self.completionBlock];
     if (error.code != NMARequestErrorNone)
     {
-        [Helper showMessage:[NSString
-                                stringWithFormat:@"Error:explore request fired with error code %d",
-                                (int)error]
-                     OnView:self.view];
+        [Helper showMessageWithErrorCode:error.code domain:@"explore" onView:self.view];
         [Helper hideIndicator];
     }
 }
@@ -178,10 +169,7 @@ typedef void (^NMARequestCompletionBlock)(NMARequest* request, id data, NSError*
     NSError* error = [aroundRequest startWithBlock:self.completionBlock];
     if (error.code != NMARequestErrorNone)
     {
-        [Helper
-            showMessage:[NSString stringWithFormat:@"Error:around request fired with error code %d",
-                                  (int)error]
-                 OnView:self.view];
+        [Helper showMessageWithErrorCode:error.code domain:@"around" onView:self.view];
         [Helper hideIndicator];
     }
 }

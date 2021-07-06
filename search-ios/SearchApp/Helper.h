@@ -10,6 +10,7 @@
 
 + (void)showIndicatorOnView:(UIView*)view;
 + (void)hideIndicator;
-+ (void)showMessage:(NSString*)message OnView:(UIView*)view;
++ (void)showMessage:(NSString*)message onView:(UIView*)view;
++ (void)showMessageWithErrorCode:(NSInteger)code domain:(NSString*)domain onView:(UIView*)view;
 
 @end

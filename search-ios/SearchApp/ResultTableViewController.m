@@ -66,7 +66,7 @@
         }
         else
         {
-            [Helper showMessage:@"The item selected is a DiscoveryLink" OnView:self.view];
+            [Helper showMessage:@"The item selected is a DiscoveryLink" onView:self.view];
         }
     }
 }
