@@ -31,7 +31,14 @@ static UIActivityIndicatorView* indicator;
     }
 }
 
-+ (void)showMessage:(NSString*)message OnView:(UIView*)view
++ (void)showMessageWithErrorCode:(NSInteger)code domain:(NSString*)domain onView:(UIView*)view
+{
+    [Helper showMessage:[NSString stringWithFormat:@"Error:%@ request fired with error code %zd",
+                         domain, code]
+                 onView:view];
+}
+
++ (void)showMessage:(NSString*)message onView:(UIView*)view
 {
     CGRect frame = CGRectMake(110, 200, 220, 120);
 
