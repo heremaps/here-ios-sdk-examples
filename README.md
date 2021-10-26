@@ -1,6 +1,6 @@
 # HERE Mobile SDK 3.x for iOS example projects
 
-Copyright (c) 2011-2020 HERE Europe B.V.
+Copyright (c) 2011-2021 HERE Europe B.V.
 
 This repository holds a series of Objective-C and Swift projects using the **HERE Mobile SDK for iOS**. More information about the API can be found on [developer.here.com](https://developer.here.com/develop/mobile-sdks) under the *Android & iOS SDKs* section.
 
