@@ -1,4 +1,4 @@
 target 'FTCRRoutingApp' do
-    platform :ios, '13.0'
-    pod 'HEREMaps', '>= 3.18'
+    platform :ios, '14.0'
+    pod 'HEREMaps', '>= 3.19'
 end

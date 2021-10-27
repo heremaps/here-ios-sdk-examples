@@ -18,7 +18,7 @@ Unless otherwise noted in `LICENSE` files for specific files or directories, the
 
 ## HERE Mobile SDK for iOS (Premium)
 
-All of the following projects use **version 3.18** of the HERE Mobile SDK for iOS (Premium)
+All of the following projects use **version 3.19** of the HERE Mobile SDK for iOS (Premium)
 
 * [AutoSuggest](auto-suggest-ios) - Send different types of AutoSuggest requests.
 * [CLE2](cle2-ios) - Use custom location extensions.
@@ -67,8 +67,8 @@ All of the following projects use **version 3.18** of the HERE Mobile SDK for iO
 ## Build Requirements
 
 * Xcode 12 or above
-* HERE Mobile SDK for iOS (Premium) Version 3.18 or above
+* HERE Mobile SDK for iOS (Premium) Version 3.19 or above
 
 ## Target Platform
 
-* iOS 13 or above
+* iOS 14 or above
