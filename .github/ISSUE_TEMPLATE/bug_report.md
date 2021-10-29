@@ -24,9 +24,9 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Smartphone (please complete the following information):**
- - Device: [e.g. iPhone12]
- - OS: [e.g. iOS14.0]
- - SDK Version [e.g. 3.18.2]
+ - Device: [e.g. iPhone13]
+ - OS: [e.g. iOS15.0]
+ - SDK Version [e.g. 3.19.2]
 
 **Additional context**
 Add any other helpful context about the problem here.
