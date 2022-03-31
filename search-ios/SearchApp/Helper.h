@@ -1,6 +1,6 @@
 
 /*
- * Copyright (c) 2011-2021 HERE Europe B.V.
+ * Copyright (c) 2011-2022 HERE Europe B.V.
  * All rights reserved.
  */
 

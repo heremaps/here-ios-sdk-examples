@@ -1,4 +1,4 @@
 target 'MapObjectsApp' do
     platform :ios, '14.0'
-    pod 'HEREMaps', '>= 3.19'
+    pod 'HEREMaps', '>= 3.20'
 end
