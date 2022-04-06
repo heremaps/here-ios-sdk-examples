@@ -1,4 +1,5 @@
 # HERE Mobile SDK 3.x for iOS example projects
+# Deprecated
 
 Copyright (c) 2011-2021 HERE Europe B.V.
 
