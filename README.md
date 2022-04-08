@@ -1,8 +1,15 @@
 # HERE Mobile SDK 3.x for iOS example projects
+# Deprecated
 
 Copyright (c) 2011-2022 HERE Europe B.V.
 
 This repository holds a series of Objective-C and Swift projects using the **HERE Mobile SDK for iOS**. More information about the API can be found on [developer.here.com](https://developer.here.com/develop/mobile-sdks) under the *Android & iOS SDKs* section.
+
+Note:
+This service is no longer being actively developed. We will only provide critical fixes for this service in future. Instead, use the new [HERE SDK 4.x](https://developer.here.com/documentation/ios-sdk-navigate/4.10.5.0/dev_guide/index.html)
+HERE Premium SDK (3.x) is superseded by new 4.x SDK variants and the Premium SDK will be maintained until 31 December 2022 with only critical bug fixes and no feature development / enhancements.
+Current users of the HERE Premium SDK (3.x) are encouraged to migrate to Lite, Explore or Navigate HERE SDK (4.x) variants based on licensed use cases before 31 December 2022. Most of the Premium SDK features are already available in the new SDK variants.
+Onboarding of new customers for Premium SDK is not possible.
 
 This set of self-contained, use-case based projects is designed to be cloned by developers for their own use.
 
