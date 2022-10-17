@@ -293,6 +293,7 @@
 					"$(PROJECT_DIR)/MapCustomizationApp",
 				);
 				INFOPLIST_FILE = MapCustomizationApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,6 +314,7 @@
 					"$(PROJECT_DIR)/MapCustomizationApp",
 				);
 				INFOPLIST_FILE = MapCustomizationApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

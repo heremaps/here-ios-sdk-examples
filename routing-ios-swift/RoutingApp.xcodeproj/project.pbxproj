@@ -22,6 +22,16 @@
 		12DC7B542125BD72000B2E6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFrameworksBuildPhase section */
+		DD28994B6578129C79143DF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
 		12DC7B3C2125BD71000B2E6D = {
 			isa = PBXGroup;
@@ -60,6 +70,7 @@
 			buildPhases = (
 				12DC7B412125BD71000B2E6D /* Sources */,
 				12DC7B432125BD71000B2E6D /* Resources */,
+				DD28994B6578129C79143DF1 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -267,7 +278,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = RoutingApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -288,7 +299,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = RoutingApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
