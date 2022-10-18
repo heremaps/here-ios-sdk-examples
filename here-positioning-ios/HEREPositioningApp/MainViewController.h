@@ -6,7 +6,6 @@
 #import <UIKit/UIKit.h>
 @import NMAKit;
 
-@interface MainViewController : UIViewController<NMAVenue3dMapLayerDelegate,NMAVenue3dRoutingControllerObserver,
-                                                UITableViewDelegate, UITableViewDataSource>
+@interface MainViewController : UIViewController
 
 @end
