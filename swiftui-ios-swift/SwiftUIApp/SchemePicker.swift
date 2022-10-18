@@ -34,7 +34,7 @@ struct SchemePicker: View {
         })
 
         return Picker("Schemes", selection: binding) {
-            ForEach(mapSchemes.indices) { index in
+            ForEach(0..<3) { index in
                 Text(self.mapSchemes[index]).tag(index)
             }
         }.pickerStyle(SegmentedPickerStyle())
